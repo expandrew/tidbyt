@@ -2,6 +2,20 @@
 
 This is my repository for experimenting with Tidbyt development
 
+## Setup
+
+Install [Pixlet](https://tidbyt.dev/docs/build/installing-pixlet):
+
+```zsh
+brew install tidbyt/tidbyt/pixlet
+```
+
+Log in to Pixlet:
+
+```
+pixlet login
+```
+
 ## Plans I have
 
 - [ ] **WQXR "What's On?"**
