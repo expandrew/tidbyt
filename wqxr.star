@@ -18,7 +18,7 @@ def now_playing(top_line, middle_line, bottom_line):
                 render.Stack(
                     children = [
                         render.Box(width = 64, height = 8, color = "12518A"),
-                        render.WrappedText(content = "WQXR", height = 8, font = "tb-8")
+                        render.WrappedText(content = "WQXR", height = 8, font = "tb-8"),
                     ],
                 ),
                 render.Column(
@@ -28,13 +28,16 @@ def now_playing(top_line, middle_line, bottom_line):
                         render.Marquee(width = 64, child = render.Text(bottom_line)),
                     ],
                 ),
-
             ],
         ),
     )
 
 def main():
-    whats_on = http.get(url = WHATS_ON, ttl_seconds=30)
+    whats_on = http.get(url = WHATS_ON, ttl_seconds = 30)
+
+    top_line = ""
+    middle_line = ""
+    bottom_line = ""
 
     if (whats_on.status_code) != 200:
         return now_playing("", "Can't connect to WQXR :(", "")
@@ -53,4 +56,3 @@ def main():
         bottom_line = whats_on.json()["current_playlist_item"]["catalog_entry"]["ensemble"]["name"] or ""
 
     return now_playing(top_line, middle_line, bottom_line)
-

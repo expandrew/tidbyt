@@ -5,10 +5,10 @@ Description: Displays song, artist, and info currently streaming on WQXR
 Author: Andrew Westling
 """
 
+load("cache.star", "cache")
 load("http.star", "http")
 load("render.star", "render")
 load("time.star", "time")
-load("cache.star", "cache")
 
 WHATS_ON = "https://api.wnyc.org/api/v1/whats_on/wqxr"
 
@@ -20,7 +20,7 @@ def now_playing(top_line, middle_line, bottom_line):
                 render.Stack(
                     children = [
                         render.Box(width = 64, height = 8, color = "12518A"),
-                        render.WrappedText(content = "WQXR", height = 8, font = "tb-8")
+                        render.WrappedText(content = "WQXR", height = 8, font = "tb-8"),
                     ],
                 ),
                 render.Column(
@@ -30,7 +30,6 @@ def now_playing(top_line, middle_line, bottom_line):
                         render.Marquee(width = 64, child = render.Text(bottom_line)),
                     ],
                 ),
-
             ],
         ),
     )
@@ -46,9 +45,9 @@ def main():
 
     # Cache stores everything as a string, so we need to put it back to integer
     if type(ttl_seconds) == "string":
-      ttl_seconds = int(ttl_seconds)
+        ttl_seconds = int(ttl_seconds)
 
-    whats_on = http.get(url = WHATS_ON, ttl_seconds=ttl_seconds)
+    whats_on = http.get(url = WHATS_ON, ttl_seconds = ttl_seconds)
 
     if (whats_on.status_code) != 200:
         return now_playing("", "Can't connect to WQXR :(", "")
@@ -81,10 +80,10 @@ def main():
     ttl_seconds = duration_to_seconds(time_until_refetch) or 15
 
     # Set cache to know when to refetch
-    cache.set("wqxr-whats-on-ttl", str(ttl_seconds), ttl_seconds=ttl_seconds)
-    cache.set("wqxr-whats-on-top-line", top_line, ttl_seconds=ttl_seconds)
-    cache.set("wqxr-whats-on-middle-line", middle_line, ttl_seconds=ttl_seconds)
-    cache.set("wqxr-whats-on-bottom-line", bottom_line, ttl_seconds=ttl_seconds)
+    cache.set("wqxr-whats-on-ttl", str(ttl_seconds), ttl_seconds = ttl_seconds)
+    cache.set("wqxr-whats-on-top-line", top_line, ttl_seconds = ttl_seconds)
+    cache.set("wqxr-whats-on-middle-line", middle_line, ttl_seconds = ttl_seconds)
+    cache.set("wqxr-whats-on-bottom-line", bottom_line, ttl_seconds = ttl_seconds)
 
     return now_playing(top_line, middle_line, bottom_line)
 
