@@ -1,0 +1,80 @@
+{
+  "has_playlists": true,
+  "future": [],
+  "current_show": {
+    "iso_start": "2023-06-20T14:00:00+00:00",
+    "description": "<p>Annie Bergen is the midday host on WQXR.</p>",
+    "fullImage": {
+      "url": "https://media.wnyc.org/i/300/300/l/80/1/AnnieBergen_WQXR_ShowPageSquares.png",
+      "width": 300,
+      "caption": "",
+      "type": "image/png",
+      "height": 300
+    },
+    "site_id": 2,
+    "start_ts": 1687269600.0,
+    "iso_end": "2023-06-20T19:00:00+00:00",
+    "listImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/1/AnnieBergen_WQXR_ShowPageSquares.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "pk": 103285,
+    "show_url": "https://www.wqxr.org/shows/annie-bergen",
+    "end": "2023-06-20T15:00:00-0400",
+    "title": "Middays with Annie Bergen",
+    "url": "https://www.wqxr.org/shows/annie-bergen",
+    "end_ts": 1687287600.0,
+    "schedule_ref": "ShowSchedule:1635",
+    "group_slug": "annie-bergen",
+    "detailImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/1/AnnieBergen_WQXR_ShowPageSquares.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "start": "2023-06-20T10:00:00-0400"
+  },
+  "expires": "2023-06-20T11:24:39",
+  "current_playlist_item": {
+    "start_time_ts": 1687273814.0,
+    "stream": "wqxr",
+    "playlist_entry_id": 1709913,
+    "start_time": "2023-06-20T11:10:14",
+    "playlist_page_url": "http://www.wqxr.org/playlists/show/terrance-mcknight/2018/jan/20/",
+    "comments_url": "/api/list/comments/177/63575/",
+    "iso_start_time": "2023-06-20T15:10:14+00:00",
+    "catalog_entry": {
+      "reclabel": { "url": "", "name": "Supraphon" },
+      "conductor": null,
+      "catno": "110649",
+      "composer": {
+        "url": "/music/musicians/antonin-dvorak/",
+        "pk": 522,
+        "slug": "antonin-dvorak",
+        "name": "Antonin Dvorak"
+      },
+      "attribution": "",
+      "soloists": [],
+      "mm_uid": 110186,
+      "title": "Serenade in E Major for Strings, Op. 22",
+      "url": "http://www.wqxr.org/music/recordings/10018/",
+      "additional_composers": [],
+      "audio_may_download": true,
+      "length": 1765,
+      "pk": 10018,
+      "arkiv_link": "http://www.arkivmusic.com/classical/Playlist?source=WQXR&cat=110649&id=110186&label=Supraphon",
+      "audio": "https://chrt.fm/track/53A61E/pdst.fm/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/",
+      "ensemble": {
+        "url": "/music/ensembles/prague-chamber-orchestra/",
+        "pk": 612,
+        "slug": "prague-chamber-orchestra",
+        "name": "Prague Chamber Orchestra"
+      },
+      "additional_ensembles": []
+    }
+  }
+}

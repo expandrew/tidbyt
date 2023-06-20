@@ -1,0 +1,99 @@
+{
+  "has_playlists": true,
+  "future": [],
+  "current_show": {
+    "iso_start": "2023-06-20T14:00:00+00:00",
+    "description": "<p>Annie Bergen is the midday host on WQXR.</p>",
+    "fullImage": {
+      "url": "https://media.wnyc.org/i/300/300/l/80/1/AnnieBergen_WQXR_ShowPageSquares.png",
+      "width": 300,
+      "caption": "",
+      "type": "image/png",
+      "height": 300
+    },
+    "site_id": 2,
+    "start_ts": 1687269600,
+    "iso_end": "2023-06-20T19:00:00+00:00",
+    "listImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/1/AnnieBergen_WQXR_ShowPageSquares.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "pk": 103285,
+    "show_url": "https://www.wqxr.org/shows/annie-bergen",
+    "end": "2023-06-20T15:00:00-0400",
+    "title": "Middays with Annie Bergen",
+    "url": "https://www.wqxr.org/shows/annie-bergen",
+    "end_ts": 1687287600,
+    "schedule_ref": "ShowSchedule:1635",
+    "group_slug": "annie-bergen",
+    "detailImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/1/AnnieBergen_WQXR_ShowPageSquares.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "start": "2023-06-20T10:00:00-0400"
+  },
+  "expires": "2023-06-20T12:10:28",
+  "current_playlist_item": {
+    "start_time_ts": 1687276948,
+    "stream": "wqxr",
+    "playlist_entry_id": 2134320,
+    "start_time": "2023-06-20T12:02:28",
+    "playlist_page_url": "http://www.wqxr.org/playlists/show/overnight-music/2019/apr/01/",
+    "comments_url": "/api/list/comments/177/74943/",
+    "iso_start_time": "2023-06-20T16:02:28+00:00",
+    "catalog_entry": {
+      "reclabel": {
+        "url": "",
+        "name": "Hyperion"
+      },
+      "conductor": null,
+      "catno": "68091",
+      "composer": {
+        "url": "/music/musicians/wolfgang-amadeus-mozart/",
+        "pk": 8,
+        "slug": "wolfgang-amadeus-mozart",
+        "name": "Wolfgang Amadeus Mozart"
+      },
+      "attribution": "",
+      "soloists": [
+        {
+          "instruments": ["violin"],
+          "musician": {
+            "url": "/music/musicians/alina-ibragimova/",
+            "pk": 1757,
+            "slug": "alina-ibragimova",
+            "name": "Alina Ibragimova"
+          },
+          "role": ""
+        },
+        {
+          "instruments": ["piano"],
+          "musician": {
+            "url": "/music/musicians/cedric-tiberghien/",
+            "pk": 23330,
+            "slug": "cedric-tiberghien",
+            "name": "Cedric Tiberghien"
+          },
+          "role": ""
+        }
+      ],
+      "mm_uid": 150542,
+      "title": "Violin Sonata in C Major, K. 14",
+      "url": "http://www.wqxr.org/music/recordings/60949/",
+      "additional_composers": [],
+      "audio_may_download": true,
+      "length": 654,
+      "pk": 60949,
+      "arkiv_link": "http://www.arkivmusic.com/classical/Playlist?source=WQXR&cat=68091&id=150542&label=Hyperion",
+      "audio": "https://chrt.fm/track/53A61E/pdst.fm/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/",
+      "ensemble": null,
+      "additional_ensembles": []
+    }
+  }
+}

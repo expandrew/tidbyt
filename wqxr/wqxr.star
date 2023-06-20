@@ -33,6 +33,14 @@ def now_playing(top_line, middle_line, bottom_line):
     )
 
 def main():
+    # Test data (run the "API: (WQXR): Serve mock API" VS Code task then uncomment a line below to test):
+    # WHATS_ON = "http://localhost:1059/between-songs.json" # No catalog item (ex. between songs)
+    # WHATS_ON = "http://localhost:1059/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
+    # WHATS_ON = "http://localhost:1059/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
+    # WHATS_ON = "http://localhost:1059/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
+    # WHATS_ON = "http://localhost:1059/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. piano/violin sonata)
+    # WHATS_ON = "http://localhost:1059/404.json" # To test "Can't connect" (ex. API is down)
+
     whats_on = http.get(url = WHATS_ON, ttl_seconds = 30)
 
     top_line = ""
