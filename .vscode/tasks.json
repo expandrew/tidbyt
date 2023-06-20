@@ -35,6 +35,18 @@
       }
     },
     {
+      "label": "Pixlet: (WQXR): Generate the preview gif",
+      "detail": "Generate the `wqxr.gif` preview GIF for my README",
+      "type": "shell",
+      "command": "pixlet render wqxr/wqxr.star --gif --magnify 5",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "revealProblems": "onProblem",
+        "close": true
+      }
+    },
+    {
       "label": "API: (WQXR): Serve mock API",
       "detail": "Serve fake responses from my local machine for different scenarios from the real WQXR API",
       "type": "shell",
