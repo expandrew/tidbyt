@@ -1,7 +1,7 @@
 """
 Applet: WQXR
-Summary: WQXR Now Playing
-Description: Displays song, artist, and info currently streaming on WQXR
+Summary: WQXR What's On
+Description: Shows what's currently playing on WQXR, New York's Classical Music Radio Station
 Author: Andrew Westling
 """
 
