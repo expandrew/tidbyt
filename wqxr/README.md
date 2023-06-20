@@ -2,6 +2,18 @@
 
 Show what's currently playing on [WQXR](https://wqxr.org) on Tidbyt
 
+![WQXR "What's On?"](/wqxr/wqxr.gif)
+
+## Settings
+
+You can change the following settings:
+
+- **Show ensemble**: Show the ensemble, if applicable
+- **Show conductor and soloists**: Show the conductor and/or soloist(s), if applicable
+- **Color: Title**: Choose your own color for the title of the current piece
+- **Color: Composer**: Choose your own color for the composer of the current piece
+- **Color: Ensemble and Conductor/Soloists**: Choose your own color for the ensemble and conductor/soloists
+
 ## Development
 
 Use VS Code Task **Pixlet: (WQXR): Serve** to get started, then open `http://127.0.0.1:8080` in the browser to see the Pixlet output.
