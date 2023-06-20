@@ -1,7 +1,7 @@
 """
 Applet: WQXR
 Summary: WQXR What's On
-Description: Shows what's currently playing on WQXR, New York's Classical Music Radio Station
+Description: Shows what's currently playing on WQXR, New York's Classical Music Radio Station.
 Author: Andrew Westling
 """
 
@@ -140,14 +140,14 @@ def get_schema():
                 id = "show_ensemble",
                 name = "Show ensemble",
                 desc = "Show the ensemble, if applicable",
-                icon = "people-group",
+                icon = "peopleGroup",
                 default = False,
             ),
             schema.Toggle(
                 id = "show_people",
                 name = "Show conductor and soloists",
                 desc = "Show the conductor and/or soloist(s), if applicable",
-                icon = "wand-magic-sparkles",
+                icon = "wandMagicSparkles",
                 default = True,
             ),
             schema.Color(
