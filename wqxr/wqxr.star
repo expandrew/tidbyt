@@ -5,24 +5,15 @@ Description: Shows what's currently playing on WQXR, New York's Classical Music 
 Author: Andrew Westling
 """
 
-load("encoding/base64.star", "base64")
 load("http.star", "http")
 load("render.star", "render")
 
 WHATS_ON = "https://api.wnyc.org/api/v1/whats_on/wqxr"
 
-WQXR_LOGO_IMAGE = base64.decode("iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAABtJREFUGFdjZICC/////2dkZGQE0ygcmCBlKgF2QS/yX2ST+wAAAABJRU5ErkJggg==")
 BLUE_HEADER_BAR = render.Stack(
     children = [
         render.Box(width = 64, height = 5, color = "12518A"),
-        render.Row(
-            main_align = "space_between",
-            expanded = True,
-            children = [
-                render.Text(content = "WQXR", height = 6, font = "tom-thumb"),
-                render.Image(src = WQXR_LOGO_IMAGE, width = 5, height = 5),
-            ],
-        ),
+        render.Text(content = "WQXR", height = 6, font = "tom-thumb"),
     ],
 )
 
