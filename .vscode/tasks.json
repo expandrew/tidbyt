@@ -4,10 +4,10 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Pixlet: Serve (WQXR)",
+      "label": "Pixlet: (WQXR): Serve",
       "detail": "Start `wqxr.star` in Pixlet",
       "type": "shell",
-      "command": "pixlet serve wqxr.star",
+      "command": "pixlet serve wqxr/wqxr.star",
       "problemMatcher": []
     }
   ]

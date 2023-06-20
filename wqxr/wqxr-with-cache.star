@@ -41,7 +41,7 @@ def main():
     ttl_seconds = cache.get("wqxr_whats_on_ttl")
 
     if ttl_seconds == None:
-        ttl_seconds = 15
+        ttl_seconds = 30
 
     # Cache stores everything as a string, so we need to put it back to integer
     if type(ttl_seconds) == "string":
@@ -54,7 +54,7 @@ def main():
 
     has_current_show = whats_on.json()["current_show"]
     has_playlist_item = whats_on.json()["current_playlist_item"]
-    time_until_refetch = time.parse_duration("15s")
+    time_until_refetch = time.parse_duration("30s")
 
     if has_current_show:
         top_line = ""
@@ -77,7 +77,7 @@ def main():
         when_to_refetch = start_time + duration
         time_until_refetch = when_to_refetch - time.now()
 
-    ttl_seconds = duration_to_seconds(time_until_refetch) or 15
+    ttl_seconds = duration_to_seconds(time_until_refetch) or 30
 
     # Set cache to know when to refetch
     cache.set("wqxr-whats-on-ttl", str(ttl_seconds), ttl_seconds = ttl_seconds)
