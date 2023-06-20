@@ -9,6 +9,18 @@
       "type": "shell",
       "command": "pixlet serve wqxr/wqxr.star",
       "problemMatcher": []
+    },
+    {
+      "label": "Pixlet: (WQXR): Render and push to my Tidbyt",
+      "detail": "Render `wqxr.star` and push it to my Tidbyt",
+      "type": "shell",
+      "command": "pixlet render wqxr/wqxr.star && pixlet push --installation-id 'WQXR' promptly-relieved-relaxed-sparrowhawk-d4e wqxr/wqxr.webp",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "revealProblems": "onProblem",
+        "close": true
+      }
     }
   ]
 }
