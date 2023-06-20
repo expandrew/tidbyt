@@ -2,6 +2,11 @@
 
 This is my repository for experimenting with Tidbyt development
 
+## Apps
+
+- [**WQXR "What's On?"**](/wqxr/): Show what is currently playing on [WQXR](https://wqxr.org) on the Tidbyt
+  - ![WQXR "What's On?"](/wqxr/wqxr.gif)
+
 ## Setup
 
 Install [Pixlet](https://tidbyt.dev/docs/build/installing-pixlet):
@@ -16,12 +21,7 @@ Log in to Pixlet:
 pixlet login
 ```
 
-## Plans I have
+## Later
 
-- [ ] **WQXR "What's On?"**
-  - Show what is currently playing on WQXR on the Tidbyt
-  - Possibly later: make a more generic "NYPR What's On?" app that lets you choose from any of the streams on New York Public Radio and show the "What's On" response on the Tidbyt (the API response includes all the different streams, it probably wouldn't be too hard)
-- [ ] **Griffin PowerMate integration**
-  - Use Griffin PowerMate push+turn to cycle through apps on Tidbyt
-  - My Raspberry Pi 3B+ failed, but once I get another one up and running, I can set up the PowerMate side of it
-  - See [Media Cube](https://github.com/expandrew/media-cube)
+- **New York Public Radio**
+  - Make a more generic "NYPR What's On?" app that lets you choose from any of the streams on New York Public Radio and show the "What's On" response on the Tidbyt (the API response includes all the different streams, it probably wouldn't be too hard to abstract what I did on the WQXR one above, and remove some of the classical-music-specific things 🤔)
