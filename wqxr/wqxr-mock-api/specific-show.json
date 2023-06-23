@@ -1,0 +1,43 @@
+{
+  "has_playlists": true,
+  "future": [],
+  "current_show": {
+    "iso_start": "2023-06-23T01:00:00+00:00",
+    "description": "<p>The New York Philharmonic This Week, hosted by Emmy Award-winning actor Alec Baldwin, includes recent performances of the orchestra and interviews with musicians, guest artists and conductors. </p>",
+    "fullImage": {
+      "url": "https://media.wnyc.org/i/300/300/l/80/1/NewYorkPhilThisWeek_WQXR_ShowPageSquares.png",
+      "width": 300,
+      "caption": "",
+      "type": "image/png",
+      "height": 300
+    },
+    "site_id": 2,
+    "start_ts": 1687482000,
+    "iso_end": "2023-06-23T03:00:00+00:00",
+    "listImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/1/NewYorkPhilThisWeek_WQXR_ShowPageSquares.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "pk": 364,
+    "show_url": "https://www.wqxr.org/shows/new-york-philharmonic",
+    "end": "2023-06-22T23:00:00-0400",
+    "title": "The New York Philharmonic This Week",
+    "url": "https://www.wqxr.org/shows/new-york-philharmonic",
+    "end_ts": 1687489200,
+    "schedule_ref": "ShowSchedule:1624",
+    "group_slug": "new-york-philharmonic",
+    "detailImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/1/NewYorkPhilThisWeek_WQXR_ShowPageSquares.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "start": "2023-06-22T21:00:00-0400"
+  },
+  "expires": "2023-06-22T21:02:54",
+  "current_playlist_item": null
+}

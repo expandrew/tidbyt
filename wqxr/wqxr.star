@@ -44,6 +44,7 @@ ERROR_CONTENT = render.Column(
 def main(config):
     # Test data (run the "API: (WQXR): Serve mock API" VS Code task then uncomment a line below to test):
     # WHATS_ON = "http://localhost:1059/between-songs.json" # No catalog item (ex. between songs)
+    # WHATS_ON = "http://localhost:1059/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
     # WHATS_ON = "http://localhost:1059/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
     # WHATS_ON = "http://localhost:1059/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
     # WHATS_ON = "http://localhost:1059/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
