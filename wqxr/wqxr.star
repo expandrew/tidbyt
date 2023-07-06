@@ -24,7 +24,8 @@ COLORS = {
 
 DEFAULT_COLOR_TITLE = COLORS["light_blue"]
 DEFAULT_COLOR_COMPOSER = COLORS["white"]
-DEFAULT_COLOR_ENSEMBLE_AND_PEOPLE = COLORS["medium_gray"]
+DEFAULT_COLOR_ENSEMBLE = COLORS["medium_gray"]
+DEFAULT_COLOR_PEOPLE = COLORS["medium_gray"]
 DEFAULT_SHOW_ENSEMBLE = False
 DEFAULT_SHOW_PEOPLE = True
 
@@ -104,9 +105,9 @@ def main(config):
     if composer:
         children.append(render.Marquee(width = 64, child = render.Text(content = composer, font = "tom-thumb", color = config.str("color_composer", DEFAULT_COLOR_COMPOSER))))
     if should_show_ensemble and ensemble:
-        children.append(render.Marquee(width = 64, child = render.Text(content = ensemble, font = "tom-thumb", color = config.str("color_ensemble_and_people", DEFAULT_COLOR_ENSEMBLE_AND_PEOPLE))))
+        children.append(render.Marquee(width = 64, child = render.Text(content = ensemble, font = "tom-thumb", color = config.str("color_ensemble", DEFAULT_COLOR_ENSEMBLE))))
     if should_show_people and people:
-        children.append(render.Marquee(width = 64, child = render.Text(content = people, font = "tom-thumb", color = config.str("color_ensemble_and_people", DEFAULT_COLOR_ENSEMBLE_AND_PEOPLE))))
+        children.append(render.Marquee(width = 64, child = render.Text(content = people, font = "tom-thumb", color = config.str("color_people", DEFAULT_COLOR_PEOPLE))))
 
     return render.Root(
         max_age = 60,
@@ -157,7 +158,7 @@ def get_schema():
             schema.Color(
                 id = "color_title",
                 name = "Color: Title",
-                desc = "Choose your own color for the title of the current piece",
+                desc = "Choose your own text color for the title of the current piece",
                 icon = "palette",
                 default = DEFAULT_COLOR_TITLE,
                 palette = [
@@ -169,7 +170,7 @@ def get_schema():
             schema.Color(
                 id = "color_composer",
                 name = "Color: Composer",
-                desc = "Choose your own color for the composer of the current piece",
+                desc = "Choose your own text color for the composer of the current piece",
                 icon = "palette",
                 default = DEFAULT_COLOR_COMPOSER,
                 palette = [
@@ -180,11 +181,24 @@ def get_schema():
                 ],
             ),
             schema.Color(
-                id = "color_ensemble_and_people",
-                name = "Color: Ensemble and Conductor/Soloists",
-                desc = "Choose your own color for the ensemble and conductor/soloists",
+                id = "color_ensemble",
+                name = "Color: Ensemble",
+                desc = "Choose your own text color for the ensemble",
                 icon = "palette",
-                default = DEFAULT_COLOR_ENSEMBLE_AND_PEOPLE,
+                default = DEFAULT_COLOR_ENSEMBLE,
+                palette = [
+                    COLORS["white"],
+                    COLORS["light_gray"],
+                    COLORS["medium_gray"],
+                    COLORS["dark_gray"],
+                ],
+            ),
+            schema.Color(
+                id = "color_people",
+                name = "Color: Soloists/Conductor",
+                desc = "Choose your own text color for the soloists and conductor",
+                icon = "palette",
+                default = DEFAULT_COLOR_PEOPLE,
                 palette = [
                     COLORS["white"],
                     COLORS["light_gray"],
