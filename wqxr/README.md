@@ -2,17 +2,23 @@
 
 Show what's currently playing on [WQXR](https://wqxr.org) on Tidbyt
 
-![WQXR "What's On?"](/wqxr/wqxr.gif)
+| Horizontal                                      | Vertical                                      |
+| ----------------------------------------------- | --------------------------------------------- |
+| ![WQXR "What's On?"](/wqxr/wqxr-horizontal.gif) | ![WQXR "What's On?"](/wqxr/wqxr-vertical.gif) |
 
 ## Settings
 
 You can change the following settings:
 
+- **Scroll direction**: Choose whether to scroll text horizontally or vertically
+- **Scroll speed**: Slow down the scroll speed of the text
 - **Show ensemble**: Show the ensemble, if applicable
 - **Show conductor and soloists**: Show the conductor and/or soloist(s), if applicable
-- **Color: Title**: Choose your own color for the title of the current piece
-- **Color: Composer**: Choose your own color for the composer of the current piece
-- **Color: Ensemble and Conductor/Soloists**: Choose your own color for the ensemble and conductor/soloists
+- **Use custom colors**: Choose your own text colors
+  - **Color: Title**: Choose your own text color for the title of the current piece
+  - **Color: Composer**: Choose your own text color for the composer of the current piece
+  - **Color: Ensemble**: Choose your own text color for the ensemble
+  - **Color: Conductor/Soloists**: Choose your own text color for the conductor/soloists
 
 ## Development
 
