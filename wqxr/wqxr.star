@@ -34,13 +34,13 @@ SCROLL_DIRECTION_OPTIONS = [
 ]
 
 DEFAULT_SCROLL_DIRECTION = SCROLL_DIRECTION_OPTIONS[0].value
+DEFAULT_SHOW_ENSEMBLE = False
+DEFAULT_SHOW_PEOPLE = True
+DEFAULT_USE_CUSTOM_COLORS = False
 DEFAULT_COLOR_TITLE = COLORS["light_blue"]
 DEFAULT_COLOR_COMPOSER = COLORS["white"]
 DEFAULT_COLOR_ENSEMBLE = COLORS["medium_gray"]
 DEFAULT_COLOR_PEOPLE = COLORS["medium_gray"]
-DEFAULT_SHOW_ENSEMBLE = False
-DEFAULT_SHOW_PEOPLE = True
-DEFAULT_USE_CUSTOM_COLORS = False
 
 BLUE_HEADER_BAR = render.Stack(
     children = [
@@ -67,6 +67,13 @@ def main(config):
     # WHATS_ON = "http://localhost:1059/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
     # WHATS_ON = "http://localhost:1059/404.json" # To test "Can't connect" (ex. API is down)
 
+    # Get settings values
+    scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
+    should_show_ensemble = config.bool("show_ensemble", DEFAULT_SHOW_ENSEMBLE)
+    should_show_people = config.bool("show_people", DEFAULT_SHOW_PEOPLE)
+    use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
+
+    # Get data
     whats_on = http.get(url = WHATS_ON, ttl_seconds = 30)
 
     if (whats_on.status_code) != 200:
@@ -79,6 +86,7 @@ def main(config):
             ),
         )
 
+    # Parse data
     has_current_show = whats_on.json()["current_show"]
     has_playlist_item = whats_on.json()["current_playlist_item"]
     has_catalog_entry = has_playlist_item and whats_on.json()["current_playlist_item"]["catalog_entry"]
@@ -109,8 +117,7 @@ def main(config):
 
         people = build_people(conductor, soloists)
 
-    use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
-
+    # Handle colors
     if use_custom_colors:
         color_title = config.str("color_title", DEFAULT_COLOR_TITLE)
         color_composer = config.str("color_composer", DEFAULT_COLOR_COMPOSER)
@@ -122,52 +129,49 @@ def main(config):
         color_ensemble = DEFAULT_COLOR_ENSEMBLE
         color_people = DEFAULT_COLOR_PEOPLE
 
-    should_show_ensemble = config.bool("show_ensemble", DEFAULT_SHOW_ENSEMBLE)
-    should_show_people = config.bool("show_people", DEFAULT_SHOW_PEOPLE)
-    scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
+    # These are just for putting the content into
+    root_contents = None
+    data_parts = []
 
-    MAIN_CONTENTS = None
-    children = []
-
+    # Vertical scrolling
     if scroll_direction == "vertical":
         # For vertical mode, each child needs to be a WrappedText widget, so the text will wrap to the next line
-        # (I also wrap each child in a Padding widget with appropriate spacing, so things can breathe a little bit)
 
+        # (I also wrap each child in a Padding widget with appropriate spacing, so things can breathe a little bit)
         pad = (0, 4, 0, 0) # (left, top, right, bottom)
 
         if title:
             # Don't pad the top one because it doesn't need it
-            children.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = title, font = "tb-8", color = color_title)))
+            data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = title, font = "tb-8", color = color_title)))
         if composer:
-            children.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = composer, font = "tom-thumb", color = color_composer)))
+            data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = composer, font = "tom-thumb", color = color_composer)))
         if should_show_ensemble and ensemble:
-            children.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = ensemble, font = "tom-thumb", color = color_ensemble)))
+            data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = ensemble, font = "tom-thumb", color = color_ensemble)))
         if should_show_people and people:
-            children.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = people, font = "tom-thumb", color = color_people)))
+            data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = people, font = "tom-thumb", color = color_people)))
 
-        # For vertical mode, a Marquee with `scroll_direction = "vertical"` gets passed to Root; this handles the scrolling
-        MAIN_CONTENTS = render.Marquee(
+        root_contents = render.Marquee(
             scroll_direction = "vertical",
             height = 27,
-            child = render.Column(children = children),
+            child = render.Column(children = data_parts),
         )
 
+    # Horizontal scrolling
     if scroll_direction == "horizontal":
         # For horizontal mode, each child needs to be its own Marquee widget, so each line will scroll individually when too long
         if title:
-            children.append(render.Marquee(width = 64, child = render.Text(content = title, font = "tb-8", color = color_title)))
+            data_parts.append(render.Marquee(width = 64, child = render.Text(content = title, font = "tb-8", color = color_title)))
         if composer:
-            children.append(render.Marquee(width = 64, child = render.Text(content = composer, font = "tom-thumb", color = color_composer)))
+            data_parts.append(render.Marquee(width = 64, child = render.Text(content = composer, font = "tom-thumb", color = color_composer)))
         if should_show_ensemble and ensemble:
-            children.append(render.Marquee(width = 64, child = render.Text(content = ensemble, font = "tom-thumb", color = color_ensemble)))
+            data_parts.append(render.Marquee(width = 64, child = render.Text(content = ensemble, font = "tom-thumb", color = color_ensemble)))
         if should_show_people and people:
-            children.append(render.Marquee(width = 64, child = render.Text(content = people, font = "tom-thumb", color = color_people)))
+            data_parts.append(render.Marquee(width = 64, child = render.Text(content = people, font = "tom-thumb", color = color_people)))
 
-        # For horizontal, a Column gets passed to Root; this handles the vertical spacing
-        MAIN_CONTENTS = render.Column(
+        root_contents = render.Column(
             expanded = True,
             main_align = "space_evenly",
-            children = children,
+            children = data_parts,
         )
 
     return render.Root(
@@ -175,7 +179,7 @@ def main(config):
         child = render.Column(
             children = [
                 BLUE_HEADER_BAR,
-                MAIN_CONTENTS
+                root_contents
             ],
         ),
     )
