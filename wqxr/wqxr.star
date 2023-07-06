@@ -44,10 +44,9 @@ SCROLL_SPEED_OPTIONS = [
     ),
     schema.Option(
         display = "Slowest",
-        value = "200"
-    )
+        value = "200",
+    ),
 ]
-
 
 DEFAULT_SCROLL_DIRECTION = SCROLL_DIRECTION_OPTIONS[0].value
 DEFAULT_SCROLL_SPEED = SCROLL_SPEED_OPTIONS[0].value
@@ -156,7 +155,7 @@ def main(config):
         # For vertical mode, each child needs to be a WrappedText widget, so the text will wrap to the next line
 
         # (I also wrap each child in a Padding widget with appropriate spacing, so things can breathe a little bit)
-        pad = (0, 4, 0, 0) # (left, top, right, bottom)
+        pad = (0, 4, 0, 0)  # (left, top, right, bottom)
 
         if title:
             # Don't pad the top one because it doesn't need it
@@ -198,7 +197,7 @@ def main(config):
         child = render.Column(
             children = [
                 BLUE_HEADER_BAR,
-                root_contents
+                root_contents,
             ],
         ),
     )
@@ -267,7 +266,7 @@ def get_schema():
     )
 
 def custom_colors(use_custom_colors):
-    if use_custom_colors == "true": # Not a real Boolean, it's a string!
+    if use_custom_colors == "true":  # Not a real Boolean, it's a string!
         return [
             schema.Color(
                 id = "color_title",
