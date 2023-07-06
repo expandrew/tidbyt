@@ -22,6 +22,18 @@ COLORS = {
     "red": "#FF0000",
 }
 
+SCROLL_DIRECTION_OPTIONS = [
+    schema.Option(
+        display = "Horizontal",
+        value = "horizontal",
+    ),
+    schema.Option(
+        display = "Vertical",
+        value = "vertical",
+    ),
+]
+
+DEFAULT_SCROLL_DIRECTION = SCROLL_DIRECTION_OPTIONS[0].value
 DEFAULT_COLOR_TITLE = COLORS["light_blue"]
 DEFAULT_COLOR_COMPOSER = COLORS["white"]
 DEFAULT_COLOR_ENSEMBLE = COLORS["medium_gray"]
@@ -110,29 +122,60 @@ def main(config):
         color_ensemble = DEFAULT_COLOR_ENSEMBLE
         color_people = DEFAULT_COLOR_PEOPLE
 
-    children = []
     should_show_ensemble = config.bool("show_ensemble", DEFAULT_SHOW_ENSEMBLE)
     should_show_people = config.bool("show_people", DEFAULT_SHOW_PEOPLE)
+    scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
 
-    if title:
-        children.append(render.Marquee(width = 64, child = render.Text(content = title, font = "tb-8", color = color_title)))
-    if composer:
-        children.append(render.Marquee(width = 64, child = render.Text(content = composer, font = "tom-thumb", color = color_composer)))
-    if should_show_ensemble and ensemble:
-        children.append(render.Marquee(width = 64, child = render.Text(content = ensemble, font = "tom-thumb", color = color_ensemble)))
-    if should_show_people and people:
-        children.append(render.Marquee(width = 64, child = render.Text(content = people, font = "tom-thumb", color = color_people)))
+    MAIN_CONTENTS = None
+    children = []
+
+    if scroll_direction == "vertical":
+        # For vertical mode, each child needs to be a WrappedText widget, so the text will wrap to the next line
+        # (I also wrap each child in a Padding widget with appropriate spacing, so things can breathe a little bit)
+
+        pad = (0, 4, 0, 0) # (left, top, right, bottom)
+
+        if title:
+            # Don't pad the top one because it doesn't need it
+            children.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = title, font = "tb-8", color = color_title)))
+        if composer:
+            children.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = composer, font = "tom-thumb", color = color_composer)))
+        if should_show_ensemble and ensemble:
+            children.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = ensemble, font = "tom-thumb", color = color_ensemble)))
+        if should_show_people and people:
+            children.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = people, font = "tom-thumb", color = color_people)))
+
+        # For vertical mode, a Marquee with `scroll_direction = "vertical"` gets passed to Root; this handles the scrolling
+        MAIN_CONTENTS = render.Marquee(
+            scroll_direction = "vertical",
+            height = 27,
+            child = render.Column(children = children),
+        )
+
+    if scroll_direction == "horizontal":
+        # For horizontal mode, each child needs to be its own Marquee widget, so each line will scroll individually when too long
+        if title:
+            children.append(render.Marquee(width = 64, child = render.Text(content = title, font = "tb-8", color = color_title)))
+        if composer:
+            children.append(render.Marquee(width = 64, child = render.Text(content = composer, font = "tom-thumb", color = color_composer)))
+        if should_show_ensemble and ensemble:
+            children.append(render.Marquee(width = 64, child = render.Text(content = ensemble, font = "tom-thumb", color = color_ensemble)))
+        if should_show_people and people:
+            children.append(render.Marquee(width = 64, child = render.Text(content = people, font = "tom-thumb", color = color_people)))
+
+        # For horizontal, a Column gets passed to Root; this handles the vertical spacing
+        MAIN_CONTENTS = render.Column(
+            expanded = True,
+            main_align = "space_evenly",
+            children = children,
+        )
 
     return render.Root(
         max_age = 60,
         child = render.Column(
             children = [
                 BLUE_HEADER_BAR,
-                render.Column(
-                    expanded = True,
-                    main_align = "space_evenly",
-                    children = children,
-                ),
+                MAIN_CONTENTS
             ],
         ),
     )
@@ -155,6 +198,14 @@ def get_schema():
     return schema.Schema(
         version = "1",
         fields = [
+            schema.Dropdown(
+                id = "scroll_direction",
+                name = "Scroll direction",
+                desc = "Choose whether to scroll text horizontally or vertically",
+                icon = "alignJustify",
+                options = SCROLL_DIRECTION_OPTIONS,
+                default = DEFAULT_SCROLL_DIRECTION,
+            ),
             schema.Toggle(
                 id = "show_ensemble",
                 name = "Show ensemble",
