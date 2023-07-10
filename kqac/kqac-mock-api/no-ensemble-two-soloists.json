@@ -1,0 +1,28 @@
+{
+  "description": "Monday - Friday, 10 am - 2 pm",
+  "title": "Brandi Parisi",
+  "url": "https://www.allclassical.org/author/brandiparisi/",
+  "image": "https://www.allclassical.org/wp-content/hosts/host_brandi_parisi.jpg",
+  "song": {
+    "song_id": 393009,
+    "end": 1689015730,
+    "conductor": "",
+    "title": "Wie Melodien, Op 105/1",
+    "notes": "",
+    "urlTitle": "Wie+Melodien%2C+Op+105%2F1",
+    "label": "Telarc",
+    "soloist": "Zuill Bailey, cello",
+    "catalog": "32664",
+    "urlComposer": "Brahms%2C+Johannes",
+    "composer": "Brahms, Johannes",
+    "urlCatalog": "32664",
+    "duration": "00:01:43",
+    "urlLabel": "Telarc",
+    "ensemble": "Awadagin Pratt, piano",
+    "displaySong": true
+  },
+  "starttime": "10:00",
+  "endtime": "14:00",
+  "thumbnail": "https://www.allclassical.org/wp-content/hosts/host_brandi_parisi150.jpg",
+  "name": "Brandi Parisi"
+}

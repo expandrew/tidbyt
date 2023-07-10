@@ -83,6 +83,10 @@ def main(config):
     # NOW_PLAYING = "http://localhost:60899/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
     # NOW_PLAYING = "http://localhost:60899/404.json" # To test "Can't connect" (ex. API is down)
 
+    # Unhandled test data
+    # NOW_PLAYING = "http://localhost:60899/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata) (they put the second soloist in the "ensemble" line??? This breaks my "Show ensemble" setting)
+    # NOW_PLAYING = "http://localhost:60899/conductor-unreadable-character.json" # Conductor is listed as "Jakub Hrua", but should be "Jakub Hrůša" (this is their fault not mine; not sure how I'd actually address this without better data)
+
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
