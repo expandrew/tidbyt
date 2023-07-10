@@ -83,6 +83,9 @@ def main(config):
     # WHATS_ON = "http://localhost:1059/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
     # WHATS_ON = "http://localhost:1059/404.json" # To test "Can't connect" (ex. API is down)
 
+    # Unhandled test cases:
+    # WHATS_ON = "http://localhost:1059/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco)
+
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
