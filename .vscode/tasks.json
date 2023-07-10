@@ -50,7 +50,7 @@
       "label": "API: (WQXR): Serve mock API",
       "detail": "Serve fake responses from my local machine for different scenarios from the real WQXR API",
       "type": "shell",
-      "command": "python3 -m http.server 1059 --bind 127.0.0.1 --directory wqxr/wqxr-mock-api",
+      "command": "python3 -m http.server 61059 --bind 127.0.0.1 --directory wqxr/wqxr-mock-api",
       "problemMatcher": []
     }
   ]
