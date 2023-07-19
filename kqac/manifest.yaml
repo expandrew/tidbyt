@@ -1,0 +1,8 @@
+---
+id: all-classical-portland-kqac
+name: All Classical Portland (KQAC)
+summary: All Classical Portland (KQAC) Now Playing
+desc: Shows what's currently playing on All Classical Portland (KQAC)
+author: Andrew Westling
+fileName: kqac.star
+packageName: kqac
