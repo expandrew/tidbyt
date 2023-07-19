@@ -195,7 +195,6 @@ def main(config):
         )
 
     return render.Root(
-        max_age = 60,
         delay = scroll_speed,
         child = render.Column(
             children = [
