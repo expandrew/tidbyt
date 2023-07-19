@@ -50,13 +50,11 @@ SCROLL_SPEED_OPTIONS = [
 
 DEFAULT_SCROLL_DIRECTION = SCROLL_DIRECTION_OPTIONS[0].value
 DEFAULT_SCROLL_SPEED = SCROLL_SPEED_OPTIONS[0].value
-DEFAULT_SHOW_ENSEMBLE = False
-DEFAULT_SHOW_PEOPLE = True
+DEFAULT_SHOW_ENSEMBLE_INFO = False
 DEFAULT_USE_CUSTOM_COLORS = False
 DEFAULT_COLOR_TITLE = COLORS["light_blue"]
 DEFAULT_COLOR_COMPOSER = COLORS["white"]
-DEFAULT_COLOR_ENSEMBLE = COLORS["medium_gray"]
-DEFAULT_COLOR_PEOPLE = COLORS["medium_gray"]
+DEFAULT_COLOR_ENSEMBLE_INFO = COLORS["medium_gray"]
 
 HEADER_BAR = render.Stack(
     children = [
@@ -90,8 +88,7 @@ def main(config):
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
-    should_show_ensemble = config.bool("show_ensemble", DEFAULT_SHOW_ENSEMBLE)
-    should_show_people = config.bool("show_people", DEFAULT_SHOW_PEOPLE)
+    should_show_ensemble_info = config.bool("show_ensemble_info", DEFAULT_SHOW_ENSEMBLE_INFO)
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
 
     # Get data
@@ -141,13 +138,11 @@ def main(config):
     if use_custom_colors:
         color_title = config.str("color_title", DEFAULT_COLOR_TITLE)
         color_composer = config.str("color_composer", DEFAULT_COLOR_COMPOSER)
-        color_ensemble = config.str("color_ensemble", DEFAULT_COLOR_ENSEMBLE)
-        color_people = config.str("color_people", DEFAULT_COLOR_PEOPLE)
+        color_ensemble_info = config.str("color_ensemble_info", DEFAULT_COLOR_ENSEMBLE_INFO)
     else:
         color_title = DEFAULT_COLOR_TITLE
         color_composer = DEFAULT_COLOR_COMPOSER
-        color_ensemble = DEFAULT_COLOR_ENSEMBLE
-        color_people = DEFAULT_COLOR_PEOPLE
+        color_ensemble_info = DEFAULT_COLOR_ENSEMBLE_INFO
 
     # These are just for putting the content into
     root_contents = None
@@ -165,10 +160,11 @@ def main(config):
             data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = title, font = "tb-8", color = color_title)))
         if composer:
             data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = composer, font = "tom-thumb", color = color_composer)))
-        if should_show_ensemble and ensemble:
-            data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = ensemble, font = "tom-thumb", color = color_ensemble)))
-        if should_show_people and people:
-            data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = people, font = "tom-thumb", color = color_people)))
+        if should_show_ensemble_info:
+            if ensemble:
+                data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = ensemble, font = "tom-thumb", color = color_ensemble_info)))
+            if people:
+                data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = people, font = "tom-thumb", color = color_ensemble_info)))
 
         root_contents = render.Marquee(
             scroll_direction = "vertical",
@@ -183,10 +179,11 @@ def main(config):
             data_parts.append(render.Marquee(width = 64, child = render.Text(content = title, font = "tb-8", color = color_title)))
         if composer:
             data_parts.append(render.Marquee(width = 64, child = render.Text(content = composer, font = "tom-thumb", color = color_composer)))
-        if should_show_ensemble and ensemble:
-            data_parts.append(render.Marquee(width = 64, child = render.Text(content = ensemble, font = "tom-thumb", color = color_ensemble)))
-        if should_show_people and people:
-            data_parts.append(render.Marquee(width = 64, child = render.Text(content = people, font = "tom-thumb", color = color_people)))
+        if should_show_ensemble_info:
+            if ensemble:
+                data_parts.append(render.Marquee(width = 64, child = render.Text(content = ensemble, font = "tom-thumb", color = color_ensemble_info)))
+            if people:
+                data_parts.append(render.Marquee(width = 64, child = render.Text(content = people, font = "tom-thumb", color = color_ensemble_info)))
 
         root_contents = render.Column(
             expanded = True,
@@ -236,18 +233,11 @@ def get_schema():
                 default = DEFAULT_SCROLL_SPEED,
             ),
             schema.Toggle(
-                id = "show_ensemble",
-                name = "Show ensemble",
-                desc = "Show the ensemble, if applicable",
+                id = "show_ensemble_info",
+                name = "Show ensemble info",
+                desc = "Show the ensemble name, conductor, and/or soloist(s), if applicable",
                 icon = "peopleGroup",
-                default = DEFAULT_SHOW_ENSEMBLE,
-            ),
-            schema.Toggle(
-                id = "show_people",
-                name = "Show conductor and soloists",
-                desc = "Show the conductor and/or soloist(s), if applicable",
-                icon = "wandMagicSparkles",
-                default = DEFAULT_SHOW_PEOPLE,
+                default = DEFAULT_SHOW_ENSEMBLE_INFO,
             ),
             schema.Toggle(
                 id = "use_custom_colors",
@@ -293,24 +283,11 @@ def custom_colors(use_custom_colors):
                 ],
             ),
             schema.Color(
-                id = "color_ensemble",
-                name = "Color: Ensemble",
-                desc = "Choose your own color for the ensemble",
+                id = "color_ensemble_info",
+                name = "Color: Ensemble Info",
+                desc = "Choose your own color for the ensemble information (ensemble name, conductor, and/or soloists)",
                 icon = "palette",
-                default = DEFAULT_COLOR_ENSEMBLE,
-                palette = [
-                    COLORS["white"],
-                    COLORS["light_gray"],
-                    COLORS["medium_gray"],
-                    COLORS["dark_gray"],
-                ],
-            ),
-            schema.Color(
-                id = "color_people",
-                name = "Color: Conductor/Soloists",
-                desc = "Choose your own color for the conductor/soloists",
-                icon = "palette",
-                default = DEFAULT_COLOR_PEOPLE,
+                default = DEFAULT_COLOR_ENSEMBLE_INFO,
                 palette = [
                     COLORS["white"],
                     COLORS["light_gray"],
