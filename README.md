@@ -4,8 +4,10 @@ This is my repository for experimenting with Tidbyt development
 
 ## Apps
 
-- [**WQXR "What's On?"**](/wqxr/): Show what is currently playing on [WQXR](https://wqxr.org) on the Tidbyt
-  - ![WQXR "What's On?"](/wqxr/wqxr-horizontal.gif)
+- [**WQXR "What's On?"**](/wqxr/)
+  - Show what is currently playing on [WQXR](https://wqxr.org)
+- [**All Classical Portland (KQAC) "Now Playing"**](/kqac/)
+  - Show what is currently playing on [All Classical Portland (KQAC)](https://allclassical.org)
 
 ## Setup
 

@@ -3,6 +3,7 @@
   // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
+    // WQXR
     {
       "label": "Pixlet: (WQXR): Serve",
       "detail": "Start `wqxr.star` in Pixlet",
@@ -50,7 +51,59 @@
       "label": "API: (WQXR): Serve mock API",
       "detail": "Serve fake responses from my local machine for different scenarios from the real WQXR API",
       "type": "shell",
-      "command": "python3 -m http.server 1059 --bind 127.0.0.1 --directory wqxr/wqxr-mock-api",
+      "command": "python3 -m http.server 61059 --bind 127.0.0.1 --directory wqxr/wqxr-mock-api",
+      "problemMatcher": []
+    },
+
+    // KQAC
+    {
+      "label": "Pixlet: (KQAC): Serve",
+      "detail": "Start `kqac.star` in Pixlet",
+      "type": "shell",
+      "command": "pixlet serve kqac/kqac.star",
+      "problemMatcher": []
+    },
+    {
+      "label": "Pixlet: (KQAC): Format",
+      "detail": "Format `kqac.star` with Pixlet's built-in formatting",
+      "type": "shell",
+      "command": "pixlet format kqac/kqac.star",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "revealProblems": "onProblem",
+        "close": true
+      }
+    },
+    {
+      "label": "Pixlet: (KQAC): Render and push to my Tidbyt",
+      "detail": "Render `kqac.star` and push it to my Tidbyt",
+      "type": "shell",
+      "command": "pixlet render kqac/kqac.star && pixlet push --installation-id 'KQAC' promptly-relieved-relaxed-sparrowhawk-d4e kqac/kqac.webp",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "revealProblems": "onProblem",
+        "close": true
+      }
+    },
+    {
+      "label": "Pixlet: (KQAC): Generate the preview gif",
+      "detail": "Generate the `kqac.gif` preview GIF for my README",
+      "type": "shell",
+      "command": "pixlet render kqac/kqac.star --gif --magnify 5",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "revealProblems": "onProblem",
+        "close": true
+      }
+    },
+    {
+      "label": "API: (KQAC): Serve mock API",
+      "detail": "Serve fake responses from my local machine for different scenarios from the real KQAC API",
+      "type": "shell",
+      "command": "python3 -m http.server 60899 --bind 127.0.0.1 --directory kqac/kqac-mock-api",
       "problemMatcher": []
     }
   ]

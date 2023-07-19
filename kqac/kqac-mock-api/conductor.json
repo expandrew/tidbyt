@@ -1,0 +1,28 @@
+{
+  "description": "Monday - Friday, 6 am - 10 am",
+  "title": "Warren Black",
+  "url": "https://www.allclassical.org/author/warrenblack/",
+  "image": "https://www.allclassical.org/wp-content/hosts/host_warren_black150.jpg",
+  "song": {
+    "song_id": 392999,
+    "end": 1689008411,
+    "conductor": "John Eliot Gardiner",
+    "title": "Symphony No. 8 in F, Opus 93",
+    "notes": "",
+    "urlTitle": "Symphony+No.+8+in+F%2C+Opus+93",
+    "label": "Soli",
+    "soloist": "",
+    "catalog": "721",
+    "urlComposer": "Beethoven%2C+Ludwig+van",
+    "composer": "Beethoven, Ludwig van",
+    "urlCatalog": "721",
+    "duration": "00:24:23",
+    "urlLabel": "Soli",
+    "ensemble": "Revolutionary and Romantic Orchestra",
+    "displaySong": true
+  },
+  "starttime": "09:02",
+  "endtime": "10:00",
+  "thumbnail": "https://www.allclassical.org/wp-content/hosts/host_warren_black150.jpg",
+  "name": "Warren Black"
+}

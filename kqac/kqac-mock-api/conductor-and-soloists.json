@@ -1,0 +1,28 @@
+{
+  "description": "Monday - Friday, 10 am - 2 pm",
+  "title": "Brandi Parisi",
+  "url": "https://www.allclassical.org/author/brandiparisi/",
+  "image": "https://www.allclassical.org/wp-content/hosts/host_brandi_parisi.jpg",
+  "song": {
+    "song_id": 393005,
+    "end": 1689015028,
+    "conductor": "Alexander Vedernikov",
+    "title": "Violin Concerto in a minor, Opus 82",
+    "notes": "",
+    "urlTitle": "Violin+Concerto+in+a+minor%2C+Opus+82",
+    "label": "Hyperion",
+    "soloist": "Chloë Hanslip, violin",
+    "catalog": "67940",
+    "urlComposer": "Glazunov%2C+Alexander",
+    "composer": "Glazunov, Alexander",
+    "urlCatalog": "67940",
+    "duration": "00:20:41",
+    "urlLabel": "Hyperion",
+    "ensemble": "Swiss Italian Orchestra",
+    "displaySong": true
+  },
+  "starttime": "10:00",
+  "endtime": "14:00",
+  "thumbnail": "https://www.allclassical.org/wp-content/hosts/host_brandi_parisi150.jpg",
+  "name": "Brandi Parisi"
+}
