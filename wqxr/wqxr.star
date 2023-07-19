@@ -85,7 +85,8 @@ def main(config):
     # WHATS_ON = "http://localhost:1059/soloist-data-uses-role.json" # Piece has a soloist, but the instrument part is empty (instead it uses "role" for this part)
 
     # Unhandled test cases:
-    # WHATS_ON = "http://localhost:1059/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco)
+    # WHATS_ON = "http://localhost:1059/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco in composer)
+    # WHATS_ON = "http://localhost:1059/long-song-title.json" # Long song title (figure out how to handle on vertical mode; it gets cut off) (ex. Fantasy-Septet in song title)
 
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
