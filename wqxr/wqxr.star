@@ -82,6 +82,11 @@ def main(config):
     # WHATS_ON = "http://localhost:61059/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
     # WHATS_ON = "http://localhost:61059/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
     # WHATS_ON = "http://localhost:61059/404.json" # To test "Can't connect" (ex. API is down)
+    # WHATS_ON = "http://localhost:61059/soloist-data-uses-role.json" # Piece has a soloist, but the instrument part is empty (instead it uses "role" for this part)
+
+    # Unhandled test cases:
+    # WHATS_ON = "http://localhost:61059/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco in composer)
+    # WHATS_ON = "http://localhost:61059/long-song-title.json" # Long song title (figure out how to handle on vertical mode; it gets cut off) (ex. Fantasy-Septet in song title)
 
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
@@ -192,7 +197,6 @@ def main(config):
         )
 
     return render.Root(
-        max_age = 60,
         delay = scroll_speed,
         child = render.Column(
             children = [
@@ -208,7 +212,8 @@ def build_people(conductor, soloists):
     if soloists:
         soloist_parts = []
         for soloist in soloists:
-            soloist_parts.append("%s, %s" % (soloist["musician"]["name"], soloist["instruments"][0]))
+            soloist_instrument = (len(soloist["instruments"]) and soloist["instruments"][0]) or soloist["role"]
+            soloist_parts.append("%s, %s" % (soloist["musician"]["name"], soloist_instrument))
         output.append(", ".join(soloist_parts))
 
     if conductor:
