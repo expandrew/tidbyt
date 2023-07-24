@@ -72,18 +72,18 @@ ERROR_CONTENT = render.Column(
 )
 
 def main(config):
-    # Test data (run the "API: (KQAC): Serve mock API" VS Code task then uncomment a line below to test):
-    # NOW_PLAYING = "http://localhost:60899/between-songs.json" # No catalog item (ex. between songs)
-    # NOW_PLAYING = "http://localhost:60899/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
-    # NOW_PLAYING = "http://localhost:60899/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
-    # NOW_PLAYING = "http://localhost:60899/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
-    # NOW_PLAYING = "http://localhost:60899/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
-    # NOW_PLAYING = "http://localhost:60899/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
-    # NOW_PLAYING = "http://localhost:60899/404.json" # To test "Can't connect" (ex. API is down)
+    # Test data (run the "API: Serve mock API" VS Code task then uncomment a line below to test):
+    # NOW_PLAYING = "http://localhost:61010/between-songs.json" # No catalog item (ex. between songs)
+    # NOW_PLAYING = "http://localhost:61010/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
+    # NOW_PLAYING = "http://localhost:61010/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
+    # NOW_PLAYING = "http://localhost:61010/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
+    # NOW_PLAYING = "http://localhost:61010/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
+    # NOW_PLAYING = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
+    # NOW_PLAYING = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
 
     # Unhandled test data
-    # NOW_PLAYING = "http://localhost:60899/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata) (they put the second soloist in the "ensemble" line??? This breaks my "Show ensemble" setting)
-    # NOW_PLAYING = "http://localhost:60899/conductor-unreadable-character.json" # Conductor is listed as "Jakub Hrua", but should be "Jakub Hrůša" (this is their fault not mine; not sure how I'd actually address this without better data)
+    # NOW_PLAYING = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata) (they put the second soloist in the "ensemble" line??? This breaks my "Show ensemble" setting)
+    # NOW_PLAYING = "http://localhost:61010/conductor-unreadable-character.json" # Conductor is listed as "Jakub Hrua", but should be "Jakub Hrůša" (this is their fault not mine; not sure how I'd actually address this without better data)
 
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
