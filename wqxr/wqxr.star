@@ -74,19 +74,19 @@ ERROR_CONTENT = render.Column(
 )
 
 def main(config):
-    # Test data (run the "API: (WQXR): Serve mock API" VS Code task then uncomment a line below to test):
-    # WHATS_ON = "http://localhost:61059/between-songs.json" # No catalog item (ex. between songs)
-    # WHATS_ON = "http://localhost:61059/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
-    # WHATS_ON = "http://localhost:61059/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
-    # WHATS_ON = "http://localhost:61059/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
-    # WHATS_ON = "http://localhost:61059/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
-    # WHATS_ON = "http://localhost:61059/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
-    # WHATS_ON = "http://localhost:61059/404.json" # To test "Can't connect" (ex. API is down)
-    # WHATS_ON = "http://localhost:61059/soloist-data-uses-role.json" # Piece has a soloist, but the instrument part is empty (instead it uses "role" for this part)
+    # Test data (run the "API: Serve mock API" VS Code task then uncomment a line below to test):
+    # WHATS_ON = "http://localhost:61010/between-songs.json" # No catalog item (ex. between songs)
+    # WHATS_ON = "http://localhost:61010/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
+    # WHATS_ON = "http://localhost:61010/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
+    # WHATS_ON = "http://localhost:61010/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
+    # WHATS_ON = "http://localhost:61010/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
+    # WHATS_ON = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
+    # WHATS_ON = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
+    # WHATS_ON = "http://localhost:61010/soloist-data-uses-role.json" # Piece has a soloist, but the instrument part is empty (instead it uses "role" for this part)
 
     # Unhandled test cases:
-    # WHATS_ON = "http://localhost:61059/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco in composer)
-    # WHATS_ON = "http://localhost:61059/long-song-title.json" # Long song title (figure out how to handle on vertical mode; it gets cut off) (ex. Fantasy-Septet in song title)
+    # WHATS_ON = "http://localhost:61010/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco in composer)
+    # WHATS_ON = "http://localhost:61010/long-song-title.json" # Long song title (figure out how to handle on vertical mode; it gets cut off) (ex. Fantasy-Septet in song title)
 
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
