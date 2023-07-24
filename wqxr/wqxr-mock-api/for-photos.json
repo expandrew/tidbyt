@@ -1,0 +1,22 @@
+{
+  "has_playlists": true,
+  "current_show": {
+    "title": "Middays with Annie Bergen"
+  },
+  "expires": "2023-06-20T13:37:09",
+  "current_playlist_item": {
+    "catalog_entry": {
+      "conductor": {
+        "name": "Neeme Järvi"
+      },
+      "composer": {
+        "name": "Sergei Prokofiev"
+      },
+      "soloists": [],
+      "title": "Lieutenant Kijé, Op. 60",
+      "ensemble": {
+        "name": "Royal Scottish National Orchestra"
+      }
+    }
+  }
+}

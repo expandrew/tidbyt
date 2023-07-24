@@ -1,0 +1,88 @@
+{
+  "has_playlists": true,
+  "future": [],
+  "current_show": {
+    "iso_start": "2023-07-23T16:00:00+00:00",
+    "description": "<p>Clayelle Dalferes hosts weekend afternoons on WQXR.</p>",
+    "fullImage": {
+      "url": "https://media.wnyc.org/i/300/300/l/80/1/WQXR_Clayelle.png",
+      "width": 300,
+      "caption": "",
+      "type": "image/png",
+      "height": 300
+    },
+    "site_id": 2,
+    "start_ts": 1690128000,
+    "iso_end": "2023-07-23T21:00:00+00:00",
+    "listImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/1/WQXR_Clayelle.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "pk": 152300,
+    "show_url": "https://www.wqxr.org/shows/clayelle-dalferes",
+    "end": "2023-07-23T17:00:00-0400",
+    "title": "Weekend Afternoons with Clayelle Dalferes",
+    "url": "https://www.wqxr.org/shows/clayelle-dalferes",
+    "end_ts": 1690146000,
+    "schedule_ref": "ShowSchedule:763",
+    "group_slug": "clayelle-dalferes",
+    "detailImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/1/WQXR_Clayelle.png",
+      "width": 60,
+      "caption": "",
+      "type": "image/png",
+      "height": 60
+    },
+    "start": "2023-07-23T12:00:00-0400"
+  },
+  "expires": "2023-07-23T12:30:40",
+  "current_playlist_item": {
+    "start_time_ts": 1690128661,
+    "stream": "wqxr",
+    "playlist_entry_id": 1555828,
+    "start_time": "2023-07-23T12:11:01",
+    "playlist_page_url": "http://www.wqxr.org/playlists/show/terrance-mcknight/2017/aug/08/",
+    "comments_url": "/api/list/comments/177/59287/",
+    "iso_start_time": "2023-07-23T16:11:01+00:00",
+    "catalog_entry": {
+      "reclabel": {
+        "url": "",
+        "name": "Nimbus"
+      },
+      "conductor": {
+        "url": "/music/musicians/adam-fischer/",
+        "pk": 3793,
+        "slug": "adam-fischer",
+        "name": "Adam Fischer"
+      },
+      "catno": "5590/4",
+      "composer": {
+        "url": "/music/musicians/franz-joseph-haydn/",
+        "pk": 1334,
+        "slug": "franz-joseph-haydn",
+        "name": "Franz Joseph Haydn"
+      },
+      "attribution": "",
+      "soloists": [],
+      "mm_uid": 134424,
+      "title": "Symphony No. 63 in C Major \"La Roxelane\"",
+      "url": "http://www.wqxr.org/music/recordings/29595/",
+      "additional_composers": [],
+      "audio_may_download": true,
+      "length": 1174,
+      "pk": 29595,
+      "arkiv_link": "http://www.arkivmusic.com/classical/Playlist?source=WQXR&cat=5590%2F4&id=134424&label=Nimbus",
+      "audio": "https://chrt.fm/track/53A61E/pdst.fm/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/",
+      "ensemble": {
+        "url": "/music/ensembles/austro-hungarian-haydn-orchestra/",
+        "pk": 772,
+        "slug": "austro-hungarian-haydn-orchestra",
+        "name": "Austro-Hungarian Haydn Orchestra"
+      },
+      "additional_ensembles": []
+    }
+  }
+}

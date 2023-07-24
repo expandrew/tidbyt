@@ -85,6 +85,9 @@ def main(config):
     # NOW_PLAYING = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata) (they put the second soloist in the "ensemble" line??? This breaks my "Show ensemble" setting)
     # NOW_PLAYING = "http://localhost:61010/conductor-unreadable-character.json" # Conductor is listed as "Jakub Hrua", but should be "Jakub Hrůša" (this is their fault not mine; not sure how I'd actually address this without better data)
 
+    # For product photos
+    # NOW_PLAYING = "http://localhost:61010/for-photos.json"
+
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))

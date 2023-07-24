@@ -88,6 +88,12 @@ def main(config):
     # WHATS_ON = "http://localhost:61010/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco in composer)
     # WHATS_ON = "http://localhost:61010/long-song-title.json" # Long song title (figure out how to handle on vertical mode; it gets cut off) (ex. Fantasy-Septet in song title)
 
+    # For product photos
+    # WHATS_ON = "http://localhost:61010/for-photos.json"
+    # WHATS_ON = "http://localhost:61010/great-fit-for-vertical-scroll-haydn.json"
+    # WHATS_ON = "http://localhost:61010/great-fit-for-vertical-scroll-janacek.json"
+
+
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
