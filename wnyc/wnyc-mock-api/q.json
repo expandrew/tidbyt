@@ -1,0 +1,43 @@
+{
+  "has_playlists": false,
+  "future": [],
+  "current_show": {
+    "iso_start": "2023-07-25T02:00:00+00:00",
+    "description": "<p>Q is an energetic daily arts and culture program from the CBC hosted by Tom Power.</p>",
+    "fullImage": {
+      "url": "https://media.wnyc.org/i/300/300/l/80/2020/10/Q_cbc.jpg",
+      "width": 300,
+      "caption": "q",
+      "type": "image/jpeg",
+      "height": 300
+    },
+    "site_id": 1,
+    "start_ts": 1690250400,
+    "iso_end": "2023-07-25T03:00:00+00:00",
+    "listImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/2020/10/Q_cbc.jpg",
+      "width": 60,
+      "caption": "q",
+      "type": "image/jpeg",
+      "height": 60
+    },
+    "pk": 213871,
+    "show_url": "https://www.wnyc.org/shows/q",
+    "end": "2023-07-24T23:00:00-0400",
+    "title": "Q",
+    "url": "https://www.wnyc.org/shows/q",
+    "end_ts": 1690254000,
+    "schedule_ref": "ShowSchedule:626",
+    "group_slug": "q",
+    "detailImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/2020/10/Q_cbc.jpg",
+      "width": 60,
+      "caption": "q",
+      "type": "image/jpeg",
+      "height": 60
+    },
+    "start": "2023-07-24T22:00:00-0400"
+  },
+  "expires": "2023-07-24T22:00:55",
+  "current_playlist_item": null
+}

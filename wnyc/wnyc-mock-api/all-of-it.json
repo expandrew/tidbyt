@@ -1,0 +1,48 @@
+{
+  "has_playlists": false,
+  "future": [],
+  "current_show": {
+    "iso_start": "2023-07-24T16:00:00+00:00",
+    "description": "Ludwig Göransson on scoring 'Oppenheimer.' Reacting to the premiere of 'Barbie.' How one journalist stood up to nationalism in India. Notes From America celebrates diaspora with music.",
+    "fullImage": {
+      "url": "https://media.wnyc.org/i/300/300/l/80/2023/07/AP23202015292538.jpg",
+      "width": 300,
+      "caption": "Advertisements for the films \"Oppenheimer\" and \"Barbie\" appear at AMC Theaters at The Grove on Thursday, July 20, 2023, in Los Angeles.",
+      "type": "image/jpeg",
+      "height": 300
+    },
+    "comments_url": "/api/list/comments/23/1345780/",
+    "start_ts": 1690214400,
+    "iso_end": "2023-07-24T18:00:00+00:00",
+    "listImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/2023/07/AP23202015292538.jpg",
+      "width": 60,
+      "caption": "Advertisements for the films \"Oppenheimer\" and \"Barbie\" appear at AMC Theaters at The Grove on Thursday, July 20, 2023, in Los Angeles.",
+      "type": "image/jpeg",
+      "height": 60
+    },
+    "show_title": "All Of It",
+    "episode_pk": 1345780,
+    "show_url": "https://www.wnyc.org/shows/all-of-it",
+    "end": "2023-07-24T14:00:00-0400",
+    "title": "Ludwig Göransson on 'Oppenheimer', 'Barbie' Reviews, 'While We Watched', 'Notes From America' Explores Music Through Diaspora",
+    "url": "http://www.wnyc.org/story/all-of-it-2023-07-24/",
+    "site_id": 1,
+    "end_ts": 1690221600,
+    "group_image": "https://media.wnyc.org/i/130/130/l/80/2020/06/AllOfIt.png",
+    "schedule_ref": "ShowSchedule:1398",
+    "detail_api_url": "/api/story/1345780/",
+    "group_slug": "all-of-it",
+    "pk": 882225,
+    "start": "2023-07-24T12:00:00-0400",
+    "detailImage": {
+      "url": "https://media.wnyc.org/i/60/60/l/80/2023/07/AP23202015292538.jpg",
+      "width": 60,
+      "caption": "Advertisements for the films \"Oppenheimer\" and \"Barbie\" appear at AMC Theaters at The Grove on Thursday, July 20, 2023, in Los Angeles.",
+      "type": "image/jpeg",
+      "height": 60
+    }
+  },
+  "expires": "2023-07-24T12:29:38",
+  "current_playlist_item": null
+}
