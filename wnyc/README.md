@@ -2,9 +2,17 @@
 
 Show what's currently playing on [WNYC](https://wnyc.org) on Tidbyt
 
-| Horizontal                                      | Vertical                                      |
-| ----------------------------------------------- | --------------------------------------------- |
-| ![WNYC "What's On?"](/wnyc/wnyc-horizontal.gif) | ![WNYC "What's On?"](/wnyc/wnyc-vertical.gif) |
+![WNYC "What's On?"](/wnyc/wnyc.gif)
+
+## Settings
+
+You can change the following settings:
+
+- **Scroll speed**: Slow down the scroll speed of the text
+- **Show description**: Show the description of the show
+- **Use custom colors**: Choose your own text colors
+  - **Color: Show Title**: Choose your own color for the current show's title
+  - **Color: Description**: Choose your own color for the description of the current show
 
 ## Development
 

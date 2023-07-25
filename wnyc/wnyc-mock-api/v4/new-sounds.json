@@ -1,0 +1,440 @@
+{
+  "links": {
+    "first": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "last": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "whats-on-now",
+      "id": "1",
+      "attributes": {
+        "name": "WNYC 93.9 FM",
+        "slug": "wnyc-fm939",
+        "short-description": "News, Culture & Talk",
+        "has-playlists": false,
+        "image-logo": "https://media.wnyc.org/i/500/500/c/80/1/wnyc_2_1.png",
+        "schedule-url": "http://www.wnyc.org/schedule/?scheduleStation=wnyc-fm939",
+        "playlist-url": "http://www.wnyc.org/playlist-daily/?scheduleStation=wnyc-fm939",
+        "whats-on": null,
+        "audio-bumper": "/streambumper/streambumper000001_wnycfm.mp3",
+        "aac": "https://fm939.wnyc.org/wnycfm.aac",
+        "mp3": "https://fm939.wnyc.org/wnycfm",
+        "mobile-aac": "https://fm939.wnyc.org/wnycfm-mobile.aac",
+        "mobile-mp3": "https://fm939.wnyc.org/wnycfm",
+        "hls": "https://hls-live.wnyc.org/wnycfm32-hls/playlist.m3u8",
+        "twitter-handle": "",
+        "site-id": 1,
+        "order": 1
+      },
+      "relationships": {
+        "current-show": {
+          "data": {
+            "type": "show-schedule",
+            "id": "676"
+          }
+        },
+        "current-airing": {
+          "data": null
+        },
+        "current-episode": {
+          "data": {
+            "type": "episode",
+            "id": "1345890"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "episode",
+      "id": "1345890",
+      "attributes": {
+        "analytics-code": "ExperimentalStory:4512-jon-hassell-influence-encore $A1$AD3408$V0$Me$D15$HS1$HC0$B0$SS++$C$SNew Sounds$T!music!brian_eno!hugo_marsh!sam_gendel!jack_wyllie!jon_hassell!kirk_barley!arve_henriksen!paradise_cinema!daniel_herskedal!nils_petter_molvaer!$APnewsounds/newsounds072423.mp3$",
+        "appearances": {
+          "producers": [],
+          "hosts": [],
+          "authors": []
+        },
+        "audio": "https://chrt.fm/track/53A61E/pdst.fm/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/newsounds/newsounds072423.mp3?awCollectionId=385&awEpisodeId=1345890",
+        "audio-available": true,
+        "audio-eventually": true,
+        "audio-duration-readable": "56 min",
+        "audio-may-download": false,
+        "audio-may-embed": true,
+        "audio-may-stream": true,
+        "body": "<p>The late trumpeter, composer and electronic pioneer Jon Hassell took the sound of the trumpet and processed it to make it almost unrecognizable – breathy and otherworldly, melodic and sensual. Hassell had studied at Eastman, played with La Monte Young’s Theater of Eternal Music, played in the first recording of Terry Riley’s <em>In C</em>, and traveled to India with Young and Riley to study with Pandit Pran Nath (<a href=\"https://www.newsounds.org/story/jon-hassell-international-man-mystery/\">Phil Kline</a>.) He died on June 26, 2021.</p>\n<p>Hassell adapted the traditional Indian vocal style for the trumpet - and also used electronics, specifically the harmonizer– which made it sound like three trumpets were playing together. He pioneered a musical ethos he dubbed 'Fourth World' and together with Brian Eno, released the record, “Possible Musics,” in 1980. (Host note: \"Possible Musics\" was almost the name of this program when it started back in 1982.)</p>\n<p>For this show, we celebrate the late Jon Hassell and his musical legacy by sampling his work, and some of the musicians he inspired: Norwegian trumpeters Arve Henriksen and Nils Petter Molvær, along with Norwegian tuba player, composer, and bass trumpet player Daniel Hersekdal. There’s also music by L.A.-based sax player Sam Gendel, along with a soundscape by Yorkshire born composer and producer Kirk Barley.</p>\n<p>Listen to Hassell in collaboration with Brian Eno, and a recording Hassell did with<span> </span><a href=\"https://www.farafina.com/en/about/\" target=\"_blank\">Farafina</a>, a music and dance group from Burkina Faso, established in 1978. Plus, listen to music from Hassell’s 2018 record, <em>Listening to Pictures</em>, which uses harmonizer, along with electronic sampling, loops, overdubs and distorted layers of voicings to achieve its “Fourth World aesthetic.”</p>\n<p>Hear multi-instrumentalist Jack Wyllie of Portico Quartet and Szun Waves working under the moniker Paradise Cinema and a piece, “Possible Futures,” which calls back to the “Possible Musics” title. The work was recorded in Dakar, Senegal in collaboration with mbalax percussionists Khadim Mbaye (saba drums) and Tons Sambe (tama drums). Also, hear music by violinist Hugh Marsh, who had been living with and sharing studio space with Jon Hassell, as they were working on the 2018 release,<span> </span><em>Listening to Pictures</em>, and more.</p>\n<p>Additionally, thanks to<span> </span><a href=\"https://crackmagazine.net/\" target=\"_blank\">Crack Magazine</a>, read a<span> </span><a href=\"https://crackmagazine.net/article/lists/13-artists-jon-hassell-legacy-gigi-masin-yu-su-ami-dang-laraaji-britton-powell/\" target=\"_blank\">collection of testimonials by 13 artists on Hassell’s musical legacy</a>, including Ami Dang, members of The Comet Is Coming, Laraaji, and Felicia Atkinson. –<span> </span><em>Caryn Havlik</em></p>\n<p><em>Revisit the wayback machine for this 2009 interview with Jon Hassell on the release of \"Last night the moon came dropping its clothes in the street.\"</em></p>\n<p><iframe frameborder=\"0\" height=\"130\" scrolling=\"no\" src=\"https://www.wnyc.org/widgets/ondemand_player/newsounds/#file=/audio/json/116007/&amp;share=1\" width=\"100%\"></iframe></p>\n<p><span>#4512, The Jon Hassell Influence (First Aired 7/07/2021)</span></p>\n<p><span>ARTIST: Jon Hassell and Brian Eno </span><br><span>WORK: Delta Rain Dream [2:00]</span><br><span>RECORDING: Fourth World, Vol. 1: <span>Possible Musics</span><span> </span></span><br><span>SOURCE: EG #7 </span><br><span>INFO: <a href=\"http://www.amazon.com/exec/obidos/ASIN/B000003S2B/wnycorg-20\">Amazon.com</a></span></p>\n<p><span>ARTIST: Jon Hassell &amp; Farafina<br><span>WORK: A Vampire Dances (Symmetry)[4:01]</span><br><span>RECORDING: Flash of the Spirit</span><br><span>SOURCE:  Intuition/Capitol Records 91186</span><br><span>INFO: Out of print, but download from Amazon.com or iTunes</span></span></p>\n<p><span>ARTIST: Paradise Cinema<br><span>WORK: Possible Futures [6:18]</span><br><span>RECORDING: Paradise Cinema</span><br><span>SOURCE: Gondwana Records</span><br><span>INFO:<span> </span></span><a href=\"https://paradise-cinema.bandcamp.com/album/paradise-cinema\" target=\"_blank\">paradise-cinema.bandcamp.com</a></span></p>\n<p><span>ARTIST:<span><span><span> </span>Daniel Herskedal</span></span><br><span>WORK:<span><span><span><span> </span>The Mariner's Cross</span></span></span> [3:15]</span><br><span>RECORDING:<span><span><span> </span>Harbour</span></span></span><br><span>SOURCE:<span><span><span> </span>ECM Records</span></span></span><span><br></span><span>INFO:<span><span><span><span><span> </span><a href=\"https://www.ecmrecords.com/\" target=\"_blank\">ecmrecords.com</a></span></span></span></span></span></span></p>\n<p><span><span><span><span><span><span>ARTIST: Jon Hassell<br><span>WORK: Dreaming [6:09]</span><br><span>RECORDING: Listening to Pictures</span><br><span>SOURCE: Ndeya Records</span><br><span>INFO: <a href=\"https://jonhassell.bandcamp.com/album/listening-to-pictures-pentimento-volume-one\" target=\"_blank\">jonhassell.bandcamp.com</a></span></span></span></span></span></span></span></p>\n<p><span><span><span><span><span><span><span>ARTIST: Arve Henriksen<br><span>WORK:<span><span> </span>Assembly</span> [3:56]</span><br><span>RECORDING: Cartography</span><br><span>SOURCE: ECM 2086</span><br><span>INFO: </span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><a href=\"http://www.ecmrecords.com/\">ecmrecords.com</a></span></span></span></span></span></span></span></p>\n<p><span><span><span><span><span><span><span>ARTIST: Hugh Marsh<br>WORK: I Laid Down in the Snow [3:56]<br>RECORDING: Violin Vocations<br>SOURCE: Western Vinyl<br>INFO:<span> </span></span></span></span></span></span></span></span><span><span><span><span><span><span><span><a href=\"https://hughmarsh.bandcamp.com/album/violinvocations\" target=\"_blank\">hughmarsh.bandcamp.com</a></span></span></span></span></span></span></span></p>\n<p><span>ARTIST: Sam Gendel<br><span>WORK: Final Chamber [4:49]</span><br><span>RECORDING: Pass If Music</span><br><span>SOURCE: Leaving Records</span><br><span>INFO: <a href=\"https://leavingrecords.bandcamp.com/album/pass-if-music\" target=\"_blank\">leavingrecords.bandcamp.com</a></span></span></p>\n<p><span><span>ARTIST: Nils Petter Molvær<br><span>WORK: A Small Realm [3:21]</span><br><span>RECORDING: Baboon Moon</span><br><span>SOURCE: Thirsty Ear THI 57201</span><br><span>INFO:<span> </span><a href=\"http://www.thirstyear.com/\" target=\"_blank\">thirstyear.com</a></span></span></span></p>\n<p><span><span><span>ARTIST: Kirk Barley<br><span>WORK:<span><span> </span>Bleached</span><span> </span>[3:43]</span><br><span>RECORDING: Landscapes</span><br><span>SOURCE:<span> </span><a href=\"https://kirkbarley.bandcamp.com/album/landscapes\" target=\"_blank\">kirkbarley.bandcamp.com</a></span><br><span>INFO:<span><span> </span><a href=\"https://kirkbarley.com\" target=\"_blank\">kirkbarley.com</a></span></span></span></span></span></p>\n<p><span><span><span>ARTIST: Brian Eno, ft. Jon Hassell<br><span>WORK: Shadow [2:12]</span><br><span>RECORDING: Ambient 4 / On Land</span><br><span>SOURCE: EG Records 20</span><br><span>INFO: Available at Amazon.com</span></span></span></span></p>",
+        "canonical-url": null,
+        "channel": "",
+        "channel-title": "",
+        "chunks": {
+          "show-sidebar-top": null,
+          "story": null,
+          "site-sidebar-top": null,
+          "show-sidebar-bottom": null,
+          "site-sidebar-bottom": null
+        },
+        "cms-pk": 1345890,
+        "comments-count": 0,
+        "enable-comments": true,
+        "date-line-ts": 1690225740,
+        "edit-link": "cms/episode/1345890",
+        "embed-code": "<iframe frameborder=\"0\" scrolling=\"no\" height=\"130\" width=\"100%\" src=\"https://www.wnyc.org/widgets/ondemand_player/newsounds/#file=/audio/json/1345890/&share=1\"></iframe>",
+        "estimated-duration": 3408,
+        "headers": {
+          "brand": {
+            "url": "https://www.newsounds.org/shows/newsounds",
+            "title": "New Sounds",
+            "slug": "newsounds",
+            "logo-image": {
+              "alt-text": "",
+              "name": "1/ns_showcard-newsounds.png",
+              "source": null,
+              "url": "https://media.wnyc.org/i/600/600/l/80/1/ns_showcard-newsounds.png",
+              "h": 600,
+              "is-display": false,
+              "crop": "l",
+              "caption": "",
+              "credits-url": "",
+              "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/ns_showcard-newsounds.png",
+              "w": 600,
+              "id": 170723,
+              "credits-name": "newsounds"
+            }
+          },
+          "links": [
+            {
+              "url": "https://www.newsounds.org/shows/newsounds",
+              "title": "New Sounds",
+              "item-type": "show",
+              "slug": "newsounds"
+            }
+          ]
+        },
+        "header-donate-chunk": null,
+        "image-caption": "",
+        "image-main": {
+          "alt-text": "Jon Hassell",
+          "name": "1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+          "source": null,
+          "url": "https://media.wnyc.org/i/801/800/c/80/1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+          "h": 800,
+          "is-display": true,
+          "crop": "c",
+          "caption": "Jon Hassell",
+          "credits-url": "http://www.muzines.co.uk/",
+          "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+          "w": 801,
+          "id": 176659,
+          "credits-name": "Muzines"
+        },
+        "item-type": "episode",
+        "item-type-id": 23,
+        "newscast": "",
+        "newsdate": "2023-07-24T15:09:00.881261-04:00",
+        "npr-analytics-dimensions": [
+          "NYPR",
+          "episode",
+          "1345890",
+          "0",
+          "music",
+          "",
+          "arve_henriksen,brian_eno,daniel_herskedal,hugo_marsh,jack_wyllie,jon_hassell,kirk_barley,music,nils_petter_molvaer,paradise_cinema,sam_gendel",
+          "1",
+          "New Sounds",
+          "1",
+          "New Sounds",
+          "2023-07-24 15:09:00.881261-04:00",
+          "571",
+          "none"
+        ],
+        "playlist": [],
+        "podcast-links": [],
+        "producing-organizations": [
+          {
+            "url": "http://www.newsounds.org/",
+            "logo": null,
+            "name": "New Sounds"
+          }
+        ],
+        "publish-at": "2023-07-24T15:07:49",
+        "publish-status": "published",
+        "show": "newsounds",
+        "show-tease": "<p>Daily showcase of weird and wonderful music from artists, composers and traditional musicians &mdash; all gleefully oblivious of their genres.</p>",
+        "show-title": "New Sounds",
+        "show-producing-orgs": [
+          {
+            "url": "http://www.wqxr.org",
+            "logo": null,
+            "name": "WQXR"
+          }
+        ],
+        "series": [],
+        "short-title": "",
+        "site-id": 15,
+        "slug": "4512-jon-hassell-influence-encore",
+        "slideshow": [],
+        "tags": [
+          "arve_henriksen",
+          "brian_eno",
+          "daniel_herskedal",
+          "hugo_marsh",
+          "jack_wyllie",
+          "jon_hassell",
+          "kirk_barley",
+          "music",
+          "nils_petter_molvaer",
+          "paradise_cinema",
+          "sam_gendel"
+        ],
+        "tease": "Celebrate the late trumpeter and composer&nbsp;Jon Hassell's musical legacy, from&nbsp;his work with Brian Eno&nbsp;to his recent 2018 record, along with work&nbsp;by the musicians he inspired.",
+        "template": "story_default",
+        "title": "#4512, The Jon Hassell Influence",
+        "transcript": "",
+        "twitter-headline": "#4512, The Jon Hassell Influence",
+        "twitter-handle": "newsounds",
+        "url": "http://www.newsounds.org/story/4512-jon-hassell-influence-encore/",
+        "video": null
+      },
+      "relationships": {
+        "segments": {
+          "data": []
+        }
+      }
+    },
+    {
+      "type": "image",
+      "id": "170723",
+      "attributes": {
+        "caption": "",
+        "credits-url": "",
+        "credits-name": "newsounds",
+        "crop": "l",
+        "h": 600,
+        "is-display": false,
+        "name": "1/ns_showcard-newsounds.png",
+        "source": "",
+        "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/ns_showcard-newsounds.png",
+        "url": "https://media.wnyc.org/i/600/600/l/80/1/ns_showcard-newsounds.png",
+        "w": 600
+      }
+    },
+    {
+      "type": "show",
+      "id": "385",
+      "attributes": {
+        "slug": "newsounds",
+        "title": "New Sounds",
+        "url": "https://www.newsounds.org/shows/newsounds",
+        "linkroll": [
+          {
+            "href": null,
+            "nav-slug": "episodes",
+            "title": "Episodes"
+          },
+          {
+            "href": null,
+            "nav-slug": "the-podcast",
+            "title": "The Podcast"
+          },
+          {
+            "href": null,
+            "nav-slug": "about",
+            "title": "About"
+          }
+        ],
+        "about": {
+          "body": "<p>Daily showcase of weird and wonderful music from artists, composers and traditional musicians — all gleefully oblivious of their genres.</p>\n<center><a href=\"https://music.amazon.com/podcasts/63ec09c9-b20c-4a3d-b66d-ae363079a8c4/new-sounds-from-wnyc\"> <img src=\"https://media.wnyc.org/i/165/40/l/80/2022/11/EN_ListenAFOn_AmazonMusic_button_Indigo_RGB.png\" alt=\"Listen on Amazon\" border=\"0\"> </a></center>",
+          "roles": {
+            "host": [
+              {
+                "url": "/people/john-schaefer/",
+                "image": "https://media.wnyc.org/i/1600/1067/c/80/1/WNYC_REPORTERS_1321_preview_MQq69Ld.jpg",
+                "last-name": "Schaefer",
+                "first-name": "John"
+              }
+            ],
+            "producer": [
+              {
+                "url": "/people/caryn-havlik/",
+                "image": "https://media.wnyc.org/i/300/300/c/80/1/caryn_havlik_web_zAAPZ4A.jpg",
+                "last-name": "Havlik",
+                "first-name": "Caryn"
+              }
+            ]
+          },
+          "social": {
+            "twitter": "newsounds",
+            "facebook": "newsounds"
+          }
+        },
+        "description": "<p>Daily showcase of weird and wonderful music from artists, composers and traditional musicians &mdash; all gleefully oblivious of their genres.</p>\r\n<center><a href=\"https://music.amazon.com/podcasts/63ec09c9-b20c-4a3d-b66d-ae363079a8c4/new-sounds-from-wnyc\"> <img src=\"https://media.wnyc.org/i/165/40/l/80/2022/11/EN_ListenAFOn_AmazonMusic_button_Indigo_RGB.png\" alt=\"Listen on Amazon\" border=\"0\" /> </a></center>",
+        "social-links": [
+          {
+            "href": "https://www.facebook.com/newsounds/",
+            "title": "Facebook"
+          },
+          {
+            "href": "https://twitter.com/newsounds",
+            "title": "Twitter"
+          }
+        ],
+        "bg-color": "#f25ced",
+        "featured": {
+          "analytics-code": "ExperimentalStory:4512-jon-hassell-influence-encore $A1$AD3408$V0$Me$D15$HS1$HC0$B0$SS++$C$SNew Sounds$T!music!brian_eno!hugo_marsh!sam_gendel!jack_wyllie!jon_hassell!kirk_barley!arve_henriksen!paradise_cinema!daniel_herskedal!nils_petter_molvaer!$APnewsounds/newsounds072423.mp3$",
+          "audio-eventually": true,
+          "cms-pk": 1345890,
+          "date-line": "Monday, July 24, 2023",
+          "site-id": 15,
+          "image-main": {
+            "alt-text": "Jon Hassell",
+            "name": "1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+            "source": null,
+            "url": "https://media.wnyc.org/i/801/800/c/80/1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+            "h": 800,
+            "is-display": true,
+            "crop": "c",
+            "caption": "Jon Hassell",
+            "credits-url": "http://www.muzines.co.uk/",
+            "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+            "w": 801,
+            "id": 176659,
+            "credits-name": "Muzines"
+          },
+          "audio-show-options": true,
+          "large-tease-layout": true,
+          "slug": "4512-jon-hassell-influence-encore",
+          "audio-may-embed": true,
+          "date-line-datetime": "2023-07-24T15:09:00.881261-04:00",
+          "audio-duration-readable": "56 min",
+          "npr-analytics-dimensions": [
+            "NYPR",
+            "episode",
+            "1345890",
+            "0",
+            "music",
+            "",
+            "arve_henriksen,brian_eno,daniel_herskedal,hugo_marsh,jack_wyllie,jon_hassell,kirk_barley,music,nils_petter_molvaer,paradise_cinema,sam_gendel",
+            "1",
+            "New Sounds",
+            "1",
+            "New Sounds",
+            "2023-07-24 15:09:00.881261-04:00",
+            "571",
+            "none"
+          ],
+          "title": "#4512, The Jon Hassell Influence",
+          "url": "//www.newsounds.org/story/4512-jon-hassell-influence-encore/",
+          "is-latest": true,
+          "tease": "Celebrate the late trumpeter and composer Jon Hassell's musical legacy, from his work with Brian Eno to his recent 2018 record, along with work by the musicians he inspired.",
+          "id": 1345890,
+          "headers": {
+            "brand": {
+              "url": "https://www.newsounds.org/shows/newsounds",
+              "title": "New Sounds",
+              "slug": "newsounds",
+              "logo-image": {
+                "alt-text": "",
+                "name": "1/ns_showcard-newsounds.png",
+                "source": null,
+                "url": "https://media.wnyc.org/i/600/600/l/80/1/ns_showcard-newsounds.png",
+                "h": 600,
+                "is-display": false,
+                "crop": "l",
+                "caption": "",
+                "credits-url": "",
+                "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/ns_showcard-newsounds.png",
+                "w": 600,
+                "id": 170723,
+                "credits-name": "newsounds"
+              }
+            },
+            "links": [
+              {
+                "url": "https://www.newsounds.org/shows/newsounds",
+                "title": "New Sounds",
+                "item-type": "show",
+                "slug": "newsounds"
+              }
+            ]
+          },
+          "audio-may-download": false,
+          "edit-link": "cms/episode/1345890",
+          "audio": "https://chrt.fm/track/53A61E/pdst.fm/e/dts.podtrac.com/pts/redirect.mp3/waaa.wnyc.org/newsounds/newsounds072423.mp3?awCollectionId=385&awEpisodeId=1345890",
+          "audio-available": true
+        },
+        "sidebar-chunks": [null, null],
+        "donate-chunk": {
+          "content": "",
+          "slug": ""
+        },
+        "listing-object-type": "show",
+        "rss-feed": "http://www.newsounds.org/feeds/shows/newsounds",
+        "edit-link": ["cms/show/385"],
+        "podcast-links": null,
+        "itunes-podcast-id": null,
+        "studios-marquee-mobile-offset": null,
+        "cms-pk": 385,
+        "tease": "<p>Daily showcase of weird and wonderful music from artists, composers and traditional musicians &mdash; all gleefully oblivious of their genres.</p>",
+        "schedule-summary": "Sunday - Friday at 11pm on 93.9 FM. Saturday at midnight on 93.9 FM.",
+        "contact-email": ""
+      },
+      "relationships": {
+        "image": {
+          "data": {
+            "type": "image",
+            "id": "170723"
+          }
+        },
+        "marquee-image": {
+          "data": {
+            "type": "image",
+            "id": "170728"
+          }
+        },
+        "studios-marquee-image": {
+          "data": null
+        },
+        "fb-image": {
+          "data": null
+        },
+        "producing-organizations": {
+          "meta": {
+            "count": 1
+          },
+          "data": [
+            {
+              "type": "producing-organization",
+              "id": "74"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "show-schedule",
+      "id": "676",
+      "attributes": {
+        "iso-start-time": "2023-07-25T03:00:00+00:00",
+        "iso-end-time": "2023-07-25T04:00:00+00:00"
+      },
+      "relationships": {
+        "show": {
+          "data": {
+            "type": "show",
+            "id": "385"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "count": 1
+    }
+  }
+}

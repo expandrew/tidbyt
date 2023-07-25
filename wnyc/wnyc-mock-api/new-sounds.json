@@ -1,0 +1,48 @@
+{
+  "has_playlists": false,
+  "future": [],
+  "current_show": {
+    "iso_start": "2023-07-25T03:00:00+00:00",
+    "description": "Celebrate the late trumpeter and composer Jon Hassell's musical legacy, from his work with Brian Eno to his recent 2018 record, along with work by the musicians he inspired.",
+    "fullImage": {
+      "url": "https://media.wnyc.org/i/300/300/c/80/1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+      "width": 300,
+      "caption": "Jon Hassell",
+      "type": "image/jpeg",
+      "height": 300
+    },
+    "comments_url": "/api/list/comments/23/1345890/",
+    "start_ts": 1690254000,
+    "iso_end": "2023-07-25T04:00:00+00:00",
+    "listImage": {
+      "url": "https://media.wnyc.org/i/60/60/c/80/1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+      "width": 60,
+      "caption": "Jon Hassell",
+      "type": "image/jpeg",
+      "height": 60
+    },
+    "show_title": "New Sounds",
+    "episode_pk": 1345890,
+    "show_url": "https://www.newsounds.org/shows/newsounds",
+    "end": "2023-07-25T00:00:00-0400",
+    "title": "#4512, The Jon Hassell Influence",
+    "url": "http://www.newsounds.org/story/4512-jon-hassell-influence-encore/",
+    "site_id": 15,
+    "end_ts": 1690257600,
+    "group_image": "https://media.wnyc.org/i/130/130/l/80/1/ns_showcard-newsounds.png",
+    "schedule_ref": "ShowSchedule:676",
+    "detail_api_url": "/api/story/1345890/",
+    "group_slug": "newsounds",
+    "pk": 385,
+    "start": "2023-07-24T23:00:00-0400",
+    "detailImage": {
+      "url": "https://media.wnyc.org/i/60/60/c/80/1/MT_87_12_jon_hassell_large_5CLzcyj.jpg",
+      "width": 60,
+      "caption": "Jon Hassell",
+      "type": "image/jpeg",
+      "height": 60
+    }
+  },
+  "expires": "2023-07-24T23:03:00",
+  "current_playlist_item": null
+}
