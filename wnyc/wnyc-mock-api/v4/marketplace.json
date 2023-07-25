@@ -1,0 +1,180 @@
+{
+  "links": {
+    "first": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "last": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "whats-on-now",
+      "id": "1",
+      "attributes": {
+        "name": "WNYC 93.9 FM",
+        "slug": "wnyc-fm939",
+        "short-description": "News, Culture & Talk",
+        "has-playlists": false,
+        "image-logo": "https://media.wnyc.org/i/500/500/c/80/1/wnyc_2_1.png",
+        "schedule-url": "http://www.wnyc.org/schedule/?scheduleStation=wnyc-fm939",
+        "playlist-url": "http://www.wnyc.org/playlist-daily/?scheduleStation=wnyc-fm939",
+        "whats-on": null,
+        "audio-bumper": "/streambumper/streambumper000001_wnycfm.mp3",
+        "aac": "https://fm939.wnyc.org/wnycfm.aac",
+        "mp3": "https://fm939.wnyc.org/wnycfm",
+        "mobile-aac": "https://fm939.wnyc.org/wnycfm-mobile.aac",
+        "mobile-mp3": "https://fm939.wnyc.org/wnycfm",
+        "hls": "https://hls-live.wnyc.org/wnycfm32-hls/playlist.m3u8",
+        "twitter-handle": "",
+        "site-id": 1,
+        "order": 1
+      },
+      "relationships": {
+        "current-show": {
+          "data": {
+            "type": "show-schedule",
+            "id": "623"
+          }
+        },
+        "current-airing": {
+          "data": null
+        },
+        "current-episode": {
+          "data": null
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "image",
+      "id": "155853",
+      "attributes": {
+        "caption": "",
+        "credits-url": "",
+        "credits-name": "whyy ",
+        "crop": "l",
+        "h": 1860,
+        "is-display": true,
+        "name": "1/fresh_air_crD2Ny5.png",
+        "source": "",
+        "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/fresh_air_crD2Ny5.png",
+        "url": "https://media.wnyc.org/i/1860/1860/l/80/1/fresh_air_crD2Ny5.png",
+        "w": 1860
+      }
+    },
+    {
+      "type": "show",
+      "id": "370",
+      "attributes": {
+        "slug": "freshair",
+        "title": "Fresh Air",
+        "url": "https://www.wnyc.org/shows/freshair",
+        "linkroll": [
+          {
+            "href": null,
+            "nav-slug": "episodes",
+            "title": "Episodes"
+          },
+          {
+            "href": null,
+            "nav-slug": "about",
+            "title": "About"
+          }
+        ],
+        "about": {
+          "body": "<p>\"If you want to understand a political conflict, it helps to understand the culture in which that conflict is taking place,\" says host Terry Gross. Fresh Air is one of the most popular programs on public radio, breaking the \"talk show\" mold, and Gross is known for her fearless and insightful interviews with prominent figures in American arts, politics, and popular culture. \"When there is a crisis in a foreign country, we sometimes call up that country's leading novelist or filmmaker to get the cultural perspective.\" Fresh Air features daily reports and reviews from critics and commentators on music, books, movies, and other cultural phenomena that invade the national psyche.</p>",
+          "roles": {
+            "host": [
+              {
+                "url": "/people/terry-gross/",
+                "image": "https://media.wnyc.org/i/1000/894/l/80/2020/07/terry-gross_fresh-air.jpg",
+                "last-name": "Gross",
+                "first-name": "Terry"
+              }
+            ]
+          },
+          "social": {}
+        },
+        "description": "<p>\"If you want to understand a political conflict, it helps to understand the culture in which that conflict is taking place,\" says host Terry Gross. Fresh Air is one of the most popular programs on public radio, breaking the \"talk show\" mold, and Gross is known for her fearless and insightful interviews with prominent figures in American arts, politics, and popular culture. \"When there is a crisis in a foreign country, we sometimes call up that country's leading novelist or filmmaker to get the cultural perspective.\" Fresh Air features daily reports and reviews from critics and commentators on music, books, movies, and other cultural phenomena that invade the national psyche.</p>",
+        "social-links": [
+          {
+            "href": "https://twitter.com/nprfreshair",
+            "title": "twitter"
+          },
+          {
+            "href": "https://www.facebook.com/freshairwithterrygross",
+            "title": "facebook"
+          }
+        ],
+        "bg-color": "",
+        "featured": null,
+        "sidebar-chunks": [null, null],
+        "donate-chunk": {
+          "content": "",
+          "slug": ""
+        },
+        "listing-object-type": "show",
+        "rss-feed": "http://www.npr.org/rss/podcast.php?id=13",
+        "edit-link": ["cms/show/370"],
+        "podcast-links": null,
+        "itunes-podcast-id": null,
+        "studios-marquee-mobile-offset": null,
+        "cms-pk": 370,
+        "tease": "<p>The Peabody Award-winning program features Terry Gross&rsquo; fearless and insightful interviews with big names in pop culture, politics and the arts.</p>",
+        "schedule-summary": "Monday - Thursday at 2 p.m. on 93.9 FM and AM820, and Monday - Friday at 9 p.m. on AM820.",
+        "contact-email": ""
+      },
+      "relationships": {
+        "image": {
+          "data": {
+            "type": "image",
+            "id": "155853"
+          }
+        },
+        "marquee-image": {
+          "data": null
+        },
+        "studios-marquee-image": {
+          "data": null
+        },
+        "fb-image": {
+          "data": null
+        },
+        "producing-organizations": {
+          "meta": {
+            "count": 1
+          },
+          "data": [
+            {
+              "type": "producing-organization",
+              "id": "58"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "show-schedule",
+      "id": "623",
+      "attributes": {
+        "iso-start-time": "2023-07-25T18:00:00+00:00",
+        "iso-end-time": "2023-07-25T19:00:00+00:00"
+      },
+      "relationships": {
+        "show": {
+          "data": {
+            "type": "show",
+            "id": "370"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "count": 1
+    }
+  }
+}

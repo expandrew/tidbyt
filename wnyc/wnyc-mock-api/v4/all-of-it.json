@@ -1,0 +1,588 @@
+{
+  "links": {
+    "first": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "last": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "whats-on-now",
+      "id": "1",
+      "attributes": {
+        "name": "WNYC 93.9 FM",
+        "slug": "wnyc-fm939",
+        "short-description": "News, Culture & Talk",
+        "has-playlists": false,
+        "image-logo": "https://media.wnyc.org/i/500/500/c/80/1/wnyc_2_1.png",
+        "schedule-url": "http://www.wnyc.org/schedule/?scheduleStation=wnyc-fm939",
+        "playlist-url": "http://www.wnyc.org/playlist-daily/?scheduleStation=wnyc-fm939",
+        "whats-on": null,
+        "audio-bumper": "/streambumper/streambumper000001_wnycfm.mp3",
+        "aac": "https://fm939.wnyc.org/wnycfm.aac",
+        "mp3": "https://fm939.wnyc.org/wnycfm",
+        "mobile-aac": "https://fm939.wnyc.org/wnycfm-mobile.aac",
+        "mobile-mp3": "https://fm939.wnyc.org/wnycfm",
+        "hls": "https://hls-live.wnyc.org/wnycfm32-hls/playlist.m3u8",
+        "twitter-handle": "",
+        "site-id": 1,
+        "order": 1
+      },
+      "relationships": {
+        "current-show": {
+          "data": {
+            "type": "show-schedule",
+            "id": "1398"
+          }
+        },
+        "current-airing": {
+          "data": null
+        },
+        "current-episode": {
+          "data": {
+            "type": "episode",
+            "id": "1345780"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "episode",
+      "id": "1345780",
+      "attributes": {
+        "analytics-code": "ExperimentalStory:all-of-it-2023-07-24 $A0$AD0$V0$Me$D1$HS1$HC0$B0$SS++$C$SAll Of It$T!arts!music!history!local_wnyc!documentary!storytelling!wnyc_app_local!$APnone$",
+        "appearances": {
+          "producers": [],
+          "hosts": [],
+          "authors": []
+        },
+        "audio": [null, null, null, null],
+        "audio-available": false,
+        "audio-eventually": true,
+        "audio-duration-readable": null,
+        "audio-may-download": true,
+        "audio-may-embed": true,
+        "audio-may-stream": true,
+        "body": "<p class=\"x_elementToProof\"><span>To celebrate the Barbenheimer double-feature, we're having a <em>\"Barbie\"</em> and <em>\"Oppenheimer\"</em> celebration of our own! To kick things off, we speak with <strong>Ludwig Göransson</strong>, the Swedish composer who scored <em>\"Oppenheimer,\"</em> about the challenges of finding the right musical tone for this difficult film.</span></p>\n<p class=\"x_elementToProof\"><span><span><span><span>To continue our coverage of the<em><span> </span>\"Barbie\"<span> </span></em>and<span> </span><em>\"Oppenheimer\"</em><span> </span>double feature weekend, we speak with<span> </span><strong>Alison Willmore</strong>, who reviewed<span> </span><em>\"Barbie\"</em><span> </span>for Vulture. Plus, we take calls from listeners who have seen<span> </span><em>\"Barbie,\"<span> </span></em>or want to share their thoughts about the complicated but ubiquitous doll.</span></span></span></span></p>\n<p class=\"x_elementToProof\"><span><span><span><span><span>A new documentary follows former NDTV broadcast news host<span> </span><strong>Ravish Kumar</strong><span> </span>as he stands against the tide of nationalism sweeping Indian media coverage, sometimes with frightening consequences. Kumar and documentarian<span> </span><strong>Vinay Shukla</strong><span> </span>join us to discuss their film,<span> </span><em>\"While We Watched,\"</em><span> </span>which is at the IFC Center now.</span></span></span></span></span></p>\n<p class=\"x_elementToProof\"><span><span><span>This summer, WNYC's Notes From America with Kai Wright has launched a new series celebrating different diaspora communities in the U.S. through the lens of music, and the project includes listener compiled playlists. Yesterday, NFA producer<span> </span><strong>Regina de Heer</strong><span> </span>spoke to Kai about the different sounds of Afrobeats, including the story of the song she chose for her Ghanaian traditional engagement ceremony. Regina tells us more about the series, the history of Afrobeats, and we take your calls.</span></span></span></p>\n<p class=\"x_elementToProof\"> </p>\n<p class=\"x_elementToProof\"><em>This episode is hosted by <strong>Brigid Bergin</strong>.</em></p>",
+        "canonical-url": null,
+        "channel": "",
+        "channel-title": "",
+        "chunks": {
+          "show-sidebar-top": null,
+          "story": null,
+          "site-sidebar-top": "",
+          "show-sidebar-bottom": null,
+          "site-sidebar-bottom": null
+        },
+        "cms-pk": 1345780,
+        "comments-count": 0,
+        "enable-comments": true,
+        "date-line-ts": 1690211083,
+        "edit-link": "cms/episode/1345780",
+        "embed-code": "<iframe frameborder=\"0\" scrolling=\"no\" height=\"130\" width=\"100%\" src=\"https://www.wnyc.org/widgets/ondemand_player/wnyc/#file=/audio/json/1345780/&share=1\"></iframe>",
+        "estimated-duration": 0,
+        "headers": {
+          "brand": {
+            "url": "https://www.wnyc.org/shows/all-of-it",
+            "title": "All Of It",
+            "slug": "all-of-it",
+            "logo-image": {
+              "alt-text": "All of It with Alison Stewart",
+              "name": "2020/06/AllOfIt.png",
+              "source": null,
+              "url": "https://media.wnyc.org/i/1400/1400/l/80/2020/06/AllOfIt.png",
+              "h": 1400,
+              "is-display": true,
+              "crop": "l",
+              "caption": "All of It with Alison Stewart",
+              "credits-url": "",
+              "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2020/06/AllOfIt.png",
+              "w": 1400,
+              "id": 190372,
+              "credits-name": "WNYC"
+            }
+          },
+          "links": [
+            {
+              "url": "https://www.wnyc.org/shows/all-of-it",
+              "title": "All Of It",
+              "item-type": "show",
+              "slug": "all-of-it"
+            }
+          ]
+        },
+        "header-donate-chunk": null,
+        "image-caption": "",
+        "image-main": {
+          "alt-text": "Advertisements for the films 'Oppenheimer' and 'Barbie' appear at AMC Theaters at The Grove on Thursday, July 20, 2023, in Los Angeles.",
+          "name": "2023/07/AP23202015292538.jpg",
+          "source": {
+            "url": "",
+            "name": "AP Photo"
+          },
+          "url": "https://media.wnyc.org/i/1860/1240/l/80/2023/07/AP23202015292538.jpg",
+          "h": 1240,
+          "is-display": true,
+          "crop": "l",
+          "caption": "Advertisements for the films \"Oppenheimer\" and \"Barbie\" appear at AMC Theaters at The Grove on Thursday, July 20, 2023, in Los Angeles.",
+          "credits-url": "",
+          "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2023/07/AP23202015292538.jpg",
+          "w": 1860,
+          "id": 206927,
+          "credits-name": "Chris Pizzello"
+        },
+        "item-type": "episode",
+        "item-type-id": 23,
+        "newscast": "",
+        "newsdate": "2023-07-24T11:04:43.664702-04:00",
+        "npr-analytics-dimensions": [
+          "NYPR",
+          "episode",
+          "1345780",
+          "0",
+          "arts,history,local_wnyc,music,storytelling,wnyc_app_local",
+          "",
+          "arts,documentary,history,local_wnyc,music,storytelling,wnyc_app_local",
+          "1",
+          "WNYC",
+          "0",
+          "All Of It",
+          "2023-07-24 11:04:43.664702-04:00",
+          "220",
+          "none"
+        ],
+        "playlist": [],
+        "podcast-links": [
+          {
+            "href": "https://itunes.apple.com/us/podcast/id74254710",
+            "title": "via Apple Podcasts "
+          },
+          {
+            "href": "https://pca.st/8aF6Ow",
+            "title": "via Pocketcast"
+          },
+          {
+            "href": "https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL2FsbG9maXRfcG9kY2FzdA",
+            "title": "via Google Podcasts"
+          },
+          {
+            "href": "https://open.spotify.com/show/4MSFp9H0FuYfiiypQ5e3CK?si=zwFDVZ0WTFOELEI7d_v1cQ",
+            "title": "via Spotify"
+          },
+          {
+            "href": "https://www.stitcher.com/podcast/wnyc/all-of-it?refid=stpr",
+            "title": "via Stitcher "
+          },
+          {
+            "href": "https://music.amazon.com/podcasts/cb0adb72-ac5c-45fe-8b68-4dff0550a934/All-Of-It",
+            "title": "via Amazon Music"
+          },
+          {
+            "href": "https://tunein.com/radio/All-Of-It-p1156272/",
+            "title": "via TuneIn"
+          },
+          {
+            "href": "https://www.iheart.com/podcast/all-of-it-29845052",
+            "title": "via iHeart"
+          },
+          {
+            "href": "https://radiopublic.com/all-of-it-WlPYb7",
+            "title": "via Radio Public "
+          },
+          {
+            "href": "http://feeds.wnyc.org/allofit_podcast",
+            "title": "via RSS "
+          }
+        ],
+        "producing-organizations": [],
+        "publish-at": "2023-07-23T16:19:31",
+        "publish-status": "published",
+        "show": "all-of-it",
+        "show-tease": "<p><span>All Of It with Alison Stewart is a live daily conversation about culture and the culture in and around New York City. Follow All Of It on <a href=\"https://www.instagram.com/allofitwnyc/?hl=en\" target=\"_blank\">Instagram</a>.</span></p>\r\n<p><em><span data-renderer-mark=\"true\" data-text-custom-color=\"#172b4d\">Transcripts are posted to individual segment pages as they become available.</span></em></p>",
+        "show-title": "All Of It",
+        "show-producing-orgs": [],
+        "series": [],
+        "short-title": "",
+        "site-id": 1,
+        "slug": "all-of-it-2023-07-24",
+        "slideshow": [],
+        "tags": [
+          "arts",
+          "documentary",
+          "history",
+          "local_wnyc",
+          "music",
+          "storytelling",
+          "wnyc_app_local"
+        ],
+        "tease": "Ludwig G&ouml;ransson on scoring 'Oppenheimer.' Reacting to the premiere of 'Barbie.' How one journalist stood up to nationalism in India. Notes From America celebrates diaspora with music.",
+        "template": "story_default",
+        "title": "Ludwig Göransson on 'Oppenheimer', 'Barbie' Reviews, 'While We Watched', 'Notes From America' Explores Music Through Diaspora",
+        "transcript": "",
+        "twitter-headline": "Ludwig Göransson on 'Oppenheimer', 'Barbie' Reviews, 'While We Watched', 'Notes From America' Explores Music Through Diaspora",
+        "twitter-handle": null,
+        "url": "http://www.wnyc.org/story/all-of-it-2023-07-24/",
+        "video": null
+      },
+      "relationships": {
+        "segments": {
+          "data": [
+            {
+              "type": "segment",
+              "id": "1345779"
+            },
+            {
+              "type": "segment",
+              "id": "1345781"
+            },
+            {
+              "type": "segment",
+              "id": "1345784"
+            },
+            {
+              "type": "segment",
+              "id": "1345785"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "image",
+      "id": "190372",
+      "attributes": {
+        "caption": "All of It with Alison Stewart",
+        "credits-url": "",
+        "credits-name": "WNYC",
+        "crop": "l",
+        "h": 1400,
+        "is-display": true,
+        "name": "2020/06/AllOfIt.png",
+        "source": "",
+        "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2020/06/AllOfIt.png",
+        "url": "https://media.wnyc.org/i/1400/1400/l/80/2020/06/AllOfIt.png",
+        "w": 1400
+      }
+    },
+    {
+      "type": "segment",
+      "id": "1345779",
+      "attributes": {
+        "audio-available": false,
+        "audio-eventually": true,
+        "audio-duration-readable": null,
+        "audio-may-stream": true,
+        "episode-id": 1345780,
+        "newsdate": "2023-07-24T10:59:41.997835",
+        "segment-number": 1,
+        "slug": "ludwig-goransson-scoring-oppenheimer",
+        "title": "Ludwig Göransson on Scoring 'Oppenheimer'",
+        "tease": "We speak with&nbsp;Ludwig G&ouml;ransson, the composer who scored 'Oppenheimer.'"
+      }
+    },
+    {
+      "type": "segment",
+      "id": "1345781",
+      "attributes": {
+        "audio-available": false,
+        "audio-eventually": true,
+        "audio-duration-readable": null,
+        "audio-may-stream": true,
+        "episode-id": 1345780,
+        "newsdate": "2023-07-24T11:02:43.613820",
+        "segment-number": 2,
+        "slug": "are-we-barbie-world",
+        "title": "Are We in a 'Barbie' World?",
+        "tease": "We react to the release of 'Barbie.'"
+      }
+    },
+    {
+      "type": "segment",
+      "id": "1345784",
+      "attributes": {
+        "audio-available": false,
+        "audio-eventually": true,
+        "audio-duration-readable": null,
+        "audio-may-stream": true,
+        "episode-id": 1345780,
+        "newsdate": "2023-07-24T11:02:59.727641",
+        "segment-number": 3,
+        "slug": "while-we-watched-follows-one-indian-broadcaster-standing-against-nationalism",
+        "title": "'While We Watched' Follows One Indian Broadcaster Standing Against Nationalism",
+        "tease": "A new documentary follows former NDTV broadcast news host&nbsp;Ravish Kumar&nbsp;as he stands against the tide of nationalism sweeping Indian media coverage."
+      }
+    },
+    {
+      "type": "segment",
+      "id": "1345785",
+      "attributes": {
+        "audio-available": false,
+        "audio-eventually": true,
+        "audio-duration-readable": null,
+        "audio-may-stream": true,
+        "episode-id": 1345780,
+        "newsdate": "2023-07-24T11:03:20.173456",
+        "segment-number": 4,
+        "slug": "notes-america-kai-wright-celebrating-diaspora-through-music",
+        "title": "'Notes From America with Kai Wright' is Celebrating Diaspora Through Music",
+        "tease": "Notes From America with Kai Wright is exploring music through diaspora this summer, with your song submissions!"
+      }
+    },
+    {
+      "type": "show",
+      "id": "882225",
+      "attributes": {
+        "slug": "all-of-it",
+        "title": "All Of It",
+        "url": "https://www.wnyc.org/shows/all-of-it",
+        "linkroll": [
+          {
+            "href": null,
+            "nav-slug": "episodes",
+            "title": "Episodes"
+          },
+          {
+            "href": null,
+            "nav-slug": "segments",
+            "title": "Segments"
+          },
+          {
+            "href": null,
+            "nav-slug": "get-lit",
+            "title": "Get Lit"
+          },
+          {
+            "href": null,
+            "nav-slug": "get-lit-bookclub",
+            "title": "Get Lit Segments"
+          },
+          {
+            "href": null,
+            "nav-slug": "story slug",
+            "title": "Public Song Project"
+          },
+          {
+            "href": null,
+            "nav-slug": "about",
+            "title": "About"
+          }
+        ],
+        "about": {
+          "body": "<p>All Of It is a show about culture and its consumers.</p>\n<p>All Of It is a show about culture and context.</p>\n<p>All Of It is a show about culture and the culture.</p>\n<p><br>Our aim is to engage the thinkers, doers, makers, and creators, about the what and why of their work. People make the culture and we hope, need, and want the WNYC community to be a part of our show. As we build a community around All Of It, we know that every guest and listener has an opinion. We won’t always agree, but our varied perspectives and diversity of experience is what makes New York City great.</p>\n<p><br>All Of It will be both companion for and curator of the myriad culture this city has to offer. In the words of Cristina De Rossi, anthropologist at Barnet and Southgate College, London:</p>\n<p><br>\"Culture encompasses religion, food, what we wear, how we wear it, our language, marriage, music, what we believe is right or wrong, how we sit at the table, how we greet visitors, how we behave with loved ones, and a million other things.\"</p>\n<p><br>...In other words, All Of It.</p>\n<p><br>---</p>\n<p>Join us for All Of It with Alison Stewart, weekdays from 12:00 - 2:00PM on WNYC.</p>\n<p> </p>\n<center><a href=\"https://music.amazon.com/podcasts/cb0adb72-ac5c-45fe-8b68-4dff0550a934/all-of-it\"> <img src=\"https://media.wnyc.org/i/165/40/l/80/2022/11/EN_ListenAFOn_AmazonMusic_button_Indigo_RGB.png\" alt=\"Listen on Amazon\" border=\"0\"> </a></center>",
+          "roles": {
+            "host": [
+              {
+                "url": "/people/alison-stewart/",
+                "image": "https://media.wnyc.org/i/1860/1240/l/80/2020/10/NYPR_020819_1161_R1_silo_layers-Alison-Stewart.jpg",
+                "last-name": "Stewart",
+                "first-name": "Alison"
+              }
+            ]
+          },
+          "social": {
+            "instagram": "allofitwnyc"
+          }
+        },
+        "description": "<p>All Of It is a show about culture and its consumers.</p>\r\n<p>All Of It is a show about culture and context.</p>\r\n<p>All Of It is a show about culture and the culture.</p>\r\n<p><br />Our aim is to engage the thinkers, doers, makers, and creators, about the what and why of their work. People make the culture and we hope, need, and want the WNYC community to be a part of our show. As we build a community around All Of It, we know that every guest and listener has an opinion. We won&rsquo;t always agree, but our varied perspectives and diversity of experience is what makes New York City great.</p>\r\n<p><br />All Of It will be both companion for and curator of the myriad culture this city has to offer. In the words of Cristina De Rossi, anthropologist at Barnet and Southgate College, London:</p>\r\n<p><br />\"Culture encompasses religion, food, what we wear, how we wear it, our language, marriage, music, what we believe is right or wrong, how we sit at the table, how we greet visitors, how we behave with loved ones, and a million other things.\"</p>\r\n<p><br />...In other words, All Of It.</p>\r\n<p><br />---</p>\r\n<p>Join us for All Of It with Alison Stewart, weekdays from 12:00 - 2:00PM on WNYC.</p>\r\n<p>&nbsp;</p>\r\n<center><a href=\"https://music.amazon.com/podcasts/cb0adb72-ac5c-45fe-8b68-4dff0550a934/all-of-it\"> <img src=\"https://media.wnyc.org/i/165/40/l/80/2022/11/EN_ListenAFOn_AmazonMusic_button_Indigo_RGB.png\" alt=\"Listen on Amazon\" border=\"0\" /> </a></center>",
+        "social-links": null,
+        "bg-color": "rgba(234,234,234,1)",
+        "featured": {
+          "analytics-code": "ExperimentalStory:all-of-it-2023-07-24 $A0$AD0$V0$Me$D1$HS1$HC0$B0$SS++$C$SAll Of It$T!arts!music!history!local_wnyc!documentary!storytelling!wnyc_app_local!$APnone$",
+          "audio-eventually": true,
+          "cms-pk": 1345780,
+          "date-line": "Monday, July 24, 2023",
+          "site-id": 1,
+          "image-main": {
+            "alt-text": "Advertisements for the films 'Oppenheimer' and 'Barbie' appear at AMC Theaters at The Grove on Thursday, July 20, 2023, in Los Angeles.",
+            "name": "2023/07/AP23202015292538.jpg",
+            "source": {
+              "url": "",
+              "name": "AP Photo"
+            },
+            "url": "https://media.wnyc.org/i/1860/1240/l/80/2023/07/AP23202015292538.jpg",
+            "h": 1240,
+            "is-display": true,
+            "crop": "l",
+            "caption": "Advertisements for the films \"Oppenheimer\" and \"Barbie\" appear at AMC Theaters at The Grove on Thursday, July 20, 2023, in Los Angeles.",
+            "credits-url": "",
+            "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2023/07/AP23202015292538.jpg",
+            "w": 1860,
+            "id": 206927,
+            "credits-name": "Chris Pizzello"
+          },
+          "audio-show-options": true,
+          "large-tease-layout": true,
+          "slug": "all-of-it-2023-07-24",
+          "audio-may-embed": true,
+          "date-line-datetime": "2023-07-24T11:04:43.664702-04:00",
+          "audio-duration-readable": null,
+          "npr-analytics-dimensions": [
+            "NYPR",
+            "episode",
+            "1345780",
+            "0",
+            "arts,history,local_wnyc,music,storytelling,wnyc_app_local",
+            "",
+            "arts,documentary,history,local_wnyc,music,storytelling,wnyc_app_local",
+            "1",
+            "WNYC",
+            "0",
+            "All Of It",
+            "2023-07-24 11:04:43.664702-04:00",
+            "220",
+            "none"
+          ],
+          "title": "Ludwig Göransson on 'Oppenheimer', 'Barbie' Reviews, 'While We Watched', 'Notes From America' Explores Music Through Diaspora",
+          "url": "//www.wnyc.org/story/all-of-it-2023-07-24/",
+          "is-latest": true,
+          "tease": "Ludwig Göransson on scoring 'Oppenheimer.' Reacting to the premiere of 'Barbie.' How one journalist stood up to nationalism in India. Notes From America celebrates diaspora with music.",
+          "id": 1345780,
+          "headers": {
+            "brand": {
+              "url": "https://www.wnyc.org/shows/all-of-it",
+              "title": "All Of It",
+              "slug": "all-of-it",
+              "logo-image": {
+                "alt-text": "All of It with Alison Stewart",
+                "name": "2020/06/AllOfIt.png",
+                "source": null,
+                "url": "https://media.wnyc.org/i/1400/1400/l/80/2020/06/AllOfIt.png",
+                "h": 1400,
+                "is-display": true,
+                "crop": "l",
+                "caption": "All of It with Alison Stewart",
+                "credits-url": "",
+                "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2020/06/AllOfIt.png",
+                "w": 1400,
+                "id": 190372,
+                "credits-name": "WNYC"
+              }
+            },
+            "links": [
+              {
+                "url": "https://www.wnyc.org/shows/all-of-it",
+                "title": "All Of It",
+                "item-type": "show",
+                "slug": "all-of-it"
+              }
+            ]
+          },
+          "audio-may-download": "",
+          "edit-link": "cms/episode/1345780",
+          "audio": [null, null, null, null],
+          "audio-available": false
+        },
+        "sidebar-chunks": [null, null],
+        "donate-chunk": {
+          "content": "",
+          "slug": ""
+        },
+        "listing-object-type": "show",
+        "rss-feed": "http://www.wnyc.org/feeds/shows/all-of-it",
+        "edit-link": ["cms/show/882225"],
+        "podcast-links": [
+          {
+            "href": "https://itunes.apple.com/us/podcast/id74254710",
+            "title": "via Apple Podcasts "
+          },
+          {
+            "href": "https://pca.st/8aF6Ow",
+            "title": "via Pocketcast"
+          },
+          {
+            "href": "https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLmZlZWRidXJuZXIuY29tL2FsbG9maXRfcG9kY2FzdA",
+            "title": "via Google Podcasts"
+          },
+          {
+            "href": "https://open.spotify.com/show/4MSFp9H0FuYfiiypQ5e3CK?si=zwFDVZ0WTFOELEI7d_v1cQ",
+            "title": "via Spotify"
+          },
+          {
+            "href": "https://www.stitcher.com/podcast/wnyc/all-of-it?refid=stpr",
+            "title": "via Stitcher "
+          },
+          {
+            "href": "https://music.amazon.com/podcasts/cb0adb72-ac5c-45fe-8b68-4dff0550a934/All-Of-It",
+            "title": "via Amazon Music"
+          },
+          {
+            "href": "https://tunein.com/radio/All-Of-It-p1156272/",
+            "title": "via TuneIn"
+          },
+          {
+            "href": "https://www.iheart.com/podcast/all-of-it-29845052",
+            "title": "via iHeart"
+          },
+          {
+            "href": "https://radiopublic.com/all-of-it-WlPYb7",
+            "title": "via Radio Public "
+          },
+          {
+            "href": "http://feeds.wnyc.org/allofit_podcast",
+            "title": "via RSS "
+          }
+        ],
+        "itunes-podcast-id": "74254710",
+        "studios-marquee-mobile-offset": null,
+        "cms-pk": 882225,
+        "tease": "<p><span>All Of It with Alison Stewart is a live daily conversation about culture and the culture in and around New York City. Follow All Of It on <a href=\"https://www.instagram.com/allofitwnyc/?hl=en\" target=\"_blank\">Instagram</a>.</span></p>\r\n<p><em><span data-renderer-mark=\"true\" data-text-custom-color=\"#172b4d\">Transcripts are posted to individual segment pages as they become available.</span></em></p>",
+        "schedule-summary": "Hosted by Alison Stewart",
+        "contact-email": ""
+      },
+      "relationships": {
+        "image": {
+          "data": {
+            "type": "image",
+            "id": "190372"
+          }
+        },
+        "marquee-image": {
+          "data": {
+            "type": "image",
+            "id": "185842"
+          }
+        },
+        "studios-marquee-image": {
+          "data": null
+        },
+        "fb-image": {
+          "data": {
+            "type": "image",
+            "id": "190374"
+          }
+        },
+        "producing-organizations": {
+          "meta": {
+            "count": 0
+          },
+          "data": []
+        }
+      }
+    },
+    {
+      "type": "show-schedule",
+      "id": "1398",
+      "attributes": {
+        "iso-start-time": "2023-07-24T16:00:00+00:00",
+        "iso-end-time": "2023-07-24T18:00:00+00:00"
+      },
+      "relationships": {
+        "show": {
+          "data": {
+            "type": "show",
+            "id": "882225"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "count": 1
+    }
+  }
+}

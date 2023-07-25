@@ -1,0 +1,429 @@
+{
+  "links": {
+    "first": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "last": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "whats-on-now",
+      "id": "1",
+      "attributes": {
+        "name": "WNYC 93.9 FM",
+        "slug": "wnyc-fm939",
+        "short-description": "News, Culture & Talk",
+        "has-playlists": false,
+        "image-logo": "https://media.wnyc.org/i/500/500/c/80/1/wnyc_2_1.png",
+        "schedule-url": "http://www.wnyc.org/schedule/?scheduleStation=wnyc-fm939",
+        "playlist-url": "http://www.wnyc.org/playlist-daily/?scheduleStation=wnyc-fm939",
+        "whats-on": null,
+        "audio-bumper": "/streambumper/streambumper000001_wnycfm.mp3",
+        "aac": "https://fm939.wnyc.org/wnycfm.aac",
+        "mp3": "https://fm939.wnyc.org/wnycfm",
+        "mobile-aac": "https://fm939.wnyc.org/wnycfm-mobile.aac",
+        "mobile-mp3": "https://fm939.wnyc.org/wnycfm",
+        "hls": "https://hls-live.wnyc.org/wnycfm32-hls/playlist.m3u8",
+        "twitter-handle": "",
+        "site-id": 1,
+        "order": 1
+      },
+      "relationships": {
+        "current-show": {
+          "data": {
+            "type": "show-schedule",
+            "id": "1052"
+          }
+        },
+        "current-airing": {
+          "data": null
+        },
+        "current-episode": {
+          "data": null
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "image",
+      "id": "200563",
+      "attributes": {
+        "caption": "",
+        "credits-url": "",
+        "credits-name": "WNYC Studios",
+        "crop": "l",
+        "h": 1860,
+        "is-display": true,
+        "name": "2022/05/Radiolab_ShowArt_correct.jpg",
+        "source": "",
+        "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2022/05/Radiolab_ShowArt_correct.jpg",
+        "url": "https://media.wnyc.org/i/1860/1860/l/80/2022/05/Radiolab_ShowArt_correct.jpg",
+        "w": 1860
+      }
+    },
+    {
+      "type": "show",
+      "id": "15957",
+      "attributes": {
+        "slug": "radiolab",
+        "title": "Radiolab",
+        "url": "https://www.wnycstudios.org/podcasts/radiolab",
+        "linkroll": [
+          {
+            "href": null,
+            "nav-slug": "podcasts",
+            "title": "Podcasts"
+          },
+          {
+            "href": null,
+            "nav-slug": "radio-shows",
+            "title": "Radio Shows"
+          },
+          {
+            "href": null,
+            "nav-slug": "membership",
+            "title": "Join The Lab"
+          },
+          {
+            "href": "https://shop.radiolab.org",
+            "title": "Swag Lab"
+          },
+          {
+            "href": "https://www.wnycstudios.org/podcasts/radiolab-kids",
+            "title": "Radiolab for Kids"
+          },
+          {
+            "href": null,
+            "nav-slug": "radiolab-read-credit",
+            "title": "Read the Credits"
+          },
+          {
+            "href": null,
+            "nav-slug": "about",
+            "title": "About"
+          },
+          {
+            "href": null,
+            "nav-slug": "the-team",
+            "title": "Team"
+          },
+          {
+            "href": null,
+            "nav-slug": "projects",
+            "title": "Projects"
+          },
+          {
+            "href": null,
+            "nav-slug": "new-cohosts-latif-nasser-lulu-miller",
+            "title": "Announcements"
+          },
+          {
+            "href": null,
+            "nav-slug": "pitch-us",
+            "title": "Pitch Us!"
+          }
+        ],
+        "about": {
+          "body": "<h1>About Radiolab</h1>\n<p><span data-stringify-type=\"paragraph-break\"><span><em>Radiolab</em> is on a curiosity bender. We ask deep questions and use investigative journalism to get the answers. A given episode might whirl you through science, legal history, and into the home of someone halfway across the world. The show is known for innovative sound design, smashing information into music. It is hosted by Lulu Miller and Latif Nasser.</span></span></p>\n<p><span data-stringify-type=\"paragraph-break\"></span><span><span><em>Radiolab</em> is available on Apple, Spotify, Stitcher, or wherever you get your podcasts.</span> Check your<span> </span></span><a target=\"_blank\" class=\"c-link\" data-stringify-link=\"https://www.wnycstudios.org/shows/radiolab/stations/\" delay=\"150\" data-sk=\"tooltip_parent\" aria-describedby=\"sk-tooltip-10367\" href=\"https://www.wnycstudios.org/shows/radiolab/stations/\" rel=\"noopener noreferrer\">local station</a><span><span> </span>for airtimes. It's also available via the CBC, ABC, and the BBC.</span></p>\n<p><span><span>Follow<span> </span></span><em data-stringify-type=\"italic\">Radiolab</em><span><span> </span>on<span> </span></span><a target=\"_blank\" class=\"c-link\" data-stringify-link=\"https://www.instagram.com/radiolab/\" delay=\"150\" data-sk=\"tooltip_parent\" href=\"https://www.instagram.com/radiolab/\" rel=\"noopener noreferrer\">Instagram</a><span>,<span> </span></span><a target=\"_blank\" class=\"c-link\" data-stringify-link=\"https://twitter.com/Radiolab\" delay=\"150\" data-sk=\"tooltip_parent\" href=\"https://twitter.com/Radiolab\" rel=\"noopener noreferrer\">Twitter</a><span>, and<span> </span></span><a target=\"_blank\" class=\"c-link\" data-stringify-link=\"https://www.facebook.com/Radiolab\" delay=\"150\" data-sk=\"tooltip_parent\" href=\"https://www.facebook.com/Radiolab\" rel=\"noopener noreferrer\">Facebook</a><span>.</span></span></p>\n<p>Contact <em>Radiolab</em> using <a href=\"https://nypublicradio.force.com/wnyc/s/programming-help-and-feedback\" target=\"_blank\">this form</a>. </p>\n<p><span data-renderer-mark=\"true\" data-text-custom-color=\"#000000\">Apply to become a</span><span> </span><a class=\"sc-1ko78hw-0 fiVZLH\" href=\"https://www.wnyc.org/internships-new-york-public-radio/\" title=\"https://www.wnyc.org/internships-new-york-public-radio/\" data-renderer-mark=\"true\" target=\"_blank\"><span data-renderer-mark=\"true\" data-text-custom-color=\"#000000\"><em>Radiolab</em> intern!</span></a></p>\n<p><strong><a class=\"more\" href=\"https://wnycstudios.org/shows/radiolab/getwidget/\">Embed the <em>Radiolab</em> widget on your blog or website.</a></strong></p>\n<p>All press inquiries may be directed to <a href=\"mailto:jhoulihan@nypublicradio.org\" target=\"_blank\">Jennifer Houlihan Roussel</a> at (646) 829-4497.</p>\n<p><em>Leadership support for Radiolab’s science programming is provided by the Gordon and Betty Moore Foundation, Science Sandbox, a Simons Foundation Initiative, and the John Templeton Foundation. Foundational support for Radiolab was provided by the Alfred P. Sloan Foundation.</em></p>\n<p> </p>\n<center><img src=\"https://media.wnyc.org/i/216/116/l/80/1/dark_at_2x.png\" alt=\"WNYC Studios logo\" border=\"0\"></center>\n<p> </p>\n<center><a href=\"https://music.amazon.com/podcasts/ffd8d916-b5a8-4950-95eb-107e448fd436/the-new-yorker-radio-hour\"> <img src=\"https://media.wnyc.org/i/165/40/l/80/2022/11/EN_ListenAFOn_AmazonMusic_button_Indigo_RGB.png\" alt=\"Listen on Amazon\" border=\"0\"> </a></center>",
+          "roles": {
+            "associate producer": [
+              {
+                "url": "/people/maria-paz-gutierrez-radiolab/",
+                "image": "https://media.wnyc.org/i/1405/937/c/80/2022/06/MariaPazGutierrez.jpg",
+                "last-name": "Gutiérrez",
+                "first-name": "Maria Paz"
+              }
+            ],
+            "producer": [
+              {
+                "url": "/people/becca-bressler/",
+                "image": "https://media.wnyc.org/i/1860/1240/c/80/1/BeccaBressler_1.jpg",
+                "last-name": "Bressler",
+                "first-name": "Becca"
+              },
+              {
+                "url": "/people/rachael-cusick-radiolab/",
+                "image": "https://media.wnyc.org/i/800/533/l/80/2022/06/RachaelCusickHeadshotUpdated.jpeg",
+                "last-name": "Cusick",
+                "first-name": "Rachael"
+              },
+              {
+                "url": "/people/gnanasambandan-sindhu/",
+                "image": "https://media.wnyc.org/i/1860/1240/l/80/2022/06/1w1a7340.JPG",
+                "last-name": "Gnanasambandan",
+                "first-name": "Sindhu"
+              },
+              {
+                "url": "/people/annie-mcewen/",
+                "image": "https://media.wnyc.org/i/1860/1240/c/80/1/AnnieMcEwen.jpg",
+                "last-name": "McEwen",
+                "first-name": "Annie "
+              },
+              {
+                "url": "/people/sarah-qari/",
+                "image": "https://media.wnyc.org/i/1860/1395/c/80/2022/10/IMG_2876.jpg",
+                "last-name": "Qari",
+                "first-name": "Sarah"
+              },
+              {
+                "url": "/people/molly-webster/",
+                "image": "https://media.wnyc.org/i/1860/1240/c/80/2020/07/molly_webster.jpg",
+                "last-name": "Webster",
+                "first-name": "Molly"
+              }
+            ],
+            "director of sound design": [
+              {
+                "url": "/people/dylan-keefe/",
+                "image": "https://media.wnyc.org/i/1860/1240/c/80/1/DylanKeefe_1.jpg",
+                "last-name": "Keefe",
+                "first-name": "Dylan"
+              }
+            ],
+            "managing editor": [
+              {
+                "url": "/people/soren-wheeler/",
+                "image": "https://media.wnyc.org/i/1860/1240/c/80/1/SorenWheeler_1.jpg",
+                "last-name": "Wheeler",
+                "first-name": "Soren"
+              }
+            ],
+            "senior editor": [
+              {
+                "url": "/people/pat-walters/",
+                "image": "https://media.wnyc.org/i/1860/1240/c/80/1/PatWalters_Aj5fRN2.jpg",
+                "last-name": "Walters",
+                "first-name": "Pat"
+              }
+            ],
+            "host": [
+              {
+                "url": "/people/lulu-miller/",
+                "image": "https://media.wnyc.org/i/1860/1394/l/80/2020/09/lulumillerkristenfinn.jpg",
+                "last-name": "Miller",
+                "first-name": "Lulu"
+              },
+              {
+                "url": "/people/latif-nasser/",
+                "image": "https://media.wnyc.org/i/1860/1239/l/80/2020/09/NYPR_061319_0585.jpg",
+                "last-name": "Nasser",
+                "first-name": "Latif"
+              }
+            ],
+            "digital producer": [
+              {
+                "url": "/people/anna-rascouet-paz/",
+                "image": "https://media.wnyc.org/i/1200/885/h/80/2022/05/anna_resized_headshot_A25rufN.jpg",
+                "last-name": "Rascouët-Paz",
+                "first-name": "Anna"
+              }
+            ],
+            "production manager": [
+              {
+                "url": "/people/w-harry-fortuna/",
+                "image": "https://media.wnyc.org/i/1860/1046/c/80/2022/01/Fortuna_ProfilePic.jpg",
+                "last-name": "Fortuna",
+                "first-name": "W. Harry"
+              }
+            ],
+            "administrative assistant": [
+              {
+                "url": "/people/david-gebel/",
+                "image": "https://media.wnyc.org/i/1040/780/c/80/2022/12/DG-pumpkin.jpg",
+                "last-name": "Gebel",
+                "first-name": "David "
+              }
+            ],
+            "editor": [
+              {
+                "url": "/people/alexandria-neason/",
+                "image": "https://media.wnyc.org/i/960/1280/c/80/2021/05/alexbio.jpeg",
+                "last-name": "Neason",
+                "first-name": "Alexandria"
+              }
+            ],
+            "composer": [
+              {
+                "url": "/people/jeremy-bloom/",
+                "image": "https://media.wnyc.org/i/1024/768/l/80/2021/02/JeremySBloom_BlueHeadshotCasualFull.jpeg",
+                "last-name": "Bloom",
+                "first-name": "Jeremy"
+              }
+            ],
+            "strategic advisor": [
+              {
+                "url": "/people/sarah-sandbach/",
+                "image": "https://media.wnyc.org/i/1860/1394/c/80/2018/11/sarahsandbachphoto.jpeg",
+                "last-name": "Sandbach",
+                "first-name": "Sarah"
+              }
+            ],
+            "technical producer": [
+              {
+                "url": "/people/arianne-wack/",
+                "image": "https://media.wnyc.org/i/1229/993/l/80/2022/07/ARIANNE-10_iyo2Xnz_kPoar68.jpeg",
+                "last-name": "Wack",
+                "first-name": "Arianne"
+              }
+            ],
+            "assistant producer": [
+              {
+                "url": "/people/ekedi-fausther-keeys/",
+                "image": "https://media.wnyc.org/i/1395/1860/c/80/2022/10/IMG_4946.jpg",
+                "last-name": "Fausther-Keeys",
+                "first-name": "Ekedi"
+              }
+            ],
+            "senior producer": [
+              {
+                "url": "/people/simon-adler/",
+                "image": "https://media.wnyc.org/i/1860/1056/c/80/2021/10/SimonAdler_o1TLhq9.png",
+                "last-name": "Adler",
+                "first-name": "Simon"
+              },
+              {
+                "url": "/people/matt-kielty/",
+                "image": "https://media.wnyc.org/i/1860/1240/c/80/1/MatthewKielty_2.jpg",
+                "last-name": "Kielty",
+                "first-name": "Matt"
+              }
+            ]
+          },
+          "social": {
+            "twitter": "Radiolab",
+            "facebook": "Radiolab"
+          }
+        },
+        "description": "<h1>About Radiolab</h1>\r\n<p><span data-stringify-type=\"paragraph-break\"><span><em>Radiolab</em> is on a curiosity bender. We ask deep questions and use investigative journalism to get the answers. A given episode might whirl you through science, legal history, and into the home of someone halfway across the world. The show is known for innovative sound design, smashing information into music. It is hosted by Lulu Miller and Latif Nasser.</span></span></p>\r\n<p><span data-stringify-type=\"paragraph-break\"></span><span><span><em>Radiolab</em> is available on Apple, Spotify, Stitcher, or wherever you get your podcasts.</span> Check your<span>&nbsp;</span></span><a target=\"_blank\" class=\"c-link\" data-stringify-link=\"https://www.wnycstudios.org/shows/radiolab/stations/\" delay=\"150\" data-sk=\"tooltip_parent\" aria-describedby=\"sk-tooltip-10367\" href=\"https://www.wnycstudios.org/shows/radiolab/stations/\" rel=\"noopener noreferrer\">local station</a><span><span>&nbsp;</span>for airtimes. It's also available via the CBC, ABC, and the BBC.</span></p>\r\n<p><span><span>Follow<span>&nbsp;</span></span><em data-stringify-type=\"italic\">Radiolab</em><span><span>&nbsp;</span>on<span>&nbsp;</span></span><a target=\"_blank\" class=\"c-link\" data-stringify-link=\"https://www.instagram.com/radiolab/\" delay=\"150\" data-sk=\"tooltip_parent\" href=\"https://www.instagram.com/radiolab/\" rel=\"noopener noreferrer\">Instagram</a><span>,<span>&nbsp;</span></span><a target=\"_blank\" class=\"c-link\" data-stringify-link=\"https://twitter.com/Radiolab\" delay=\"150\" data-sk=\"tooltip_parent\" href=\"https://twitter.com/Radiolab\" rel=\"noopener noreferrer\">Twitter</a><span>, and<span>&nbsp;</span></span><a target=\"_blank\" class=\"c-link\" data-stringify-link=\"https://www.facebook.com/Radiolab\" delay=\"150\" data-sk=\"tooltip_parent\" href=\"https://www.facebook.com/Radiolab\" rel=\"noopener noreferrer\">Facebook</a><span>.</span></span></p>\r\n<p>Contact <em>Radiolab</em> using <a href=\"https://nypublicradio.force.com/wnyc/s/programming-help-and-feedback\" target=\"_blank\">this form</a>.&nbsp;</p>\r\n<p><span data-renderer-mark=\"true\" data-text-custom-color=\"#000000\">Apply to become a</span><span> </span><a class=\"sc-1ko78hw-0 fiVZLH\" href=\"https://www.wnyc.org/internships-new-york-public-radio/\" title=\"https://www.wnyc.org/internships-new-york-public-radio/\" data-renderer-mark=\"true\" target=\"_blank\"><span data-renderer-mark=\"true\" data-text-custom-color=\"#000000\"><em>Radiolab</em> intern!</span></a></p>\r\n<p><strong><a class=\"more\" href=\"https://wnycstudios.org/shows/radiolab/getwidget/\">Embed the <em>Radiolab</em> widget on your blog or website.</a></strong></p>\r\n<p>All press inquiries may be directed to <a href=\"mailto:jhoulihan@nypublicradio.org\" target=\"_blank\">Jennifer Houlihan Roussel</a>&nbsp;at (646) 829-4497.</p>\r\n<p><em>Leadership support for Radiolab&rsquo;s science programming is provided by the Gordon and Betty Moore Foundation, Science Sandbox, a Simons Foundation Initiative, and the John Templeton Foundation. Foundational support for Radiolab was provided by the Alfred P. Sloan Foundation.</em></p>\r\n<p>&nbsp;</p>\r\n<center><img src=\"https://media.wnyc.org/i/216/116/l/80/1/dark_at_2x.png\" alt=\"WNYC Studios logo\" border=\"0\" /></center>\r\n<p>&nbsp;</p>\r\n<center><a href=\"https://music.amazon.com/podcasts/ffd8d916-b5a8-4950-95eb-107e448fd436/the-new-yorker-radio-hour\"> <img src=\"https://media.wnyc.org/i/165/40/l/80/2022/11/EN_ListenAFOn_AmazonMusic_button_Indigo_RGB.png\" alt=\"Listen on Amazon\" border=\"0\" /> </a></center>",
+        "social-links": [
+          {
+            "href": "https://www.facebook.com/Radiolab/",
+            "title": "facebook"
+          },
+          {
+            "href": "https://twitter.com/Radiolab",
+            "title": "twitter"
+          }
+        ],
+        "bg-color": "rgba(0,201,206,1)",
+        "featured": null,
+        "sidebar-chunks": [
+          {
+            "content": "<a class=\"nudge-big external-link\" style=\"margin-bottom: 20px;display:block;\" href=\"http://www.wnyc.org/shows/radiolabmoreperfect/?utm_content=radiolab-story-sidebar\" target=\"_blank\"><img style=\"max-width:300px;\" src=\"https://media2.wnyc.org/i/raw/1/MorePerfect_RightRailButton.png\" title=\"Radiolab Presents: More Perfect\"></a>\n\n<!-- Google Code for Remarketing Tag -->\n<!--------------------------------------------------\r\nRemarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup\r\n--------------------------------------------------->\n<script type=\"text/javascript\">\r\n/* <![CDATA[ */\r\nvar google_conversion_id = 949931013;\r\nvar google_custom_params = window.google_tag_params;\r\nvar google_remarketing_only = true;\r\n/* ]]> */\r\n\\x3C/script>\n<script type=\"text/javascript\" src=\"//www.googleadservices.com/pagead/conversion.js\">\r\n\\x3C/script>\n<noscript>\n<div style=\"display:inline;\">\n<img height=\"1\" width=\"1\" style=\"border-style:none;\" alt=\"\" src=\"//googleads.g.doubleclick.net/pagead/viewthroughconversion/949931013/?value=0&amp;guid=ON&amp;script=0\">\n</div>\n</noscript>\n",
+            "position": "top"
+          },
+          null
+        ],
+        "donate-chunk": {
+          "content": "",
+          "slug": ""
+        },
+        "listing-object-type": "show",
+        "rss-feed": "http://www.wnycstudios.org/feeds/shows/radiolab",
+        "edit-link": ["cms/show/15957"],
+        "podcast-links": [
+          {
+            "href": "https://itunes.apple.com/us/podcast/radiolab/id152249110?mt=2",
+            "title": "via Apple Podcasts"
+          },
+          {
+            "href": "https://pca.st/radiolab",
+            "title": "via Pocket Casts"
+          },
+          {
+            "href": "https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLndueWMub3JnL3JhZGlvbGFi",
+            "title": "via Google Podcasts"
+          },
+          {
+            "href": "https://tunein.com/podcasts/Science-Podcasts/RadioLab-p68032/",
+            "title": "via TuneIn"
+          },
+          {
+            "href": "https://www.stitcher.com/podcast/wnycs-radiolab",
+            "title": "via Stitcher"
+          },
+          {
+            "href": "https://open.spotify.com/show/2hmkzUtix0qTqvtpPcMzEL",
+            "title": "via Spotify "
+          },
+          {
+            "href": "https://www.iheart.com/podcast/Radiolab-18894587/",
+            "title": "via iHeart Radio"
+          },
+          {
+            "href": "https://music.amazon.com/podcasts/779c24b4-dfe8-497a-83bb-67e729c1177b/Radiolab",
+            "title": "via Amazon Music"
+          },
+          {
+            "href": "http://feeds.wnyc.org/radiolab",
+            "title": "via RSS"
+          }
+        ],
+        "itunes-podcast-id": "152249110",
+        "studios-marquee-mobile-offset": 80,
+        "cms-pk": 15957,
+        "tease": "<p><span>Investigating a strange world.</span></p>",
+        "schedule-summary": "with Lulu Miller, and Latif Nasser",
+        "contact-email": "radiolab@wnyc.org"
+      },
+      "relationships": {
+        "image": {
+          "data": {
+            "type": "image",
+            "id": "200563"
+          }
+        },
+        "marquee-image": {
+          "data": null
+        },
+        "studios-marquee-image": {
+          "data": {
+            "type": "image",
+            "id": "198372"
+          }
+        },
+        "fb-image": {
+          "data": {
+            "type": "image",
+            "id": "191941"
+          }
+        },
+        "producing-organizations": {
+          "meta": {
+            "count": 1
+          },
+          "data": [
+            {
+              "type": "producing-organization",
+              "id": "332"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "show-schedule",
+      "id": "1052",
+      "attributes": {
+        "iso-start-time": "2023-07-25T01:00:00+00:00",
+        "iso-end-time": "2023-07-25T02:00:00+00:00"
+      },
+      "relationships": {
+        "show": {
+          "data": {
+            "type": "show",
+            "id": "15957"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,563 @@
+{
+  "links": {
+    "first": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "last": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "whats-on-now",
+      "id": "1",
+      "attributes": {
+        "name": "WNYC 93.9 FM",
+        "slug": "wnyc-fm939",
+        "short-description": "News, Culture & Talk",
+        "has-playlists": false,
+        "image-logo": "https://media.wnyc.org/i/500/500/c/80/1/wnyc_2_1.png",
+        "schedule-url": "http://www.wnyc.org/schedule/?scheduleStation=wnyc-fm939",
+        "playlist-url": "http://www.wnyc.org/playlist-daily/?scheduleStation=wnyc-fm939",
+        "whats-on": null,
+        "audio-bumper": "/streambumper/streambumper000001_wnycfm.mp3",
+        "aac": "https://fm939.wnyc.org/wnycfm.aac",
+        "mp3": "https://fm939.wnyc.org/wnycfm",
+        "mobile-aac": "https://fm939.wnyc.org/wnycfm-mobile.aac",
+        "mobile-mp3": "https://fm939.wnyc.org/wnycfm",
+        "hls": "https://hls-live.wnyc.org/wnycfm32-hls/playlist.m3u8",
+        "twitter-handle": "",
+        "site-id": 1,
+        "order": 1
+      },
+      "relationships": {
+        "current-show": {
+          "data": {
+            "type": "show-schedule",
+            "id": "37"
+          }
+        },
+        "current-airing": {
+          "data": null
+        },
+        "current-episode": {
+          "data": {
+            "type": "episode",
+            "id": "1345413"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "episode",
+      "id": "1345413",
+      "attributes": {
+        "analytics-code": "ExperimentalStory:the-brian-lehrer-show-2023-07-25 $A0$AD0$V0$Me$D1$HS1$HC0$B0$SS++$C$SThe Brian Lehrer Show$T!film!energy!movies!climate!history!politics!local_wnyc!environment!$APnone$",
+        "appearances": {
+          "producers": [],
+          "hosts": [],
+          "authors": []
+        },
+        "audio": [],
+        "audio-available": false,
+        "audio-eventually": true,
+        "audio-duration-readable": null,
+        "audio-may-download": true,
+        "audio-may-embed": true,
+        "audio-may-stream": true,
+        "body": "<p>Coming up on today's show:</p>\n<ul>\n<li><strong>Alvin Bragg</strong>, Manhattan district attorney, talks about his office's investment in mental health services, a crackdown on illegal cannabis shops, how New Yorkers are feeling about crime in relation to actual crime numbers and more news.<br><br></li>\n<li>A record heat wave has engulfed much of the Southwest and Texas, but while the heat has sparked anxiety about reliability in Texas, utilities in Arizona are unfazed. <strong>Matthew Zeitlin</strong>, business and energy correspondent at the climate news platform Heatmap News, talks about how Arizona has been able to keep its air conditioners on and whether the transition to cleaner energy will test the state's reliability. Plus: the stakes as New York City risks a shortfall of enough to power over 350,000 homes.<br><br></li>\n<li><strong>Fred Kaplan</strong>, Slate's War Stories columnist and the author of many books, including <em>The Bomb: Presidents, Generals, and the Secret History of Nuclear War</em> (Simon &amp; Schuster, 2020), draws on his expertise in nuclear history to discuss whether Christopher Nolan's epic new film <em>Oppenheimer</em> is historically accurate - plus reveals a little-known political controversy within the other big new movie, <em>Barbie</em>.</li>\n</ul>\n<ul>\n<li>As the city heats up, many New Yorkers look to local public pools and beaches for summer fun and refuge from the sweltering sun. But this summer, safety is a major concern as the city faces a lifeguard shortage, leaving large swaths of beaches closed and unsupervised. <strong>Katie Honan</strong>, senior reporter at The City, shares her reporting on the lifeguard shortage and its causes.</li>\n</ul>\n<p><em>Transcripts are posted to each segment as they become available.</em></p>\n<p> </p>",
+        "canonical-url": null,
+        "channel": "",
+        "channel-title": "",
+        "chunks": {
+          "show-sidebar-top": null,
+          "story": null,
+          "site-sidebar-top": "",
+          "show-sidebar-bottom": null,
+          "site-sidebar-bottom": null
+        },
+        "cms-pk": 1345413,
+        "comments-count": 5,
+        "enable-comments": true,
+        "date-line-ts": 1690290145,
+        "edit-link": "cms/episode/1345413",
+        "embed-code": "<iframe frameborder=\"0\" scrolling=\"no\" height=\"130\" width=\"100%\" src=\"https://www.wnyc.org/widgets/ondemand_player/wnyc/#file=/audio/json/1345413/&share=1\"></iframe>",
+        "estimated-duration": 0,
+        "headers": {
+          "brand": {
+            "url": "https://www.wnyc.org/shows/bl",
+            "title": "The Brian Lehrer Show",
+            "slug": "bl",
+            "logo-image": {
+              "alt-text": "",
+              "name": "1/BL.png",
+              "source": null,
+              "url": "https://media.wnyc.org/i/800/800/c/80/1/BL.png",
+              "h": 800,
+              "is-display": true,
+              "crop": "c",
+              "caption": "Brian Lehrer",
+              "credits-url": "",
+              "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/BL.png",
+              "w": 800,
+              "id": 974,
+              "credits-name": "MarcoAntonio.com"
+            }
+          },
+          "links": [
+            {
+              "url": "https://www.wnyc.org/shows/bl",
+              "title": "The Brian Lehrer Show",
+              "item-type": "show",
+              "slug": "bl"
+            }
+          ]
+        },
+        "header-donate-chunk": null,
+        "image-caption": "",
+        "image-main": {
+          "alt-text": "",
+          "name": "2023/07/52675780810_2e2b3baf21_k.jpg",
+          "source": {
+            "url": "https://www.flickr.com/photos/nycmayorsoffice/40120783761/",
+            "name": "Mayoral Photo Office "
+          },
+          "url": "https://media.wnyc.org/i/1860/1239/l/80/2023/07/52675780810_2e2b3baf21_k.jpg",
+          "h": 1239,
+          "is-display": true,
+          "crop": "l",
+          "caption": "Mayor Adams & D.A. Bragg Announce Joint Efforts to Combat Illegal Cannabis Dispensaries",
+          "credits-url": "",
+          "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2023/07/52675780810_2e2b3baf21_k.jpg",
+          "w": 1860,
+          "id": 206953,
+          "credits-name": " Caroline Willis"
+        },
+        "item-type": "episode",
+        "item-type-id": 23,
+        "newscast": "",
+        "newsdate": "2023-07-25T09:02:25.445033-04:00",
+        "npr-analytics-dimensions": [
+          "NYPR",
+          "episode",
+          "1345413",
+          "0",
+          "environment,history,local_wnyc,politics",
+          "",
+          "climate,energy,environment,film,history,local_wnyc,movies,politics",
+          "1",
+          "WNYC",
+          "0",
+          "The Brian Lehrer Show",
+          "2023-07-25 09:02:25.445033-04:00",
+          "259",
+          "none"
+        ],
+        "playlist": [],
+        "podcast-links": [
+          {
+            "href": "https://itunes.apple.com/us/podcast/id73331636",
+            "title": "via Apple Podcasts"
+          },
+          {
+            "href": "https://play.pocketcasts.com/users/sign_in#/podcasts/show/0c3b41f0-2c8b-012e-09b1-00163e1b201c",
+            "title": "via Pocket Casts"
+          },
+          {
+            "href": "https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLndueWMub3JnL3dueWNfYmw",
+            "title": "via Google Podcasts"
+          },
+          {
+            "href": "https://open.spotify.com/show/39nL5PQP2w5PBhnN9wGmHG?si=c092b818a2a84f11",
+            "title": "via Spotify"
+          },
+          {
+            "href": "http://www.stitcher.com/podcast/wnycs-brian-lehrer-show",
+            "title": "via Stitcher"
+          },
+          {
+            "href": "http://tunein.com/radio/The-Brian-Lehrer-Show-p372/",
+            "title": "via TuneIn"
+          },
+          {
+            "href": "http://feeds.wnyc.org/wnyc_bl",
+            "title": "via RSS"
+          },
+          {
+            "href": "https://music.amazon.com/podcasts/01c52b88-6270-453f-b4b6-2ebcdaedc10a/The-Brian-Lehrer-Show",
+            "title": "via Amazon Music"
+          }
+        ],
+        "producing-organizations": [],
+        "publish-at": "2023-07-25T07:00:00",
+        "publish-status": "published",
+        "show": "bl",
+        "show-tease": "<p>Brian Lehrer leads the conversation about what matters most now in local and national politics, our own communities and our lives.</p>",
+        "show-title": "The Brian Lehrer Show",
+        "show-producing-orgs": [
+          {
+            "url": "http://www.wnyc.org/",
+            "logo": {
+              "alt-text": "WNYC svg black for mobile page",
+              "name": "1/wnyc-logo.png",
+              "source": null,
+              "url": "https://media.wnyc.org/i/344/137/l/80/1/wnyc-logo.png",
+              "h": 137,
+              "is-display": false,
+              "crop": "l",
+              "caption": "",
+              "credits-url": "",
+              "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/wnyc-logo.png",
+              "w": 344,
+              "id": 113188,
+              "credits-name": ""
+            },
+            "name": "WNYC"
+          }
+        ],
+        "series": [],
+        "short-title": "",
+        "site-id": 1,
+        "slug": "the-brian-lehrer-show-2023-07-25",
+        "slideshow": [],
+        "tags": [
+          "climate",
+          "energy",
+          "environment",
+          "film",
+          "history",
+          "local_wnyc",
+          "movies",
+          "politics"
+        ],
+        "tease": "Manhattan DA Bragg on Crime and Mental Health; Record Heat and the Power Grid;&nbsp;The History Behind the New Movie Oppenheimer;&nbsp;New York City's Lifeguard Shortage",
+        "template": "story_default",
+        "title": "Manhattan DA Alvin Bragg; Record Heat and the Power Grid; 'Oppenheimer' History; NYC's Lifeguard Shortage",
+        "transcript": "",
+        "twitter-headline": "Manhattan DA Alvin Bragg; Record Heat and the Power Grid; 'Oppenheimer' History; NYC's Lifeguard Shortage",
+        "twitter-handle": "BrianLehrer",
+        "url": "http://www.wnyc.org/story/the-brian-lehrer-show-2023-07-25/",
+        "video": null
+      },
+      "relationships": {
+        "segments": {
+          "data": []
+        }
+      }
+    },
+    {
+      "type": "image",
+      "id": "974",
+      "attributes": {
+        "caption": "Brian Lehrer",
+        "credits-url": "",
+        "credits-name": "MarcoAntonio.com",
+        "crop": "c",
+        "h": 800,
+        "is-display": true,
+        "name": "1/BL.png",
+        "source": "",
+        "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/BL.png",
+        "url": "https://media.wnyc.org/i/800/800/c/80/1/BL.png",
+        "w": 800
+      }
+    },
+    {
+      "type": "show",
+      "id": "363",
+      "attributes": {
+        "slug": "bl",
+        "title": "The Brian Lehrer Show",
+        "url": "https://www.wnyc.org/shows/bl",
+        "linkroll": [
+          {
+            "href": null,
+            "nav-slug": "episodes",
+            "title": "Episodes"
+          },
+          {
+            "href": null,
+            "nav-slug": "segments",
+            "title": "Segments"
+          },
+          {
+            "href": null,
+            "nav-slug": "51-city-council-members-52-weeks",
+            "title": "51 City Council Members in 52 Weeks"
+          },
+          {
+            "href": null,
+            "nav-slug": "brian-lehrer-shows-climate-story-week",
+            "title": "Climate Story of the Week"
+          },
+          {
+            "href": null,
+            "nav-slug": "about",
+            "title": "About"
+          }
+        ],
+        "about": {
+          "body": "<p>Brian Lehrer leads the conversation about what matters most now in local and national politics, our own communities and our lives.</p>\n<p><span>To comment on a particular conversation:</span></p>\n<ul>\n<li>Find us on <a class=\"external-link\" href=\"http://www.facebook.com/brianlehrerwnyc\" target=\"_blank\">Facebook</a> and <a class=\"external-link\" href=\"http://www.twitter.com/brianlehrer\" target=\"_blank\">Twitter</a></li>\n<li class=\"last\">or call 212-433-WNYC (-9692) to join on the air</li>\n</ul>\n<p>Contact: <a href=\"mailto:blshow@wnyc.org\">blshow@wnyc.org</a>. </p>\n<p><em>Support for The Brian Lehrer Show is provided in part by The Endeavor Foundation.</em></p>\n<center><a href=\"https://music.amazon.com/podcasts/01c52b88-6270-453f-b4b6-2ebcdaedc10a/the-brian-lehrer-show\"> <img src=\"https://media.wnyc.org/i/165/40/l/80/2022/11/EN_ListenAFOn_AmazonMusic_button_Indigo_RGB.png\" alt=\"Listen on Amazon\" border=\"0\"> </a></center>",
+          "roles": {
+            "host": [
+              {
+                "url": "/people/brian-lehrer/",
+                "image": "https://media.wnyc.org/i/630/365/c/80/photologue/photos/brian2_630x365.jpg",
+                "last-name": "Lehrer",
+                "first-name": "Brian"
+              }
+            ],
+            "producer": [
+              {
+                "url": "/people/megan-ryan/",
+                "image": "https://media.wnyc.org/i/1860/1239/c/80/1/meganryan-5.jpg",
+                "last-name": "Ryan",
+                "first-name": "Megan"
+              },
+              {
+                "url": "/people/lisa-allison/",
+                "image": null,
+                "last-name": "Allison",
+                "first-name": "Lisa"
+              },
+              {
+                "url": "/people/mary-croke/",
+                "image": "https://media.wnyc.org/i/1860/1239/c/80/1/bl_headshots-6.jpg",
+                "last-name": "Croke",
+                "first-name": "Mary"
+              },
+              {
+                "url": "/people/amina-srna/",
+                "image": "https://media.wnyc.org/i/1860/1240/h/80/2018/08/DSC00730.JPG",
+                "last-name": "Srna",
+                "first-name": "Amina"
+              },
+              {
+                "url": "/people/carl-d-boisrond/",
+                "image": "https://media.wnyc.org/i/1600/1200/c/80/2021/04/Carl-Headshot.png",
+                "last-name": "Boisrond",
+                "first-name": "Carl"
+              },
+              {
+                "url": "/people/zach-gottehrer-cohen/",
+                "image": null,
+                "last-name": "Gottehrer-Cohen",
+                "first-name": "Zach"
+              }
+            ]
+          },
+          "social": {
+            "twitter": "BrianLehrer",
+            "facebook": "BrianLehrerWNYC"
+          }
+        },
+        "description": "<p>Brian Lehrer leads the conversation about what matters most now in local and national politics, our own communities and our lives.</p>\r\n<p><span>To comment on a particular conversation:</span></p>\r\n<ul>\r\n<li>Find us on&nbsp;<a class=\"external-link\" href=\"http://www.facebook.com/brianlehrerwnyc\" target=\"_blank\">Facebook</a>&nbsp;and&nbsp;<a class=\"external-link\" href=\"http://www.twitter.com/brianlehrer\" target=\"_blank\">Twitter</a></li>\r\n<li class=\"last\">or call 212-433-WNYC (-9692) to join on the air</li>\r\n</ul>\r\n<p>Contact:&nbsp;<a href=\"mailto:blshow@wnyc.org\">blshow@wnyc.org</a>.&nbsp;</p>\r\n<p><em>Support for The Brian Lehrer Show is provided in part by The Endeavor Foundation.</em></p>\r\n<center><a href=\"https://music.amazon.com/podcasts/01c52b88-6270-453f-b4b6-2ebcdaedc10a/the-brian-lehrer-show\"> <img src=\"https://media.wnyc.org/i/165/40/l/80/2022/11/EN_ListenAFOn_AmazonMusic_button_Indigo_RGB.png\" alt=\"Listen on Amazon\" border=\"0\" /> </a></center>",
+        "social-links": [
+          {
+            "href": "https://www.facebook.com/BrianLehrerWNYC",
+            "title": "facebook"
+          },
+          {
+            "href": "https://twitter.com/BrianLehrer",
+            "title": "twitter"
+          }
+        ],
+        "bg-color": "rgba(0,0,0,1)",
+        "featured": {
+          "analytics-code": "ExperimentalStory:the-brian-lehrer-show-2023-07-25 $A0$AD0$V0$Me$D1$HS1$HC0$B0$SS++$C$SThe Brian Lehrer Show$T!film!energy!movies!climate!history!politics!local_wnyc!environment!$APnone$",
+          "audio-eventually": true,
+          "cms-pk": 1345413,
+          "date-line": "Tuesday, July 25, 2023",
+          "site-id": 1,
+          "image-main": {
+            "alt-text": "",
+            "name": "2023/07/52675780810_2e2b3baf21_k.jpg",
+            "source": {
+              "url": "https://www.flickr.com/photos/nycmayorsoffice/40120783761/",
+              "name": "Mayoral Photo Office "
+            },
+            "url": "https://media.wnyc.org/i/1860/1239/l/80/2023/07/52675780810_2e2b3baf21_k.jpg",
+            "h": 1239,
+            "is-display": true,
+            "crop": "l",
+            "caption": "Mayor Adams & D.A. Bragg Announce Joint Efforts to Combat Illegal Cannabis Dispensaries",
+            "credits-url": "",
+            "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2023/07/52675780810_2e2b3baf21_k.jpg",
+            "w": 1860,
+            "id": 206953,
+            "credits-name": " Caroline Willis"
+          },
+          "audio-show-options": true,
+          "large-tease-layout": true,
+          "slug": "the-brian-lehrer-show-2023-07-25",
+          "audio-may-embed": true,
+          "date-line-datetime": "2023-07-25T09:02:25.445033-04:00",
+          "audio-duration-readable": null,
+          "npr-analytics-dimensions": [
+            "NYPR",
+            "episode",
+            "1345413",
+            "0",
+            "environment,history,local_wnyc,politics",
+            "",
+            "climate,energy,environment,film,history,local_wnyc,movies,politics",
+            "1",
+            "WNYC",
+            "0",
+            "The Brian Lehrer Show",
+            "2023-07-25 09:02:25.445033-04:00",
+            "259",
+            "none"
+          ],
+          "title": "Manhattan DA Alvin Bragg; Record Heat and the Power Grid; 'Oppenheimer' History; NYC's Lifeguard Shortage",
+          "url": "//www.wnyc.org/story/the-brian-lehrer-show-2023-07-25/",
+          "is-latest": true,
+          "tease": "Manhattan DA Bragg on Crime and Mental Health; Record Heat and the Power Grid; The History Behind the New Movie Oppenheimer; New York City's Lifeguard Shortage",
+          "id": 1345413,
+          "headers": {
+            "brand": {
+              "url": "https://www.wnyc.org/shows/bl",
+              "title": "The Brian Lehrer Show",
+              "slug": "bl",
+              "logo-image": {
+                "alt-text": "",
+                "name": "1/BL.png",
+                "source": null,
+                "url": "https://media.wnyc.org/i/800/800/c/80/1/BL.png",
+                "h": 800,
+                "is-display": true,
+                "crop": "c",
+                "caption": "Brian Lehrer",
+                "credits-url": "",
+                "template": "https://media.wnyc.org/i/%s/%s/%s/%s/1/BL.png",
+                "w": 800,
+                "id": 974,
+                "credits-name": "MarcoAntonio.com"
+              }
+            },
+            "links": [
+              {
+                "url": "https://www.wnyc.org/shows/bl",
+                "title": "The Brian Lehrer Show",
+                "item-type": "show",
+                "slug": "bl"
+              }
+            ]
+          },
+          "audio-may-download": "",
+          "edit-link": "cms/episode/1345413",
+          "audio": [],
+          "audio-available": false
+        },
+        "sidebar-chunks": [
+          {
+            "content": "<a class=\"btn nudge-big gtm__click-tracking\" target=\"_blank\" href=\"https://pledge.wnyc.org/support/wnyc?ref=bl-show-sidebar\" data-action=\"Donate\" data-label=\"in-page\">Donate to our show</a>",
+            "position": "top"
+          },
+          null
+        ],
+        "donate-chunk": {
+          "content": "",
+          "slug": ""
+        },
+        "listing-object-type": "show",
+        "rss-feed": "http://www.wnyc.org/feeds/shows/bl",
+        "edit-link": ["cms/show/363"],
+        "podcast-links": [
+          {
+            "href": "https://itunes.apple.com/us/podcast/id73331636",
+            "title": "via Apple Podcasts"
+          },
+          {
+            "href": "https://play.pocketcasts.com/users/sign_in#/podcasts/show/0c3b41f0-2c8b-012e-09b1-00163e1b201c",
+            "title": "via Pocket Casts"
+          },
+          {
+            "href": "https://podcasts.google.com/feed/aHR0cDovL2ZlZWRzLndueWMub3JnL3dueWNfYmw",
+            "title": "via Google Podcasts"
+          },
+          {
+            "href": "https://open.spotify.com/show/39nL5PQP2w5PBhnN9wGmHG?si=c092b818a2a84f11",
+            "title": "via Spotify"
+          },
+          {
+            "href": "http://www.stitcher.com/podcast/wnycs-brian-lehrer-show",
+            "title": "via Stitcher"
+          },
+          {
+            "href": "http://tunein.com/radio/The-Brian-Lehrer-Show-p372/",
+            "title": "via TuneIn"
+          },
+          {
+            "href": "http://feeds.wnyc.org/wnyc_bl",
+            "title": "via RSS"
+          },
+          {
+            "href": "https://music.amazon.com/podcasts/01c52b88-6270-453f-b4b6-2ebcdaedc10a/The-Brian-Lehrer-Show",
+            "title": "via Amazon Music"
+          }
+        ],
+        "itunes-podcast-id": "73331636",
+        "studios-marquee-mobile-offset": null,
+        "cms-pk": 363,
+        "tease": "<p>Brian Lehrer leads the conversation about what matters most now in local and national politics, our own communities and our lives.</p>",
+        "schedule-summary": "Airs weekdays at 10AM on 93.9 FM and AM 820.",
+        "contact-email": "blshow@wnyc.org"
+      },
+      "relationships": {
+        "image": {
+          "data": {
+            "type": "image",
+            "id": "974"
+          }
+        },
+        "marquee-image": {
+          "data": {
+            "type": "image",
+            "id": "146449"
+          }
+        },
+        "studios-marquee-image": {
+          "data": null
+        },
+        "fb-image": {
+          "data": null
+        },
+        "producing-organizations": {
+          "meta": {
+            "count": 1
+          },
+          "data": [
+            {
+              "type": "producing-organization",
+              "id": "7"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "show-schedule",
+      "id": "37",
+      "attributes": {
+        "iso-start-time": "2023-07-25T14:00:00+00:00",
+        "iso-end-time": "2023-07-25T16:00:00+00:00"
+      },
+      "relationships": {
+        "show": {
+          "data": {
+            "type": "show",
+            "id": "363"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "count": 1
+    }
+  }
+}

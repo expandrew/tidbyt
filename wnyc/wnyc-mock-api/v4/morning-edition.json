@@ -1,0 +1,166 @@
+{
+  "links": {
+    "first": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "last": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "whats-on-now",
+      "id": "1",
+      "attributes": {
+        "name": "WNYC 93.9 FM",
+        "slug": "wnyc-fm939",
+        "short-description": "News, Culture & Talk",
+        "has-playlists": false,
+        "image-logo": "https://media.wnyc.org/i/500/500/c/80/1/wnyc_2_1.png",
+        "schedule-url": "http://www.wnyc.org/schedule/?scheduleStation=wnyc-fm939",
+        "playlist-url": "http://www.wnyc.org/playlist-daily/?scheduleStation=wnyc-fm939",
+        "whats-on": null,
+        "audio-bumper": "/streambumper/streambumper000001_wnycfm.mp3",
+        "aac": "https://fm939.wnyc.org/wnycfm.aac",
+        "mp3": "https://fm939.wnyc.org/wnycfm",
+        "mobile-aac": "https://fm939.wnyc.org/wnycfm-mobile.aac",
+        "mobile-mp3": "https://fm939.wnyc.org/wnycfm",
+        "hls": "https://hls-live.wnyc.org/wnycfm32-hls/playlist.m3u8",
+        "twitter-handle": "",
+        "site-id": 1,
+        "order": 1
+      },
+      "relationships": {
+        "current-show": {
+          "data": {
+            "type": "show-schedule",
+            "id": "159"
+          }
+        },
+        "current-airing": {
+          "data": null
+        },
+        "current-episode": {
+          "data": null
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "image",
+      "id": "192312",
+      "attributes": {
+        "caption": "Morning Edition",
+        "credits-url": "",
+        "credits-name": "NPR",
+        "crop": "l",
+        "h": 1860,
+        "is-display": true,
+        "name": "2020/10/MorningE_000_LOGO122883254.jpg",
+        "source": "",
+        "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2020/10/MorningE_000_LOGO122883254.jpg",
+        "url": "https://media.wnyc.org/i/1860/1860/l/80/2020/10/MorningE_000_LOGO122883254.jpg",
+        "w": 1860
+      }
+    },
+    {
+      "type": "show",
+      "id": "360",
+      "attributes": {
+        "slug": "me",
+        "title": "Morning Edition",
+        "url": "https://www.wnyc.org/shows/me",
+        "linkroll": [
+          {
+            "href": null,
+            "nav-slug": "episodes",
+            "title": "Episodes"
+          },
+          {
+            "href": null,
+            "nav-slug": "about",
+            "title": "About"
+          }
+        ],
+        "about": {
+          "body": "<p>Morning Edition is your perfect morning companion: gentle, but straightforward, explaining the vagaries of international diplomacy, reporting weather and even recommending the best film in town. Mornings and hard news can coexist in peace. Morning hosts make complex news digestible to millions of listeners who have yet to finish their first cup of coffee. Whether the story breaks in Bosnia or Brooklyn, news reports with on-the-spot sound create a complete picture for your ears.</p>\n<p>Contact us using <a href=\"http://www.wnyc.org/contact/\">our feedback form</a>.</p>",
+          "roles": {},
+          "social": {}
+        },
+        "description": "<p>Morning Edition is your perfect morning companion: gentle, but straightforward, explaining the vagaries of international diplomacy, reporting weather and even recommending the best film in town. Mornings and hard news can coexist in peace. Morning hosts make complex news digestible to millions of listeners who have yet to finish their first cup of coffee. Whether the story breaks in Bosnia or Brooklyn, news reports with on-the-spot sound create a complete picture for your ears.</p>\r\n<p>Contact us using&nbsp;<a href=\"http://www.wnyc.org/contact/\">our feedback form</a>.</p>",
+        "social-links": null,
+        "bg-color": "",
+        "featured": null,
+        "sidebar-chunks": [null, null],
+        "donate-chunk": {
+          "content": "",
+          "slug": ""
+        },
+        "listing-object-type": "show",
+        "rss-feed": "http://www.wnyc.org/feeds/shows/me",
+        "edit-link": ["cms/show/360"],
+        "podcast-links": null,
+        "itunes-podcast-id": null,
+        "studios-marquee-mobile-offset": null,
+        "cms-pk": 360,
+        "tease": "<p>Your morning companion from NPR and the WNYC Newsroom, with world news, local features, and weather updates.</p>",
+        "schedule-summary": "Weekdays 5-9am on 93.9FM & AM820.",
+        "contact-email": ""
+      },
+      "relationships": {
+        "image": {
+          "data": {
+            "type": "image",
+            "id": "192312"
+          }
+        },
+        "marquee-image": {
+          "data": null
+        },
+        "studios-marquee-image": {
+          "data": null
+        },
+        "fb-image": {
+          "data": null
+        },
+        "producing-organizations": {
+          "meta": {
+            "count": 2
+          },
+          "data": [
+            {
+              "type": "producing-organization",
+              "id": "6"
+            },
+            {
+              "type": "producing-organization",
+              "id": "7"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "show-schedule",
+      "id": "159",
+      "attributes": {
+        "iso-start-time": "2023-07-25T09:00:00+00:00",
+        "iso-end-time": "2023-07-25T13:00:00+00:00"
+      },
+      "relationships": {
+        "show": {
+          "data": {
+            "type": "show",
+            "id": "360"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "count": 1
+    }
+  }
+}

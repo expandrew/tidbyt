@@ -1,0 +1,155 @@
+{
+  "links": {
+    "first": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "last": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "whats-on-now",
+      "id": "1",
+      "attributes": {
+        "name": "WNYC 93.9 FM",
+        "slug": "wnyc-fm939",
+        "short-description": "News, Culture & Talk",
+        "has-playlists": false,
+        "image-logo": "https://media.wnyc.org/i/500/500/c/80/1/wnyc_2_1.png",
+        "schedule-url": "http://www.wnyc.org/schedule/?scheduleStation=wnyc-fm939",
+        "playlist-url": "http://www.wnyc.org/playlist-daily/?scheduleStation=wnyc-fm939",
+        "whats-on": null,
+        "audio-bumper": "/streambumper/streambumper000001_wnycfm.mp3",
+        "aac": "https://fm939.wnyc.org/wnycfm.aac",
+        "mp3": "https://fm939.wnyc.org/wnycfm",
+        "mobile-aac": "https://fm939.wnyc.org/wnycfm-mobile.aac",
+        "mobile-mp3": "https://fm939.wnyc.org/wnycfm",
+        "hls": "https://hls-live.wnyc.org/wnycfm32-hls/playlist.m3u8",
+        "twitter-handle": "",
+        "site-id": 1,
+        "order": 1
+      },
+      "relationships": {
+        "current-show": {
+          "data": {
+            "type": "show-schedule",
+            "id": "1196"
+          }
+        },
+        "current-airing": {
+          "data": null
+        },
+        "current-episode": {
+          "data": null
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "image",
+      "id": "177903",
+      "attributes": {
+        "caption": "",
+        "credits-url": "",
+        "credits-name": "WBUR/NPR",
+        "crop": "l",
+        "h": 1860,
+        "is-display": true,
+        "name": "2018/08/WBUR_OP_WBUR_NPR_logo_revise2018_RGB.png",
+        "source": "",
+        "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2018/08/WBUR_OP_WBUR_NPR_logo_revise2018_RGB.png",
+        "url": "https://media.wnyc.org/i/1860/1860/l/80/2018/08/WBUR_OP_WBUR_NPR_logo_revise2018_RGB.png",
+        "w": 1860
+      }
+    },
+    {
+      "type": "show",
+      "id": "386",
+      "attributes": {
+        "slug": "on-point",
+        "title": "On Point",
+        "url": "https://www.wnyc.org/shows/on-point",
+        "linkroll": [],
+        "about": {
+          "body": "<p>A hybrid of a talk program and a newsmagazine, On Point puts each day's news into context and provides a lively forum for discussion and debate. Topics chosen for the program are often taken from the biggest news stories of the day while others have a direct connection to issues that are at the core of what is urgent and important in the world at the moment. Interwoven are programs containing interviews with personalities, politicians, musicians, writers, and journalists. On Point deliberately seeks out distinct and provocative voices that may be new to public radio or that may not have been heard in quite the same context before. Debriefs, discussions and radio diaries are designed not just to stimulate the intellect of the listeners but also to elicit emotion and passion about the state of national and international affairs.</p>",
+          "roles": {},
+          "social": {}
+        },
+        "description": "<p>A hybrid of a talk program and a newsmagazine, On Point puts each day's news into context and provides a lively forum for discussion and debate. Topics chosen for the program are often taken from the biggest news stories of the day while others have a direct connection to issues that are at the core of what is urgent and important in the world at the moment. Interwoven are programs containing interviews with personalities, politicians, musicians, writers, and journalists. On Point deliberately seeks out distinct and provocative voices that may be new to public radio or that may not have been heard in quite the same context before. Debriefs, discussions and radio diaries are designed not just to stimulate the intellect of the listeners but also to elicit emotion and passion about the state of national and international affairs.</p>",
+        "social-links": null,
+        "bg-color": "",
+        "featured": null,
+        "sidebar-chunks": [null, null],
+        "donate-chunk": {
+          "content": "",
+          "slug": ""
+        },
+        "listing-object-type": "show",
+        "rss-feed": "http://www.npr.org/rss/podcast.php?id=510053",
+        "edit-link": ["cms/show/386"],
+        "podcast-links": null,
+        "itunes-podcast-id": null,
+        "studios-marquee-mobile-offset": null,
+        "cms-pk": 386,
+        "tease": "<p>A hybrid of a talk program and a newsmagazine, On Point puts each day's news into context and provides a lively forum for discussion and debate.</p>",
+        "schedule-summary": "Weekdays at 8 p.m. on 93.9 FM and AM820 WNYC",
+        "contact-email": ""
+      },
+      "relationships": {
+        "image": {
+          "data": {
+            "type": "image",
+            "id": "177903"
+          }
+        },
+        "marquee-image": {
+          "data": null
+        },
+        "studios-marquee-image": {
+          "data": null
+        },
+        "fb-image": {
+          "data": null
+        },
+        "producing-organizations": {
+          "meta": {
+            "count": 2
+          },
+          "data": [
+            {
+              "type": "producing-organization",
+              "id": "6"
+            },
+            {
+              "type": "producing-organization",
+              "id": "4"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "show-schedule",
+      "id": "1196",
+      "attributes": {
+        "iso-start-time": "2023-07-25T00:00:00+00:00",
+        "iso-end-time": "2023-07-25T01:00:00+00:00"
+      },
+      "relationships": {
+        "show": {
+          "data": {
+            "type": "show",
+            "id": "386"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "count": 1
+    }
+  }
+}

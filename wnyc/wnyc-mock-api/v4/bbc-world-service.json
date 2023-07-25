@@ -1,0 +1,162 @@
+{
+  "links": {
+    "first": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "last": "http://api.prod.nypr.digital/api/v4/whats_on/?filter%5Bslug%5D=wnyc-fm939&include=current-airing.image%2Ccurrent-show.show.image%2Ccurrent-episode.segments&page=1",
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "type": "whats-on-now",
+      "id": "1",
+      "attributes": {
+        "name": "WNYC 93.9 FM",
+        "slug": "wnyc-fm939",
+        "short-description": "News, Culture & Talk",
+        "has-playlists": false,
+        "image-logo": "https://media.wnyc.org/i/500/500/c/80/1/wnyc_2_1.png",
+        "schedule-url": "http://www.wnyc.org/schedule/?scheduleStation=wnyc-fm939",
+        "playlist-url": "http://www.wnyc.org/playlist-daily/?scheduleStation=wnyc-fm939",
+        "whats-on": null,
+        "audio-bumper": "/streambumper/streambumper000001_wnycfm.mp3",
+        "aac": "https://fm939.wnyc.org/wnycfm.aac",
+        "mp3": "https://fm939.wnyc.org/wnycfm",
+        "mobile-aac": "https://fm939.wnyc.org/wnycfm-mobile.aac",
+        "mobile-mp3": "https://fm939.wnyc.org/wnycfm",
+        "hls": "https://hls-live.wnyc.org/wnycfm32-hls/playlist.m3u8",
+        "twitter-handle": "",
+        "site-id": 1,
+        "order": 1
+      },
+      "relationships": {
+        "current-show": {
+          "data": {
+            "type": "show-schedule",
+            "id": "1548"
+          }
+        },
+        "current-airing": {
+          "data": null
+        },
+        "current-episode": {
+          "data": null
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "image",
+      "id": "186439",
+      "attributes": {
+        "caption": "",
+        "credits-url": "",
+        "credits-name": "BBC World Service",
+        "crop": "l",
+        "h": 1860,
+        "is-display": true,
+        "name": "2019/10/2019-bbc-news-tile-world-service-rgb.png",
+        "source": "",
+        "template": "https://media.wnyc.org/i/%s/%s/%s/%s/2019/10/2019-bbc-news-tile-world-service-rgb.png",
+        "url": "https://media.wnyc.org/i/1860/1860/l/80/2019/10/2019-bbc-news-tile-world-service-rgb.png",
+        "w": 1860
+      }
+    },
+    {
+      "type": "show",
+      "id": "362",
+      "attributes": {
+        "slug": "bbc-world-service",
+        "title": "BBC World Service",
+        "url": "https://www.wnyc.org/shows/bbc-world-service",
+        "linkroll": [
+          {
+            "href": null,
+            "nav-slug": "episodes",
+            "title": "Episodes"
+          },
+          {
+            "href": null,
+            "nav-slug": "about",
+            "title": "About"
+          }
+        ],
+        "about": {
+          "body": "<p><span>BBC World Service delivers breaking news and information programming around the world, in English and 28 other language services, on radio, TV and digital</span><span>.  Via the BBC’s </span>network of international correspondents,  BBC World Service is the comprehensive source for the day’s major breaking global news, as well as <span>arts, sports, science and business coverage.  In the U.S, </span><span>BBC content - mainly news and current affairs programming, including its flagship global program Newshour, broadcast on local public radio stations.  </span><span>For more information, visit <a href=\"http://bbc.com/worldservice/\">bbc.com/worldservice</a>.</span></p>",
+          "roles": {},
+          "social": {}
+        },
+        "description": "<p><span>BBC World Service delivers breaking news and information programming around the world, in English and 28 other language services, on radio, TV and digital</span><span>.&nbsp; Via the BBC&rsquo;s </span>network of international correspondents,&nbsp; BBC World Service is the comprehensive source for the day&rsquo;s major breaking global news, as well as <span>arts, sports, science and business coverage.&nbsp; In the U.S, </span><span>BBC content - mainly news and current affairs programming, including its flagship global program Newshour, broadcast on local public radio stations.&nbsp; </span><span>For more information, visit <a href=\"http://bbc.com/worldservice/\">bbc.com/worldservice</a>.</span></p>",
+        "social-links": null,
+        "bg-color": "",
+        "featured": null,
+        "sidebar-chunks": [null, null],
+        "donate-chunk": {
+          "content": "",
+          "slug": ""
+        },
+        "listing-object-type": "show",
+        "rss-feed": "https://podcasts.files.bbci.co.uk/p02nq0gn.rss",
+        "edit-link": ["cms/show/362"],
+        "podcast-links": null,
+        "itunes-podcast-id": null,
+        "studios-marquee-mobile-offset": null,
+        "cms-pk": 362,
+        "tease": "<p>BBC World Service delivers breaking news and information programming around the world, in English and 28 other language services, on radio, TV and digital.</p>",
+        "schedule-summary": "Airs Weekdays at 12AM and 9AM on 93.9 FM and 12AM on AM 820; Airs Saturday and Sunday at 12AM on 93.9 FM, Saturday at 10PM on AM820 and Sunday at 12AM on AM820 ",
+        "contact-email": ""
+      },
+      "relationships": {
+        "image": {
+          "data": {
+            "type": "image",
+            "id": "186439"
+          }
+        },
+        "marquee-image": {
+          "data": null
+        },
+        "studios-marquee-image": {
+          "data": null
+        },
+        "fb-image": {
+          "data": null
+        },
+        "producing-organizations": {
+          "meta": {
+            "count": 1
+          },
+          "data": [
+            {
+              "type": "producing-organization",
+              "id": "2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "show-schedule",
+      "id": "1548",
+      "attributes": {
+        "iso-start-time": "2023-07-25T04:00:00+00:00",
+        "iso-end-time": "2023-07-25T06:00:00+00:00"
+      },
+      "relationships": {
+        "show": {
+          "data": {
+            "type": "show",
+            "id": "362"
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "count": 1
+    }
+  }
+}
