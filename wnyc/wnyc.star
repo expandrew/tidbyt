@@ -79,6 +79,7 @@ def main(config):
     # WHATS_ON = "http://localhost:61010/brian-lehrer.json"
     # WHATS_ON = "http://localhost:61010/bbc-newshour.json"
     # WHATS_ON = "http://localhost:61010/1a.json"
+    # WHATS_ON = "http://localhost:61010/marketplace.json"
     # WHATS_ON = "http://localhost:61010/freakonomics-radio.json" # To test long words in the show_title
     # WHATS_ON = "http://localhost:61010/no-show-title.json" # To test that it returns nothing when there's no show title
     # WHATS_ON = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
