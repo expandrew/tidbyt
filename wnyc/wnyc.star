@@ -6,6 +6,7 @@ Author: Andrew Westling
 """
 
 load("http.star", "http")
+load("re.star", "re")
 load("render.star", "render")
 load("schema.star", "schema")
 
@@ -47,8 +48,10 @@ SCROLL_SPEED_OPTIONS = [
 
 DEFAULT_SCROLL_DIRECTION = SCROLL_DIRECTION_OPTIONS[1].value
 DEFAULT_SCROLL_SPEED = SCROLL_SPEED_OPTIONS[1].value
+DEFAULT_SHOW_DESCRIPTION = True
 DEFAULT_USE_CUSTOM_COLORS = False
 DEFAULT_COLOR_SHOW_TITLE = COLORS["white"]
+DEFAULT_COLOR_DESCRIPTION = COLORS["medium_gray"]
 
 RED_HEADER_BAR = render.Stack(
     children = [
@@ -79,6 +82,7 @@ def main(config):
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
+    should_show_description = config.bool("show_description", DEFAULT_SHOW_DESCRIPTION)
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
 
     # Get data
@@ -98,8 +102,10 @@ def main(config):
     has_current_show = whats_on.json()["current_show"]
     has_show_title = has_current_show and "show_title" in whats_on.json()["current_show"]
     has_title = has_current_show and "title" in whats_on.json()["current_show"] # In cases where there isn't a "show_title" key in the API response, we'll use "title"
+    has_description = has_current_show and "description" in whats_on.json()["current_show"]
 
     show_title = ""
+    description = ""
 
     if has_current_show:
         if has_title:
@@ -107,14 +113,18 @@ def main(config):
         if has_show_title:
             show_title = whats_on.json()["current_show"]["show_title"]
 
+        description = has_description and normalize_description(whats_on.json()["current_show"]["description"])
+
     if not has_current_show or not show_title:
         return []  # If there's no show playing, we shouldn't show an empty screen, just return nothing
 
     # Handle colors
     if use_custom_colors:
         color_show_title = config.str("color_show_title", DEFAULT_COLOR_SHOW_TITLE)
+        color_description = config.str("color_description", DEFAULT_COLOR_DESCRIPTION)
     else:
         color_show_title = DEFAULT_COLOR_SHOW_TITLE
+        color_description = DEFAULT_COLOR_DESCRIPTION
 
     # These are just for putting the content into
     root_contents = None
@@ -130,6 +140,8 @@ def main(config):
         if show_title:
             # Don't pad the top one because it doesn't need it
             data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = "tb-8", color = color_show_title)))
+        if should_show_description and description:
+            data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = description, font = "tom-thumb", color = color_description)))
 
         root_contents = render.Marquee(
             scroll_direction = "vertical",
@@ -142,6 +154,8 @@ def main(config):
         # For horizontal mode, each child needs to be its own Marquee widget, so each line will scroll individually when too long
         if show_title:
             data_parts.append(render.Marquee(width = 64, child = render.Text(content = show_title, font = "tb-8", color = color_show_title)))
+        if should_show_description and description:
+            data_parts.append(render.Marquee(width = 64, child = render.Text(content = description, font = "tom-thumb", color = color_description)))
 
         root_contents = render.Column(
             expanded = True,
@@ -158,6 +172,9 @@ def main(config):
             ],
         ),
     )
+
+def normalize_description(description):
+    return re.sub('<.*?>', '', description)
 
 def get_schema():
     return schema.Schema(
@@ -178,6 +195,13 @@ def get_schema():
                 icon = "gauge",
                 options = SCROLL_SPEED_OPTIONS,
                 default = DEFAULT_SCROLL_SPEED,
+            ),
+            schema.Toggle(
+                id = "show_description",
+                name = "Show description",
+                desc = "Show the description of the show",
+                icon = "commentDots",
+                default = DEFAULT_SHOW_DESCRIPTION,
             ),
             schema.Toggle(
                 id = "use_custom_colors",
@@ -206,6 +230,18 @@ def custom_colors(use_custom_colors):
                 palette = [
                     COLORS["white"],
                     COLORS["red"],
+                ],
+            ),
+            schema.Color(
+                id = "color_description",
+                name = "Color: Description",
+                desc = "Choose your own color for the description of the current show",
+                icon = "palette",
+                default = DEFAULT_COLOR_DESCRIPTION,
+                palette = [
+                    COLORS["light_gray"],
+                    COLORS["medium_gray"],
+                    COLORS["dark_gray"],
                 ],
             ),
         ]
