@@ -44,7 +44,7 @@ DEFAULT_COLOR_DESCRIPTION = COLORS["medium_gray"]
 RED_HEADER_BAR = render.Stack(
     children = [
         render.Box(width = 64, height = 6, color = COLORS["red"]),
-        render.Text(content = "WNYC", height = 7, font="tb-8"),
+        render.Text(content = "WNYC", height = 7, font = "tb-8"),
     ],
 )
 
@@ -62,6 +62,7 @@ def main(config):
     # WHATS_ON = "http://localhost:61010/all-of-it.json"
     # WHATS_ON = "http://localhost:61010/radiolab.json"
     # WHATS_ON = "http://localhost:61010/q.json"
+    # WHATS_ON = "http://localhost:61010/freakonomics-radio.json" # To test long words in the show_title
     # WHATS_ON = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
 
     # Unhandled test cases:
@@ -88,7 +89,7 @@ def main(config):
     # Parse data
     has_current_show = whats_on.json()["current_show"]
     has_show_title = has_current_show and "show_title" in whats_on.json()["current_show"]
-    has_title = has_current_show and "title" in whats_on.json()["current_show"] # In cases where there isn't a "show_title" key in the API response, we'll use "title"
+    has_title = has_current_show and "title" in whats_on.json()["current_show"]  # In cases where there isn't a "show_title" key in the API response, we'll use "title"
     has_description = has_current_show and "description" in whats_on.json()["current_show"]
 
     show_title = ""
@@ -113,10 +114,15 @@ def main(config):
         color_show_title = DEFAULT_COLOR_SHOW_TITLE
         color_description = DEFAULT_COLOR_DESCRIPTION
 
+    font_show_title = "6x13"
+
+    if has_long_words(show_title):
+        font_show_title = "5x8"  # Use a smaller font if any words in the show_title are longer than 10 characters (e.g. "Freakonomics Radio", the Freakonomics part gets cut off)
+
     data_parts = []
 
     if show_title:
-        data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = "tb-8", color = color_show_title)))
+        data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = font_show_title, color = color_show_title)))
     if should_show_description and description:
         data_parts.append(render.Padding(pad = (0, 4, 0, 0), child = render.WrappedText(align = "center", width = 64, content = description, font = "tom-thumb", color = color_description)))
 
@@ -134,8 +140,11 @@ def main(config):
         ),
     )
 
+def has_long_words(show_title):
+    return True if len(re.findall("\\S{10}", show_title)) else False
+
 def normalize_description(description):
-    return re.sub('<.*?>', '', description)
+    return re.sub("<.*?>", "", description)
 
 def get_schema():
     return schema.Schema(
