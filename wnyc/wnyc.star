@@ -36,7 +36,8 @@ SCROLL_SPEED_OPTIONS = [
 ]
 
 DEFAULT_SCROLL_SPEED = SCROLL_SPEED_OPTIONS[1].value
-DEFAULT_SHOW_DESCRIPTION = True
+DEFAULT_SHOW_DESCRIPTION = False
+DEFAULT_SHOW_IMAGE = True
 DEFAULT_USE_CUSTOM_COLORS = False
 DEFAULT_COLOR_SHOW_TITLE = COLORS["white"]
 DEFAULT_COLOR_DESCRIPTION = COLORS["medium_gray"]
@@ -74,6 +75,7 @@ def main(config):
     # Get settings values
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
     should_show_description = config.bool("show_description", DEFAULT_SHOW_DESCRIPTION)
+    should_show_image = config.bool("show_image", DEFAULT_SHOW_IMAGE)
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
 
     # Get data
@@ -94,9 +96,12 @@ def main(config):
     has_show_title = has_current_show and "show_title" in whats_on.json()["current_show"]
     has_title = has_current_show and "title" in whats_on.json()["current_show"]  # In cases where there isn't a "show_title" key in the API response, we'll use "title"
     has_description = has_current_show and "description" in whats_on.json()["current_show"]
+    has_list_image = has_current_show and "listImage" in whats_on.json()["current_show"]
+    has_group_image = has_current_show and "group_image" in whats_on.json()["current_show"]
 
     show_title = ""
     description = ""
+    image_src = ""
 
     if has_current_show:
         if has_title:
@@ -105,6 +110,11 @@ def main(config):
             show_title = whats_on.json()["current_show"]["show_title"]
 
         description = has_description and normalize_description(whats_on.json()["current_show"]["description"])
+
+        if has_list_image:
+            image_src = http.get(whats_on.json()["current_show"]["listImage"]["url"]).body()
+        if has_group_image:
+            image_src = http.get(whats_on.json()["current_show"]["group_image"]).body()
 
     if not has_current_show or not show_title:
         return []  # If there's no show playing, we shouldn't show an empty screen, just return nothing
@@ -122,23 +132,38 @@ def main(config):
     if has_long_words(show_title):
         font_show_title = "5x8"  # Use a smaller font if any words in the show_title are longer than 10 characters (e.g. "Freakonomics Radio", the Freakonomics part gets cut off)
 
+    root_contents = []
     data_parts = []
 
-    if show_title:
-        data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = font_show_title, color = color_show_title)))
-    if should_show_description and description:
-        data_parts.append(render.Padding(pad = (0, 4, 0, 0), child = render.WrappedText(align = "center", width = 64, content = description, font = "tom-thumb", color = color_description)))
+    if should_show_description:
+        if show_title:
+            data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = font_show_title, color = color_show_title)))
+        if should_show_description and description:
+            data_parts.append(render.Padding(pad = (0, 4, 0, 0), child = render.WrappedText(align = "center", width = 64, content = description, font = "tom-thumb", color = color_description)))
+
+        root_contents = render.Marquee(
+            scroll_direction = "vertical",
+            height = 27,
+            child = render.Column(children = data_parts),
+        )
+
+    if not should_show_description:
+        marquee_width = 64
+
+        if should_show_image and image_src:
+            marquee_width = 37  # The marquee needs to be narrower if we are showing the image next to it
+
+        root_contents = render.Row(expanded = True, main_align = "space_between", children = [
+            render.Column(children = [render.Image(src = image_src, height = 26, width = 26)]) if should_show_image else None,
+            render.Column(main_align = "center", expanded = True, children = [render.Marquee(width = marquee_width, scroll_direction = "horizontal", child = render.Text(content = show_title, font = "6x13", color = color_show_title))]),
+        ])
 
     return render.Root(
         delay = scroll_speed,
         child = render.Column(
             children = [
                 RED_HEADER_BAR,
-                render.Marquee(
-                    scroll_direction = "vertical",
-                    height = 27,
-                    child = render.Column(children = data_parts),
-                ),
+                root_contents,
             ],
         ),
     )
@@ -167,6 +192,13 @@ def get_schema():
                 desc = "Show the description of the show",
                 icon = "commentDots",
                 default = DEFAULT_SHOW_DESCRIPTION,
+            ),
+            schema.Toggle(
+                id = "show_image",
+                name = "Show image",
+                desc = "Show an image for the show",
+                icon = "image",
+                default = DEFAULT_SHOW_IMAGE,
             ),
             schema.Toggle(
                 id = "use_custom_colors",
