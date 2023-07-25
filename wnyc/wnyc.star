@@ -10,8 +10,6 @@ load("re.star", "re")
 load("render.star", "render")
 load("schema.star", "schema")
 
-WHATS_ON = "https://api.wnyc.org/api/v1/whats_on/wnyc-fm939"
-
 COLORS = {
     "red": "#DE1E3D",
     "white": "#FFFFFF",
@@ -19,6 +17,17 @@ COLORS = {
     "medium_gray": "#888888",
     "dark_gray": "#444444",
 }
+
+STREAM_OPTIONS = [
+    schema.Option(
+        display = "WNYC 93.9 FM",
+        value = "wnyc-fm939",
+    ),
+    schema.Option(
+        display = "WNYC AM 820",
+        value = "wnyc-am820",
+    ),
+]
 
 SCROLL_SPEED_OPTIONS = [
     schema.Option(
@@ -35,6 +44,7 @@ SCROLL_SPEED_OPTIONS = [
     ),
 ]
 
+DEFAULT_STREAM = STREAM_OPTIONS[0].value
 DEFAULT_SCROLL_SPEED = SCROLL_SPEED_OPTIONS[1].value
 DEFAULT_SHOW_DESCRIPTION = False
 DEFAULT_SHOW_IMAGE = True
@@ -58,6 +68,9 @@ ERROR_CONTENT = render.Column(
 )
 
 def main(config):
+    stream = config.str("stream", DEFAULT_STREAM)
+    WHATS_ON = ("https://api.wnyc.org/api/v1/whats_on/%s" % stream)
+
     # Test data (run the "API: Serve mock API" VS Code task then uncomment a line below to test):
     # WHATS_ON = "http://localhost:61010/all-things-considered.json"
     # WHATS_ON = "http://localhost:61010/all-of-it.json"
@@ -69,10 +82,8 @@ def main(config):
     # WHATS_ON = "http://localhost:61010/no-show-title.json" # To test that it returns nothing when there's no show title
     # WHATS_ON = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
 
-    # Unhandled test cases:
-    # WHATS_ON =
-
     # Get settings values
+    stream = config.str("stream", DEFAULT_STREAM)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
     should_show_description = config.bool("show_description", DEFAULT_SHOW_DESCRIPTION)
     should_show_image = config.bool("show_image", DEFAULT_SHOW_IMAGE)
@@ -178,6 +189,14 @@ def get_schema():
     return schema.Schema(
         version = "1",
         fields = [
+            schema.Dropdown(
+                id = "stream",
+                name = "Stream",
+                desc = "Choose which stream to show info for",
+                icon = "radio",
+                options = STREAM_OPTIONS,
+                default = DEFAULT_STREAM,
+            ),
             schema.Dropdown(
                 id = "scroll_speed",
                 name = "Scroll speed",
