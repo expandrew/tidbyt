@@ -20,17 +20,6 @@ COLORS = {
     "dark_gray": "#444444",
 }
 
-SCROLL_DIRECTION_OPTIONS = [
-    schema.Option(
-        display = "Horizontal",
-        value = "horizontal",
-    ),
-    schema.Option(
-        display = "Vertical",
-        value = "vertical",
-    ),
-]
-
 SCROLL_SPEED_OPTIONS = [
     schema.Option(
         display = "Fast",
@@ -46,7 +35,6 @@ SCROLL_SPEED_OPTIONS = [
     ),
 ]
 
-DEFAULT_SCROLL_DIRECTION = SCROLL_DIRECTION_OPTIONS[1].value
 DEFAULT_SCROLL_SPEED = SCROLL_SPEED_OPTIONS[1].value
 DEFAULT_SHOW_DESCRIPTION = True
 DEFAULT_USE_CUSTOM_COLORS = False
@@ -80,7 +68,6 @@ def main(config):
     # WHATS_ON =
 
     # Get settings values
-    scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
     should_show_description = config.bool("show_description", DEFAULT_SHOW_DESCRIPTION)
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
@@ -126,49 +113,23 @@ def main(config):
         color_show_title = DEFAULT_COLOR_SHOW_TITLE
         color_description = DEFAULT_COLOR_DESCRIPTION
 
-    # These are just for putting the content into
-    root_contents = None
     data_parts = []
 
-    # Vertical scrolling
-    if scroll_direction == "vertical":
-        # For vertical mode, each child needs to be a WrappedText widget, so the text will wrap to the next line
-
-        # (I also wrap each child in a Padding widget with appropriate spacing, so things can breathe a little bit)
-        pad = (0, 4, 0, 0)  # (left, top, right, bottom)
-
-        if show_title:
-            # Don't pad the top one because it doesn't need it
-            data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = "tb-8", color = color_show_title)))
-        if should_show_description and description:
-            data_parts.append(render.Padding(pad = pad, child = render.WrappedText(align = "center", width = 64, content = description, font = "tom-thumb", color = color_description)))
-
-        root_contents = render.Marquee(
-            scroll_direction = "vertical",
-            height = 27,
-            child = render.Column(children = data_parts),
-        )
-
-    # Horizontal scrolling
-    if scroll_direction == "horizontal":
-        # For horizontal mode, each child needs to be its own Marquee widget, so each line will scroll individually when too long
-        if show_title:
-            data_parts.append(render.Marquee(width = 64, child = render.Text(content = show_title, font = "tb-8", color = color_show_title)))
-        if should_show_description and description:
-            data_parts.append(render.Marquee(width = 64, child = render.Text(content = description, font = "tom-thumb", color = color_description)))
-
-        root_contents = render.Column(
-            expanded = True,
-            main_align = "space_evenly",
-            children = data_parts,
-        )
+    if show_title:
+        data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = "tb-8", color = color_show_title)))
+    if should_show_description and description:
+        data_parts.append(render.Padding(pad = (0, 4, 0, 0), child = render.WrappedText(align = "center", width = 64, content = description, font = "tom-thumb", color = color_description)))
 
     return render.Root(
         delay = scroll_speed,
         child = render.Column(
             children = [
                 RED_HEADER_BAR,
-                root_contents,
+                render.Marquee(
+                    scroll_direction = "vertical",
+                    height = 27,
+                    child = render.Column(children = data_parts),
+                ),
             ],
         ),
     )
@@ -180,14 +141,6 @@ def get_schema():
     return schema.Schema(
         version = "1",
         fields = [
-            schema.Dropdown(
-                id = "scroll_direction",
-                name = "Scroll direction",
-                desc = "Choose whether to scroll text horizontally or vertically",
-                icon = "alignJustify",
-                options = SCROLL_DIRECTION_OPTIONS,
-                default = DEFAULT_SCROLL_DIRECTION,
-            ),
             schema.Dropdown(
                 id = "scroll_speed",
                 name = "Scroll speed",
