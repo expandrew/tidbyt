@@ -44,10 +44,20 @@ SCROLL_SPEED_OPTIONS = [
     ),
 ]
 
+LAYOUT_OPTIONS = [
+    schema.Option(
+        display = "Name and Image",
+        value = "with_image",
+    ),
+    schema.Option(
+        display = "Name and Description",
+        value = "with_description",
+    ),
+]
+
 DEFAULT_STREAM = STREAM_OPTIONS[0].value
+DEFAULT_LAYOUT = LAYOUT_OPTIONS[0].value
 DEFAULT_SCROLL_SPEED = SCROLL_SPEED_OPTIONS[1].value
-DEFAULT_SHOW_DESCRIPTION = False
-DEFAULT_SHOW_IMAGE = True
 DEFAULT_USE_CUSTOM_COLORS = False
 DEFAULT_COLOR_SHOW_TITLE = COLORS["white"]
 DEFAULT_COLOR_DESCRIPTION = COLORS["medium_gray"]
@@ -86,10 +96,8 @@ def main(config):
     # WHATS_ON = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
 
     # Get settings values
-    stream = config.str("stream", DEFAULT_STREAM)
     scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
-    should_show_description = config.bool("show_description", DEFAULT_SHOW_DESCRIPTION)
-    should_show_image = config.bool("show_image", DEFAULT_SHOW_IMAGE)
+    layout = config.str("layout", DEFAULT_LAYOUT)
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
 
     # Get data
@@ -141,18 +149,17 @@ def main(config):
         color_show_title = DEFAULT_COLOR_SHOW_TITLE
         color_description = DEFAULT_COLOR_DESCRIPTION
 
-    font_show_title = "6x13"
-
-    if has_long_words(show_title):
-        font_show_title = "5x8"  # Use a smaller font if any words in the show_title are longer than 10 characters (e.g. "Freakonomics Radio", the Freakonomics part gets cut off)
-
     root_contents = []
     data_parts = []
 
-    if should_show_description:
+    if layout == "with_description":
+        font_show_title = "6x13"
+        if has_long_words(show_title):
+            font_show_title = "5x8"  # Use a smaller font if any words in the show_title are longer than 10 characters (e.g. "Freakonomics Radio", the Freakonomics part gets cut off)
+
         if show_title:
             data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = font_show_title, color = color_show_title)))
-        if should_show_description and description:
+        if description:
             data_parts.append(render.Padding(pad = (0, 4, 0, 0), child = render.WrappedText(align = "center", width = 64, content = description, font = "tom-thumb", color = color_description)))
 
         root_contents = render.Marquee(
@@ -161,15 +168,19 @@ def main(config):
             child = render.Column(children = data_parts),
         )
 
-    if not should_show_description:
+    if layout == "with_image":
         marquee_width = 64
 
-        if should_show_image and image_src:
+        if image_src:
             marquee_width = 37  # The marquee needs to be narrower if we are showing the image next to it
 
         root_contents = render.Row(expanded = True, main_align = "space_between", children = [
-            render.Column(children = [render.Image(src = image_src, height = 26, width = 26)]) if should_show_image else None,
-            render.Column(main_align = "center", expanded = True, children = [render.Marquee(width = marquee_width, scroll_direction = "horizontal", child = render.Text(content = show_title, font = "6x13", color = color_show_title))]),
+            render.Column(children = [
+                render.Image(src = image_src, height = 26, width = 26) if image_src else None,
+            ]),
+            render.Column(main_align = "center", expanded = True, children = [
+                render.Marquee(width = marquee_width, scroll_direction = "horizontal", child = render.Text(content = show_title, font = "6x13", color = color_show_title)),
+            ]),
         ])
 
     return render.Root(
@@ -201,26 +212,20 @@ def get_schema():
                 default = DEFAULT_STREAM,
             ),
             schema.Dropdown(
+                id = "layout",
+                name = "Layout",
+                desc = "Choose which layout to use for the info",
+                icon = "image",
+                options = LAYOUT_OPTIONS,
+                default = DEFAULT_LAYOUT,
+            ),
+            schema.Dropdown(
                 id = "scroll_speed",
                 name = "Scroll speed",
                 desc = "Slow down the scroll speed of the text",
                 icon = "gauge",
                 options = SCROLL_SPEED_OPTIONS,
                 default = DEFAULT_SCROLL_SPEED,
-            ),
-            schema.Toggle(
-                id = "show_description",
-                name = "Show description",
-                desc = "Show the description of the show",
-                icon = "commentDots",
-                default = DEFAULT_SHOW_DESCRIPTION,
-            ),
-            schema.Toggle(
-                id = "show_image",
-                name = "Show image",
-                desc = "Show an image for the show",
-                icon = "image",
-                default = DEFAULT_SHOW_IMAGE,
             ),
             schema.Toggle(
                 id = "use_custom_colors",
