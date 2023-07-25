@@ -82,6 +82,12 @@ def main(config):
     # Get settings values
     layout = config.str("layout", DEFAULT_LAYOUT)
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
+    if use_custom_colors:
+        color_show_title = config.str("color_show_title", DEFAULT_COLOR_SHOW_TITLE)
+        color_description = config.str("color_description", DEFAULT_COLOR_DESCRIPTION)
+    else:
+        color_show_title = DEFAULT_COLOR_SHOW_TITLE
+        color_description = DEFAULT_COLOR_DESCRIPTION
 
     # Get data
     whats_on = http.get(url = WHATS_ON, ttl_seconds = 30)
@@ -123,14 +129,6 @@ def main(config):
 
     if not has_current_show or not show_title:
         return []  # If there's no show playing, we shouldn't show an empty screen, just return nothing
-
-    # Handle colors
-    if use_custom_colors:
-        color_show_title = config.str("color_show_title", DEFAULT_COLOR_SHOW_TITLE)
-        color_description = config.str("color_description", DEFAULT_COLOR_DESCRIPTION)
-    else:
-        color_show_title = DEFAULT_COLOR_SHOW_TITLE
-        color_description = DEFAULT_COLOR_DESCRIPTION
 
     root_contents = []
     data_parts = []
