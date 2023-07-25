@@ -181,9 +181,6 @@ def main(config):
         ),
     )
 
-def has_long_words(show_title):
-    return True if len(re.findall("\\S{10}", show_title)) else False
-
 def normalize_description(description):
     return re.sub("<.*?>", "", description)
 
