@@ -38,6 +38,10 @@ LAYOUT_OPTIONS = [
         display = "Name and Description",
         value = "with_description",
     ),
+    schema.Option(
+        display = "Name only",
+        value = "with_name_only",
+    ),
 ]
 
 DEFAULT_STREAM = STREAM_OPTIONS[0].value
@@ -150,15 +154,22 @@ def main(config):
 
         if image_src:
             marquee_width = 37  # The marquee needs to be narrower if we are showing the image next to it
+            data_parts.append(render.Column(children = [render.Image(src = image_src, height = 26, width = 26) if image_src else None]))
 
-        root_contents = render.Row(expanded = True, main_align = "space_between", children = [
-            render.Column(children = [
-                render.Image(src = image_src, height = 26, width = 26) if image_src else None,
-            ]),
-            render.Column(main_align = "center", expanded = True, children = [
-                render.Marquee(width = marquee_width, scroll_direction = "horizontal", child = render.Text(content = show_title, font = "tb-8", color = color_show_title)),
-            ]),
-        ])
+        if show_title:
+            data_parts.append(render.Column(main_align = "center", expanded = True, children = [render.Marquee(width = marquee_width, scroll_direction = "horizontal", child = render.Text(content = show_title, font = "tb-8", color = color_show_title))]))
+
+        root_contents = render.Row(expanded = True, main_align = "space_between", children = data_parts)
+
+    if layout == "with_name_only":
+        if show_title:
+            data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = "tb-8", color = color_show_title)))
+
+        root_contents = render.Marquee(
+            scroll_direction = "vertical",
+            height = 27,
+            child = render.Column(children = data_parts),
+        )
 
     return render.Root(
         delay = 100 if layout == "with_description" else 0,
