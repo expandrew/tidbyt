@@ -29,21 +29,6 @@ STREAM_OPTIONS = [
     ),
 ]
 
-SCROLL_SPEED_OPTIONS = [
-    schema.Option(
-        display = "Fast",
-        value = "0",
-    ),
-    schema.Option(
-        display = "Slower",
-        value = "100",
-    ),
-    schema.Option(
-        display = "Slowest",
-        value = "200",
-    ),
-]
-
 LAYOUT_OPTIONS = [
     schema.Option(
         display = "Name and Image",
@@ -57,7 +42,6 @@ LAYOUT_OPTIONS = [
 
 DEFAULT_STREAM = STREAM_OPTIONS[0].value
 DEFAULT_LAYOUT = LAYOUT_OPTIONS[0].value
-DEFAULT_SCROLL_SPEED = SCROLL_SPEED_OPTIONS[1].value
 DEFAULT_USE_CUSTOM_COLORS = False
 DEFAULT_COLOR_SHOW_TITLE = COLORS["white"]
 DEFAULT_COLOR_DESCRIPTION = COLORS["medium_gray"]
@@ -96,7 +80,6 @@ def main(config):
     # WHATS_ON = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
 
     # Get settings values
-    scroll_speed = int(config.str("scroll_speed", DEFAULT_SCROLL_SPEED))
     layout = config.str("layout", DEFAULT_LAYOUT)
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
 
@@ -184,7 +167,7 @@ def main(config):
         ])
 
     return render.Root(
-        delay = scroll_speed,
+        delay = 100 if layout == "with_description" else 0,
         child = render.Column(
             children = [
                 RED_HEADER_BAR,
@@ -218,14 +201,6 @@ def get_schema():
                 icon = "image",
                 options = LAYOUT_OPTIONS,
                 default = DEFAULT_LAYOUT,
-            ),
-            schema.Dropdown(
-                id = "scroll_speed",
-                name = "Scroll speed",
-                desc = "Slow down the scroll speed of the text",
-                icon = "gauge",
-                options = SCROLL_SPEED_OPTIONS,
-                default = DEFAULT_SCROLL_SPEED,
             ),
             schema.Toggle(
                 id = "use_custom_colors",
