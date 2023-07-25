@@ -136,12 +136,8 @@ def main(config):
     data_parts = []
 
     if layout == "with_description":
-        font_show_title = "6x13"
-        if has_long_words(show_title):
-            font_show_title = "5x8"  # Use a smaller font if any words in the show_title are longer than 10 characters (e.g. "Freakonomics Radio", the Freakonomics part gets cut off)
-
         if show_title:
-            data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = font_show_title, color = color_show_title)))
+            data_parts.append(render.Padding(pad = 0, child = render.WrappedText(align = "center", width = 64, content = show_title, font = "tb-8", color = color_show_title)))
         if description:
             data_parts.append(render.Padding(pad = (0, 4, 0, 0), child = render.WrappedText(align = "center", width = 64, content = description, font = "tom-thumb", color = color_description)))
 
@@ -162,7 +158,7 @@ def main(config):
                 render.Image(src = image_src, height = 26, width = 26) if image_src else None,
             ]),
             render.Column(main_align = "center", expanded = True, children = [
-                render.Marquee(width = marquee_width, scroll_direction = "horizontal", child = render.Text(content = show_title, font = "6x13", color = color_show_title)),
+                render.Marquee(width = marquee_width, scroll_direction = "horizontal", child = render.Text(content = show_title, font = "tb-8", color = color_show_title)),
             ]),
         ])
 
