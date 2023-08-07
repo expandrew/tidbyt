@@ -67,22 +67,22 @@ ERROR_CONTENT = render.Column(
 
 def main(config):
     stream = config.str("stream", DEFAULT_STREAM)
-    WHATS_ON = ("https://api.wnyc.org/api/v1/whats_on/%s" % stream)
+    ENDPOINT = ("https://api.wnyc.org/api/v1/whats_on/%s" % stream)
 
-    # Test data (run the "API: Serve mock API" VS Code task then uncomment a line below to test):
-    # WHATS_ON = "http://localhost:61010/all-things-considered.json"
-    # WHATS_ON = "http://localhost:61010/all-of-it.json"
-    # WHATS_ON = "http://localhost:61010/radiolab.json"
-    # WHATS_ON = "http://localhost:61010/q.json"
-    # WHATS_ON = "http://localhost:61010/new-sounds.json"
-    # WHATS_ON = "http://localhost:61010/morning-edition.json"
-    # WHATS_ON = "http://localhost:61010/brian-lehrer.json"
-    # WHATS_ON = "http://localhost:61010/bbc-newshour.json"
-    # WHATS_ON = "http://localhost:61010/1a.json"
-    # WHATS_ON = "http://localhost:61010/marketplace.json"
-    # WHATS_ON = "http://localhost:61010/freakonomics-radio.json" # To test long words in the show_title
-    # WHATS_ON = "http://localhost:61010/no-show-title.json" # To test that it returns nothing when there's no show title
-    # WHATS_ON = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
+    # Test data (run the "Mocks: Start server" VS Code task then uncomment a line below to test):
+    # ENDPOINT = "http://localhost:61010/all-things-considered.json"
+    # ENDPOINT = "http://localhost:61010/all-of-it.json"
+    # ENDPOINT = "http://localhost:61010/radiolab.json"
+    # ENDPOINT = "http://localhost:61010/q.json"
+    # ENDPOINT = "http://localhost:61010/new-sounds.json"
+    # ENDPOINT = "http://localhost:61010/morning-edition.json"
+    # ENDPOINT = "http://localhost:61010/brian-lehrer.json"
+    # ENDPOINT = "http://localhost:61010/bbc-newshour.json"
+    # ENDPOINT = "http://localhost:61010/1a.json"
+    # ENDPOINT = "http://localhost:61010/marketplace.json"
+    # ENDPOINT = "http://localhost:61010/freakonomics-radio.json" # To test long words in the show_title
+    # ENDPOINT = "http://localhost:61010/no-show-title.json" # To test that it returns nothing when there's no show title
+    # ENDPOINT = "http://localhost:61010/404.json" # To test "Can't connect" (ex. endpoint is down)
 
     # Get settings values
     layout = config.str("layout", DEFAULT_LAYOUT)
@@ -95,7 +95,7 @@ def main(config):
         color_description = DEFAULT_COLOR_DESCRIPTION
 
     # Get data
-    whats_on = http.get(url = WHATS_ON, ttl_seconds = 30)
+    whats_on = http.get(url = ENDPOINT, ttl_seconds = 30)
 
     if (whats_on.status_code) != 200:
         return render.Root(
@@ -110,7 +110,7 @@ def main(config):
     # Parse data
     has_current_show = whats_on.json()["current_show"]
     has_show_title = has_current_show and "show_title" in whats_on.json()["current_show"]
-    has_title = has_current_show and "title" in whats_on.json()["current_show"]  # In cases where there isn't a "show_title" key in the API response, we'll use "title"
+    has_title = has_current_show and "title" in whats_on.json()["current_show"]  # In cases where there isn't a "show_title" key in the response, we'll use "title"
     has_description = has_current_show and "description" in whats_on.json()["current_show"]
     has_list_image = has_current_show and "listImage" in whats_on.json()["current_show"]
     has_group_image = has_current_show and "group_image" in whats_on.json()["current_show"]

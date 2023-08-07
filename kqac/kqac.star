@@ -9,7 +9,7 @@ load("http.star", "http")
 load("render.star", "render")
 load("schema.star", "schema")
 
-NOW_PLAYING = "https://daisy.allclassical.org/json/now_play3.json"
+ENDPOINT = "https://daisy.allclassical.org/json/now_play3.json"
 
 COLORS = {
     "dark_blue": "#263741",
@@ -72,18 +72,18 @@ ERROR_CONTENT = render.Column(
 )
 
 def main(config):
-    # Test data (run the "API: Serve mock API" VS Code task then uncomment a line below to test):
-    # NOW_PLAYING = "http://localhost:61010/between-songs.json" # No catalog item (ex. between songs)
-    # NOW_PLAYING = "http://localhost:61010/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
-    # NOW_PLAYING = "http://localhost:61010/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
-    # NOW_PLAYING = "http://localhost:61010/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
-    # NOW_PLAYING = "http://localhost:61010/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
-    # NOW_PLAYING = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
-    # NOW_PLAYING = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
+    # Test data (run the "Mocks: Start server" VS Code task then uncomment a line below to test):
+    # ENDPOINT = "http://localhost:61010/between-songs.json" # No catalog item (ex. between songs)
+    # ENDPOINT = "http://localhost:61010/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
+    # ENDPOINT = "http://localhost:61010/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
+    # ENDPOINT = "http://localhost:61010/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
+    # ENDPOINT = "http://localhost:61010/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
+    # ENDPOINT = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
+    # ENDPOINT = "http://localhost:61010/404.json" # To test "Can't connect" (ex. endpoint is down)
 
     # Unhandled test data
-    # NOW_PLAYING = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata) (they put the second soloist in the "ensemble" line??? This breaks my "Show ensemble" setting)
-    # NOW_PLAYING = "http://localhost:61010/conductor-unreadable-character.json" # Conductor is listed as "Jakub Hrua", but should be "Jakub Hrůša" (this is their fault not mine; not sure how I'd actually address this without better data)
+    # ENDPOINT = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata) (they put the second soloist in the "ensemble" line??? This breaks my "Show ensemble" setting)
+    # ENDPOINT = "http://localhost:61010/conductor-unreadable-character.json" # Conductor is listed as "Jakub Hrua", but should be "Jakub Hrůša" (this is their fault not mine; not sure how I'd actually address this without better data)
 
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
@@ -92,7 +92,7 @@ def main(config):
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
 
     # Get data
-    now_playing = http.get(url = NOW_PLAYING, ttl_seconds = 30)
+    now_playing = http.get(url = ENDPOINT, ttl_seconds = 30)
 
     if (now_playing.status_code) != 200:
         return render.Root(
