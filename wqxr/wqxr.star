@@ -9,7 +9,7 @@ load("http.star", "http")
 load("render.star", "render")
 load("schema.star", "schema")
 
-WHATS_ON = "https://api.wnyc.org/api/v1/whats_on/wqxr"
+ENDPOINT = "https://api.wnyc.org/api/v1/whats_on/wqxr"
 
 COLORS = {
     "dark_blue": "#12518A",
@@ -74,19 +74,19 @@ ERROR_CONTENT = render.Column(
 )
 
 def main(config):
-    # Test data (run the "API: Serve mock API" VS Code task then uncomment a line below to test):
-    # WHATS_ON = "http://localhost:61010/between-songs.json" # No catalog item (ex. between songs)
-    # WHATS_ON = "http://localhost:61010/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
-    # WHATS_ON = "http://localhost:61010/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
-    # WHATS_ON = "http://localhost:61010/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
-    # WHATS_ON = "http://localhost:61010/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
-    # WHATS_ON = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
-    # WHATS_ON = "http://localhost:61010/404.json" # To test "Can't connect" (ex. API is down)
-    # WHATS_ON = "http://localhost:61010/soloist-data-uses-role.json" # Piece has a soloist, but the instrument part is empty (instead it uses "role" for this part)
+    # Test data (run the "Mocks: Start server" VS Code task then uncomment a line below to test):
+    # ENDPOINT = "http://localhost:61010/between-songs.json" # No catalog item (ex. between songs)
+    # ENDPOINT = "http://localhost:61010/specific-show.json" # A particular show without catalog item (ex. NYPhil broadcast)
+    # ENDPOINT = "http://localhost:61010/conductor.json" # Regular orchestral work, with conductor (ex. symphony)
+    # ENDPOINT = "http://localhost:61010/no-conductor.json" # Regular orchestral work, without conductor (ex. symphony)
+    # ENDPOINT = "http://localhost:61010/conductor-and-soloists.json" # Regular orchestral work, with soloists (ex. concerto)
+    # ENDPOINT = "http://localhost:61010/no-ensemble-two-soloists.json" # No ensemble name, two soloists (ex. sonata)
+    # ENDPOINT = "http://localhost:61010/404.json" # To test "Can't connect" (ex. endpoint is down)
+    # ENDPOINT = "http://localhost:61010/soloist-data-uses-role.json" # Piece has a soloist, but the instrument part is empty (instead it uses "role" for this part)
 
     # Unhandled test cases:
-    # WHATS_ON = "http://localhost:61010/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco in composer)
-    # WHATS_ON = "http://localhost:61010/long-song-title.json" # Long song title (figure out how to handle on vertical mode; it gets cut off) (ex. Fantasy-Septet in song title)
+    # ENDPOINT = "http://localhost:61010/long-composer-name.json" # Long composer name (figure out how to handle on vertical mode; it gets cut off) (ex. Mario Castelnuovo-Tedesco in composer)
+    # ENDPOINT = "http://localhost:61010/long-song-title.json" # Long song title (figure out how to handle on vertical mode; it gets cut off) (ex. Fantasy-Septet in song title)
 
     # Get settings values
     scroll_direction = config.str("scroll_direction", DEFAULT_SCROLL_DIRECTION)
@@ -96,7 +96,7 @@ def main(config):
     use_custom_colors = config.bool("use_custom_colors", DEFAULT_USE_CUSTOM_COLORS)
 
     # Get data
-    whats_on = http.get(url = WHATS_ON, ttl_seconds = 30)
+    whats_on = http.get(url = ENDPOINT, ttl_seconds = 30)
 
     if (whats_on.status_code) != 200:
         return render.Root(
