@@ -1,7 +1,7 @@
 """
-Applet: KQAC
-Summary: All Classical Portland
-Description: Shows what's currently playing on All Classical Portland (KQAC).
+Applet: All Classical
+Summary: Now playing: All Classical
+Description: Shows what's currently playing on All Classical Radio.
 Author: Andrew Westling
 """
 

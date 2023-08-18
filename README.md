@@ -6,8 +6,8 @@ This is my repository for experimenting with Tidbyt development
 
 - [**WQXR "What's On"**](/wqxr/)
   - Show what is currently playing on [WQXR](https://wqxr.org)
-- [**All Classical Portland (KQAC) "Now Playing"**](/kqac/)
-  - Show what is currently playing on [All Classical Portland (KQAC)](https://allclassical.org)
+- [**Now playing on All Classical Radio**](/allclassical/)
+  - Show what is currently playing on [All Classical Radio](https://allclassical.org)
 - [**WNYC "What's On"**](/wnyc/)
   - Show what is currently playing on [WNYC](https://wnyc.org)
 
